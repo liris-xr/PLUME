@@ -16,6 +16,7 @@
         <br />
         <em>(Journal Track) IEEE Conference on Virtual Reality and 3D User Interfaces</em>
         <br />
+        <a href="https://www.youtube.com/watch?v=_6krSw7fNqg"><strong>Video »</strong><a>
         <a href="https://hal.science/hal-04488824"><strong>Paper »</strong></a>
         <a href="https://github.com/liris-xr/PLUME/wiki/"><strong>Explore the docs »</strong></a>
         <br />
@@ -122,7 +123,6 @@ Charles JAVERLIAT - charles.javerliat@gmail.com
 Sophie VILLENAVE - sophie.villenave@ec-lyon.fr
 
 ## Citation
-
 ```
 @article{javerliat_plume_2024,
 	title = {{PLUME}: {Record}, {Replay}, {Analyze} and {Share} {User} {Behavior} in {6DoF} {XR} {Experiences}},
