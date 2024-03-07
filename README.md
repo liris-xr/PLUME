@@ -10,8 +10,13 @@
     <br />
     <br />
     <p align="center">
-        <strong>PLUME:</strong> <strong>PL</strong>ugin for <strong>U</strong>nity to <strong>M</strong>onitor <strong>E</strong>xperiments.
+        <strong>PLUME: Record, Replay, Analyze and Share User Behavior in 6DoF XR Experiences</strong>
         <br />
+        Charles Javerliat, Sophie Villenave, Pierre Raimbaud, Guillaume Lavoué
+        <br />
+        <em>(Journal Track) IEEE Conference on Virtual Reality and 3D User Interfaces</em>
+        <br />
+        <a href="https://hal.science/hal-04488824"><strong>Paper »</strong></a>
         <a href="https://github.com/liris-xr/PLUME/wiki/"><strong>Explore the docs »</strong></a>
         <br />
         <br />
@@ -38,11 +43,11 @@
 
 ## Getting Started
 
-In order to record your virtual experiment, you will need to install the <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME-Recorder</a> in your Unity project. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Recorder?tab=readme-ov-file#installation">here</a>.
+In order to record your virtual experiment, you will need to install the <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME-Recorder</a> in your Unity project. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Recorder?tab=readme-ov-file#getting-started">here</a>.
 
-When you are done recording your experiment, you can view and analyze your record files using the <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME-Viewer</a> standalone application. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Viewer?tab=readme-ov-file#installation">here</a>.
+When you are done recording your experiment, you can view and analyze your record files using the <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME-Viewer</a> standalone application. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Viewer?tab=readme-ov-file#getting-started">here</a>.
 
-If you need to analyze your record with other tools and languages (R, Python, etc), you can extract the data from the record files to dataframes, CSV, XDF, and other formats using <a href="https://www.github.com/liris-xr/PLUME-Python">PLUME-Python</a>. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Python?tab=readme-ov-file#installation">here</a>.
+If you need to analyze your record with other tools and languages (R, Python, etc), you can extract the data from the record files and export it to dataframes, CSV, XDF, and other formats using <a href="https://www.github.com/liris-xr/PLUME-Python">PLUME-Python</a>. The installation instructions are available <a href="https://github.com/liris-xr/PLUME-Python?tab=readme-ov-file#getting-started">here</a>.
 
 ## About
 
@@ -119,4 +124,14 @@ Sophie VILLENAVE - sophie.villenave@ec-lyon.fr
 ## Citation
 
 ```
+@article{javerliat_plume_2024,
+	title = {{PLUME}: {Record}, {Replay}, {Analyze} and {Share} {User} {Behavior} in {6DoF} {XR} {Experiences}},
+	url = {https://ieeexplore.ieee.org/document/10458415},
+	doi = {10.1109/TVCG.2024.3372107},
+	journal = {IEEE Transactions on Visualization and Computer Graphics},
+	author = {Javerliat, Charles and Villenave, Sophie and Raimbaud, Pierre and Lavoué, Guillaume},
+	year = {2024},
+	note = {Conference Name: IEEE Transactions on Visualization and Computer Graphics},
+	pages = {1--11}
+}
 ```
