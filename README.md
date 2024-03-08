@@ -77,6 +77,12 @@ We believe that PLUME can greatly benefit the scientific community by making the
 
 The <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a> is the cornerstone of the toolbox. It allows for continuously recording the state of the virtual environment in a Unity application with minimal impact on performances. By default, the recorder will record as much data as possible, namely object position, appearance, sound, interactions, and physiological signals (through a <a href="https://labstreaminglayer.org/">LabStreamingLayer</a> integration). The recorder also allows for custom data recording, such as event markers or custom-defined data structures in <a href="https://protobuf.dev/overview/">Google Protocol Buffer</a> files. This format is the one we use for all of our samples as it allows for a fast and frugal serialization, is platform-neutral and can be de-serialized in any language. The PLUME Recorder is compatible with Windows, Android, and iOS and with standalone devices. For the VR use case, we use the functionalities of OpenXR as much as possible so that it is compatible with many headsets. As the record files all follow the same serialization process and data format, they can be used interoperably across devices. For example, one could record an experiment on a standalone Android device and analyze the record file on a Windows machine, without the need for the original Unity project.
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_recorder_header_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_recorder_header_light.png">
+    <img alt="PLUME-Recorder header." src="/Documentation~/Images/plume_recorder_header_light.png">
+</picture>
+
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Viewer">
