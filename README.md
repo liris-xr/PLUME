@@ -63,6 +63,8 @@ We believe that PLUME can greatly benefit the scientific community by making the
 
 [![PLUME demo video](/Documentation~/Images/video_thumbnail.png)](https://www.youtube.com/watch?v=_6krSw7fNqg)
 
+---
+
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Recorder">
@@ -83,6 +85,8 @@ The <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a> 
     <img alt="PLUME-Recorder header." src="/Documentation~/Images/plume_recorder_header_light.png">
 </picture>
 
+---
+
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Viewer">
@@ -97,6 +101,8 @@ The <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a> 
 
 The <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME Viewer</a> is a standalone application for viewing and analyzing the record files independently of the Unity project. It offers analysis modules such as interactions analysis, 3D trajectories, in-context physiological signals tracks, position and eye gaze heatmaps for which export is available as point clouds with the scalar field embedded. PLUME Viewer is useful to observe a recorded experiment like a video in a media player, as it does not require anything more than the record files to reconstruct the VE.
 
+---
+
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Python">
@@ -110,6 +116,9 @@ The <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME Viewer</a> is a
 </br>
 
 The interoperability of the record files allows for other language to load those files for external analysis. <a href="https://www.github.com/liris-xr/PLUME-Python">PLUME Python</a> is a module that can load record files using the Protobuf package to filter and convert the data into more commonly used formats in data analysis like pandas dataframe or CSV files. Embedded data such as LabStreamingLayer's samples can be exported to XDF files for external use in tools such as <a href="https://github.com/cbrnr/sigviewer">SigViewer</a>, <a href="https://eeglab.org/">EEGLAB</a> or <a href="https://github.com/sccn/mobilab">MoBILAB</a>.
+
+---
+
 
 ## Roadmap
 
