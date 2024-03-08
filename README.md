@@ -61,6 +61,8 @@ Behavioral data collected during XR experiments, such as user movements, gaze, a
 In this context, we present PLUME, an open-source software toolbox (<a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a>, <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME Viewer</a>, <a href="https://www.github.com/liris-xr/PLUME-Python">PLUME Python</a>) that allows for the exhaustive record of XR behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (with a standalone application), and their easy sharing due to our compact and interoperable data format.
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available for the greatest, contributing to the reproducibility and replicability of XR user studies, enabling the creation of large datasets, and contributing to a deeper understanding of user experience.
 
+[![PLUME demo video](/Documentation~/Images/video_thumbnail.png)](https://www.youtube.com/watch?v=_6krSw7fNqg)
+
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Recorder">
