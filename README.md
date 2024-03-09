@@ -64,6 +64,18 @@ We believe that PLUME can greatly benefit the scientific community by making the
 [![PLUME demo video](/Documentation~/Images/video_thumbnail.png)](https://www.youtube.com/watch?v=_6krSw7fNqg)
 
 </br>
+<div align="center">
+<a href="https://github.com/liris-xr/PLUME-Recorder">
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_recorder_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_recorder_light.png">
+    <img alt="PLUME recorder logo." src="/Documentation~/Images/plume_recorder_light.png" height="80">
+</picture>
+</a>
+</div>
+</br>
+
+</br>
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_recorder_header_dark.png">
     <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_recorder_header_light.png">
