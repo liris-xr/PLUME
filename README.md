@@ -129,7 +129,7 @@ Distributed under the <a rel="license" href="https://github.com/liris-xr/PLUME/b
 ## Contact
 
 </br>
-<div align="center">
+<div>
 <a href="https://discord.gg/c3evqEWMge">
 <picture>
     <img alt="PLUME discord server" src="/Documentation~/Images/discord.png" height="80">
