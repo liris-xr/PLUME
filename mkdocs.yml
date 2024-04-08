@@ -1,0 +1,35 @@
+docs_dir: docs
+site_name: PLUME
+site_author: Charles JAVERLIAT
+copyright: GNU General Public License v3.0
+repo_url: https://github.com/liris-xr/PLUME/
+
+theme:
+  name: material
+  logo: images/plume_logo_dark.png
+  palette:
+    primary: 'black'
+    accent: 'light blue'
+  features:
+    - navigation.expand
+    - navigation.top
+    - navigation.path
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
