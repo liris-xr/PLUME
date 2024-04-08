@@ -2,9 +2,9 @@
 <div align="center">
     <a href="https://github.com/liris-xr/PLUME">
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_banner_dark.png">
-            <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_banner_light.png">
-            <img alt="PLUME banner." src="/Documentation~/Images/plume_banner_light.png">
+            <source media="(prefers-color-scheme: dark)" srcset="/docs/images/plume_banner_dark.png">
+            <source media="(prefers-color-scheme: light)" srcset="/docs/images/plume_banner_light.png">
+            <img alt="PLUME banner." src="/docs/images/plume_banner_light.png">
         </picture>
     </a>
     <br />
@@ -27,7 +27,7 @@
     </p>
 </div>
 
-<img alt="PLUME viewer." src="/Documentation~/Images/plume_viewer_teaser.png">
+<img alt="PLUME viewer." src="/docs/images/plume_viewer_teaser.png">
 
 <details>
     <summary>Table of Contents</summary>
@@ -61,15 +61,15 @@ Behavioral data collected during XR experiments, such as user movements, gaze, a
 In this context, we present PLUME, an open-source software toolbox (<a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a>, <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME Viewer</a>, <a href="https://www.github.com/liris-xr/PLUME-Python">PLUME Python</a>) that allows for the exhaustive record of XR behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (with a standalone application), and their easy sharing due to our compact and interoperable data format.
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available for the greatest, contributing to the reproducibility and replicability of XR user studies, enabling the creation of large datasets, and contributing to a deeper understanding of user experience.
 
-[![PLUME demo video](/Documentation~/Images/video_thumbnail.png)](https://www.youtube.com/watch?v=_6krSw7fNqg)
+[![PLUME demo video](/docs/images/video_thumbnail.png)](https://www.youtube.com/watch?v=_6krSw7fNqg)
 
 </br>
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Recorder">
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_recorder_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_recorder_light.png">
-    <img alt="PLUME recorder logo." src="/Documentation~/Images/plume_recorder_light.png" height="80">
+    <source media="(prefers-color-scheme: dark)" srcset="/docs/images/plume_recorder_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/docs/images/plume_recorder_light.png">
+    <img alt="PLUME recorder logo." src="/docs/images/plume_recorder_light.png" height="80">
 </picture>
 </a>
 </div>
@@ -77,9 +77,9 @@ We believe that PLUME can greatly benefit the scientific community by making the
 
 </br>
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_recorder_header_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_recorder_header_light.png">
-    <img alt="PLUME-Recorder header." src="/Documentation~/Images/plume_recorder_header_light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="/docs/images/plume_recorder_header_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/docs/images/plume_recorder_header_light.png">
+    <img alt="PLUME-Recorder header." src="/docs/images/plume_recorder_header_light.png">
 </picture>
 </br>
 
@@ -89,9 +89,9 @@ The <a href="https://www.github.com/liris-xr/PLUME-Recorder">PLUME Recorder</a> 
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Viewer">
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_viewer_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_viewer_light.png">
-    <img alt="PLUME viewer logo." src="/Documentation~/Images/plume_viewer_light.png" height="80">
+    <source media="(prefers-color-scheme: dark)" srcset="/docs/images/plume_viewer_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/docs/images/plume_viewer_light.png">
+    <img alt="PLUME viewer logo." src="/docs/images/plume_viewer_light.png" height="80">
 </picture>
 </a>
 </div>
@@ -103,9 +103,9 @@ The <a href="https://www.github.com/liris-xr/PLUME-Viewer">PLUME Viewer</a> is a
 <div align="center">
 <a href="https://github.com/liris-xr/PLUME-Python">
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/Documentation~/Images/plume_python_dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="/Documentation~/Images/plume_python_light.png">
-    <img alt="PLUME python logo." src="/Documentation~/Images/plume_python_light.png" height="80">
+    <source media="(prefers-color-scheme: dark)" srcset="/docs/images/plume_python_dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/docs/images/plume_python_light.png">
+    <img alt="PLUME python logo." src="/docs/images/plume_python_light.png" height="80">
 </picture>
 </a>
 </div>
@@ -132,7 +132,7 @@ Distributed under the <a rel="license" href="https://github.com/liris-xr/PLUME/b
 <div>
 <a href="https://discord.gg/c3evqEWMge">
 <picture>
-    <img alt="PLUME discord server" src="/Documentation~/Images/discord.png" height="80">
+    <img alt="PLUME discord server" src="/docs/images/discord.png" height="80">
 </picture>
 </a>
 </div>
