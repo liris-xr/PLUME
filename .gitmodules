@@ -1,0 +1,12 @@
+[submodule "external/PLUME-Recorder"]
+	path = external/PLUME-Recorder
+	url = https://github.com/liris-xr/PLUME-Recorder.git
+[submodule "external/PLUME-Python"]
+	path = external/PLUME-Python
+	url = https://github.com/liris-xr/PLUME-Python.git
+[submodule "external/PLUME-Viewer"]
+	path = external/PLUME-Viewer
+	url = https://github.com/liris-xr/PLUME-Viewer.git
+[submodule "external/PLUME-Protos"]
+	path = external/PLUME-Protos
+	url = https://github.com/liris-xr/PLUME-Protos.git
