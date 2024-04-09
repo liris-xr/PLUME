@@ -24,6 +24,9 @@ plugins:
   - search
   - awesome-pages
 
+hooks:
+  - mkdocs_hooks.py
+
 markdown_extensions:
   - abbr
   - pymdownx.highlight:

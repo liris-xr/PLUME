@@ -1,2 +1,6 @@
 .vs/
 .idea/
+
+*.g.md
+
+__pycache__/
