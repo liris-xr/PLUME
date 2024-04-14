@@ -36,3 +36,23 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+nav:
+  - PLUME-Protos:
+    - Protos:
+      - ... | flat | PLUME-Protos/protos/*.md
+      - Unity:
+        - Settings:
+          - ... | flat | PLUME-Protos/protos/unity/settings/**/*.md
+        - UI:
+          - ... | flat | PLUME-Protos/protos/unity/ui/**/*.md
+        - XR Interaction Toolkit:
+          - ... | flat | PLUME-Protos/protos/unity/xritk/**/*.md
+        - URP:
+          - ... | flat | PLUME-Protos/protos/unity/urp/**/*.md
+        - ... | flat | PLUME-Protos/protos/unity/**/*.md
+      - LSL:
+        - ... | flat | PLUME-Protos/protos/lsl/**/*.md
+      - Common:
+        - ... | flat | PLUME-Protos/protos/common/**/*.md
+  - ...

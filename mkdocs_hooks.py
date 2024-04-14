@@ -3,16 +3,23 @@ import subprocess
 from glob import glob
 import platform
 import os
+import pathlib
+from tqdm import tqdm
 
-def generate_protos_docs():
+last_proto_template_mtime = 0
+
+def generate_protos_docs(force_rebuild=False):
+    global last_proto_template_mtime
     
-    protos_docs_template = "./docs/PLUME-Protos/protos.tmpl"
-    protos_generated_docs = "./docs/PLUME-Protos/protos.g.md"
-    protos_generated_docs_dir = os.path.dirname(protos_generated_docs)
-    protos_dir = "./external/PLUME-Protos/"
+    protos_docs_template = "./docs/PLUME-Protos/proto_docs.tmpl"
+    template_mtime = os.path.getmtime(protos_docs_template)
 
-    if os.path.exists(protos_generated_docs):
-        return
+    if template_mtime != last_proto_template_mtime:
+        force_rebuild = True
+        last_proto_template_mtime = template_mtime
+
+    protos_dir = "./external/PLUME-Protos/"
+    protos_docs_dir = "./docs/PLUME-Protos/protos/"
 
     if which('protoc') is None:
         print("protoc not found. Ensure that you installed and added it to your PATH.")
@@ -31,12 +38,18 @@ def generate_protos_docs():
     else:
         raise Exception(f"Unsupported system: {system_name}")
 
-    os.makedirs(protos_generated_docs_dir, exist_ok=True)
-    args = [f"--proto_path={protos_dir}",
-            f"--plugin=protoc-gen-doc={protoc_gen_doc_path}",
-            f"--doc_out={protos_generated_docs_dir}",
-            f"--doc_opt={protos_docs_template},{os.path.basename(protos_generated_docs)}", *protos]
-    subprocess.run(["protoc", *args])
+    for proto in tqdm(protos, desc="Generating docs"):
+        proto_docs_path = protos_docs_dir / pathlib.Path(proto).relative_to(protos_dir).with_suffix(".md")
+        pathlib.Path(proto_docs_path.parent).mkdir(parents=True, exist_ok=True)
+
+        if os.path.exists(proto_docs_path) and not force_rebuild:
+            continue
+        
+        args = [f"--proto_path={protos_dir}",
+                f"--plugin=protoc-gen-doc={protoc_gen_doc_path}",
+                f"--doc_out={protos_docs_dir}",
+                f"--doc_opt={protos_docs_template},{str(proto_docs_path.relative_to(protos_docs_dir))}", proto]
+        subprocess.run(["protoc", *args])
 
 def on_pre_build(**kwargs):
     generate_protos_docs()
