@@ -1,0 +1,4 @@
+# Proto files documentation is generated automatically
+*.md
+!**/index.md
+!**/.pages

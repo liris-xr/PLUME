@@ -1,0 +1,3 @@
+# Timestamps
+
+Recorded samples are associated with a timestamp expressed in nanoseconds since the beginning of the record on a 64-bits unsigned integer. The timestamp is automatically added when the sample is sent to the recording system using a high resolution [Stopwatch clock](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch?view=net-8.0). Time measurement accuracy depends on the frequency of this clock. During our experimentations with PLUME, the Stopwatch implementation on our machine was accurate within 100 nanoseconds (10<sup>7</sup> ticks/s).
