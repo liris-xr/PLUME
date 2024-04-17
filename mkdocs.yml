@@ -12,11 +12,6 @@ theme:
     accent: 'light blue'
   features:
     - navigation.indexes
-    # - navigation.top
-    # - navigation.path
-    # - navigation.instant
-    # - navigation.instant.progress
-    # - toc.integrate
     - content.code.copy
     - content.code.annotate
 

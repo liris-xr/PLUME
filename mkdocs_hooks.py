@@ -53,6 +53,9 @@ def generate_protos_docs(force_rebuild=False):
                 f"--doc_out={protos_docs_dir}",
                 f"--doc_opt={protos_docs_template},{str(proto_docs_path.relative_to(protos_docs_dir))}", proto]
         subprocess.run(["protoc", *args])
+        print(f"Generated {proto_docs_path}")
+    
+    print("Done generating proto docs.")
 
 def on_pre_build(**kwargs):
-    generate_protos_docs()
+    generate_protos_docs(False)
