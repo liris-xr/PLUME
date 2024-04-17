@@ -6,7 +6,7 @@
 </style>
 # PLUME Recorder
 <p align="center">
-    <img src="/images/plume_recorder_light.png" alt="plume recorder logo" width="300"/>
+    <img src="../images/plume_recorder_light.png" alt="plume recorder logo" width="300"/>
 </p>
 
 <br/>

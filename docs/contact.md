@@ -3,7 +3,7 @@
 <div>
     <a href="https://discord.gg/c3evqEWMge">
         <picture>
-            <img alt="PLUME discord server" src="/images/discord.png" height="80">
+            <img alt="PLUME discord server" src="../images/discord.png" height="80">
         </picture>
     </a>
 </div>

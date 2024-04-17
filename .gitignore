@@ -5,3 +5,5 @@
 *.g.md
 
 __pycache__/
+site/
+build/
