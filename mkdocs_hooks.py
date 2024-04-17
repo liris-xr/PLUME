@@ -4,19 +4,20 @@ from glob import glob
 import platform
 import os
 import pathlib
-from tqdm import tqdm
 
-last_proto_template_mtime = 0
+last_proto_template_mtime = None
 
 def generate_protos_docs(force_rebuild=False):
     global last_proto_template_mtime
+
+    print("Generating proto docs...")
     
     file_format_dir = "./docs/recorder/file-format/"
 
     protos_docs_template = os.path.join(file_format_dir, "proto_docs.tmpl")
     template_mtime = os.path.getmtime(protos_docs_template)
 
-    if template_mtime != last_proto_template_mtime:
+    if last_proto_template_mtime == None or template_mtime != last_proto_template_mtime:
         force_rebuild = True
         last_proto_template_mtime = template_mtime
 
@@ -40,7 +41,7 @@ def generate_protos_docs(force_rebuild=False):
     else:
         raise Exception(f"Unsupported system: {system_name}")
 
-    for proto in tqdm(protos, desc="Generating docs"):
+    for proto in protos:
         proto_docs_path = protos_docs_dir / pathlib.Path(proto).relative_to(protos_dir).with_suffix(".md")
         pathlib.Path(proto_docs_path.parent).mkdir(parents=True, exist_ok=True)
 
