@@ -20,7 +20,7 @@ plugins:
   - awesome-pages
 
 hooks:
-  - mkdocs_hooks.py
+  - mkdocs_generate_protos_docs.py
 
 markdown_extensions:
   - abbr

@@ -33,4 +33,4 @@ jobs:
       - name: Install Mkdocs requirements
         run: pip install -r docs/requirements.txt
       - name: Deploy documentation
-        run: mkdocs gh-deploy --force
+        run: python mkdocs_generate_protos_docs.py && mkdocs gh-deploy --force

@@ -9,8 +9,6 @@ last_proto_template_mtime = None
 
 def generate_protos_docs(force_rebuild=False):
     global last_proto_template_mtime
-
-    print("Generating proto docs...")
     
     file_format_dir = "./docs/recorder/file-format/"
 
@@ -41,6 +39,8 @@ def generate_protos_docs(force_rebuild=False):
     else:
         raise Exception(f"Unsupported system: {system_name}")
 
+    print("Generating proto docs...")
+
     for proto in protos:
         proto_docs_path = protos_docs_dir / pathlib.Path(proto).relative_to(protos_dir).with_suffix(".md")
         pathlib.Path(proto_docs_path.parent).mkdir(parents=True, exist_ok=True)
@@ -59,3 +59,6 @@ def generate_protos_docs(force_rebuild=False):
 
 def on_pre_build(**kwargs):
     generate_protos_docs(False)
+
+if __name__ == "__main__":
+    generate_protos_docs(True)
