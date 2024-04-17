@@ -3,34 +3,42 @@ on:
   push:
     branches:
       - master
-      - main
-permissions:
-  contents: write
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Install Protoc
         uses: arduino/setup-protoc@v3
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
       - name: Install Mkdocs requirements
         run: pip install -r docs/requirements.txt
-      - name: Deploy documentation
-        run: python mkdocs_generate_protos_docs.py && mkdocs gh-deploy --force
+      # - name: Generate protos documentation
+      #   run: python generate_protos_docs.py
+      - name: Build documentation
+        run: mkdocs build
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

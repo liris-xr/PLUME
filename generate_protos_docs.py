@@ -51,8 +51,13 @@ def generate_protos_docs(force_rebuild=False):
         args = [f"--proto_path={protos_dir}",
                 f"--plugin=protoc-gen-doc={protoc_gen_doc_path}",
                 f"--doc_out={protos_docs_dir}",
-                f"--doc_opt={protos_docs_template},{str(proto_docs_path.relative_to(protos_docs_dir))}", proto]
-        subprocess.run(["protoc", *args])
+                f"--doc_opt={protos_docs_template},{proto_docs_path.relative_to(protos_docs_dir).as_posix()},source_relative", proto]
+        res = subprocess.run(["protoc", *args])
+        
+        if res.returncode != 0:
+            print(f"Failed to generate {proto_docs_path}")
+            exit()
+        
         print(f"Generated {proto_docs_path}")
     
     print("Done generating proto docs.")
