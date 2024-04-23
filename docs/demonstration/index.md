@@ -67,7 +67,7 @@ Record files are saved in the <a href="https://docs.unity3d.com/ScriptReference/
 
     Mac: Application.persistentDataPath points to the user Library folder. (This folder is often hidden.) User data is written into __~/Library/Application Support/*company name*/*product name*__.
 
-If you encounter any errors or issues, please <a href="https://github.com/liris-xr/PLUME-Recorder/issues">create an issue</a> or [contact us](../contact).
+If you encounter any errors or issues, please <a href="https://github.com/liris-xr/PLUME-Recorder/issues">create an issue</a> or [contact us](../contact.md).
 
 ## Overview your experiment with PLUME Viewer
 
