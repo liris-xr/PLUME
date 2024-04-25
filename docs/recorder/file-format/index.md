@@ -2,7 +2,7 @@
 
 ## Overview
 
-The data collected by the recorder is saved in a single `.plm` file as the recording progresses. The file is written in binary and uses [Protobuf](https://protobuf.dev/) to serialize record samples in a language-neutral, platform-neutral manner, maximizing interoperability of the save file between languages and workflows.
+Data collected by the recorder is saved in a single `.plm` file as the recording progresses. The file is written in binary and uses [Protobuf](https://protobuf.dev/) to serialize record samples in a language-neutral, platform-neutral manner, maximizing interoperability of the save file between languages and workflows.
 
 To save space we compress the data on-the-fly using [LZ4](https://lz4.org/), a lossless dynamic compression algorithm.
 
@@ -11,11 +11,11 @@ To save space we compress the data on-the-fly using [LZ4](https://lz4.org/), a l
     
     By using LZ4, we ensured that the compression speed would not be a limit for heavy scenes, with a compression speed of up to 780 MB/s with LZ4 versus 100 MB/s for Deflate.
 
-The file is composed a sequence of serialized [packed samples](#sample-packing), prefixed by their length.
+The file contains a sequence of serialized [packed samples](#sample-packing), prefixed by their length.
 
 ## Packed samples
 
-Recorded data is specified in `.proto` files. This file format has the advantage of being easily convertible to data structures in several languages (C#, Python, C/C++, etc). In practice, this means that the specification of the recorded data is decoupled from the recorder itself, and also allows for reading the resulting `.plm` files from any language of your liking, this is what we use for [PLUME Python](../../python/index.md).
+Recorded data is specified in `.proto` files. This file format has the advantage of being easily convertible to data structures in several languages (C#, Python, C/C++, etc). In practice, this means that the specification of the recorded data is decoupled from the recorder itself, and also allows for reading the resulting `.plm` files from any language of your liking. This is what we use for [PLUME Python](../../python/index.md).
 
 ??? example "Example of a proto file"
     A proto file is defined by a list of properties with a type, a name, and an id. For more information on the `.proto` file format, see the [documentation](https://protobuf.dev/programming-guides/proto3/).
