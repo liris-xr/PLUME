@@ -13,10 +13,31 @@ To save space we compress the data on-the-fly using [LZ4](https://lz4.org/), a l
 
 The file is composed a sequence of serialized [packed samples](#sample-packing), prefixed by their length.
 
-## Sample packing
+## Packed samples
 
-To allow for maximum extensibility, each sample payload is packed in a [Any](https://protobuf.dev/programming-guides/proto3/#any) type along with an optional timestamp in nanoseconds. Timestamp is optional so that one can record data that is not bound to a specific time, like an application setting, demographics, etc.
+Recorded data is specified in `.proto` files. This file format has the advantage of being easily convertible to data structures in several languages (C#, Python, C/C++, etc). In practice, this means that the specification of the recorded data is decoupled from the recorder itself, and also allows for reading the resulting `.plm` files from any language of your liking, this is what we use for [PLUME Python](../../python/index.md).
+
+??? example "Example of a proto file"
+    A proto file is defined by a list of properties with a type, a name, and an id. For more information on the `.proto` file format, see the [documentation](https://protobuf.dev/programming-guides/proto3/).
+
+    ```proto
+    message Demographics {
+        Gender gender = 1;
+        uint32 age = 2;
+        float weight = 3;
+
+        enum Gender {
+            Unspecified = 0;
+            Female = 1;
+            Male = 2;
+        }
+    }
+    ```
+
+Each sample is packed in a `PackedSample`. The data itself is encapsulated in the payload field as an [any](https://protobuf.dev/programming-guides/proto3/#any) type. The packed samples also contain an optional [timestamp](../timestamps.md).
 
 ```proto title="packed_sample.proto"
 --8<-- "external/PLUME-Protos/packed_sample.proto"
 ```
+
+All of the proto files used internally by the PLUME Recorder can be found in the `Proto files` section.
