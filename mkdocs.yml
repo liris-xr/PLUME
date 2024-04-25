@@ -6,6 +6,7 @@ repo_url: https://github.com/liris-xr/PLUME/
 
 theme:
   name: material
+  custom_dir: overrides
   logo: images/plume_logo_dark.png
   palette:
     primary: 'black'
@@ -25,6 +26,9 @@ extra_css:
 
 hooks:
   - generate_protos_docs.py
+
+watch:
+  - overrides
 
 markdown_extensions:
   - abbr
