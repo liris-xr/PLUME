@@ -33,7 +33,7 @@ PLUME-Recorder is pre-installed in the project. You can update the package using
 
 === "Lab Streaming Layer"
 
-    Lab Streaming Layer streams can be picked up for recording.
+    Lab Streaming Layer streams picks up every available stream for recording.
 
 ### Settings Panel
 If you want to configure PLUME-Recorder, the settings panel is located inside the `Project Settings` window which is accessible directly from `PLUME > Settings`.
@@ -45,12 +45,16 @@ To get more details on settings go to the PLUME-Recorder [global settings page](
 </p>
 
 ## Create you first record
-Press the `Play` button to start egg hunting! You have 2 minutes to find as much eggs as you can. You can teleport around the virtual environment using the joystick on your controller. To pick up an egg, simply hover your controller over the egg.
+* Unity Editor: Press the `Play` button to start egg hunting!
+* PC VR: Build your application for Windows. Launch the executable of your built application.
+* Standalone VR: Build your application for your Android powered HMD. Launch your applition within your headset OS.
+
+You have 2 minutes to find as much eggs as you can. You can teleport around the virtual environment using the joystick on your controller. To pick up an egg, simply hover your controller over the egg.
 
 !!! information
     Easter Egg Hunt was developed using [OpenXR](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.11/manual/index.html) and [XR Interaction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html). To run the application, you can use any compatible VR headset. Make sure the software for your headset is defined as the default runtime for OpenXR.
 
-If recording has successfully started, PLUME will display the information messages in the console. Recording is automatically stopped when quitting the application.
+If recording has successfully started, PLUME will display the information messages in the console or in [Unity log files](https://docs.unity3d.com/Manual/LogFiles.html). Recording is automatically stopped when quitting the application.
 
 <p align="center">
     <img src="../images/recorder_started.png" alt="plume logs" width="800"/>
