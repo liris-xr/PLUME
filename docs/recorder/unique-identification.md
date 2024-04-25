@@ -20,8 +20,8 @@ The `SceneGuidRegistry` contains the correspondences between each scene object a
 
 <figure>
 <div class="center-h-v gap-10">
-<img src="../../images/scene_guid_registry_in_hierarchy.png" alt="scene guid registry in hierarchy" />
-<img src="../../images/scene_guid_registry.png" alt="scene guid registry" style="height:300px" />
+<img src="./images/scene_guid_registry_in_hierarchy.png" alt="scene guid registry in hierarchy" />
+<img src="./images/scene_guid_registry.png" alt="scene guid registry" style="height:300px" />
 </div>
 <figcaption>Exemple of a scene GUID registry in the editor hierarchy (left) and the component UI (right).</figcaption>
 </figure>
@@ -33,7 +33,7 @@ Entries of the assets GUID registry contains an additional property called `Asse
 
 <figure>
 <div>
-<img src="../../images/assets_guid_registry.png" alt="scene guid registry" style="height:300px" />
+<img src="./images/assets_guid_registry.png" alt="scene guid registry" style="height:300px" />
 </div>
 <figcaption>Exemple of an assets GUID registry component UI.</figcaption>
 </figure>
