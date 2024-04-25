@@ -1,6 +1,6 @@
 # Audio
 
-The PLUME Recorder can be used to record the audio stream of the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) component. When enabled, a `.wav` file containing the data stream from the `AudioListener` will be created alongside the main record file. Recorded audio is stereo and spatialized.
+The `AudioRecorderModule` can be used to record the audio stream sent to the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) component. When enabled, a separate `.wav` file containing the audio samples will be created alongside the record file.
 
 ## Spatialized audio
 
