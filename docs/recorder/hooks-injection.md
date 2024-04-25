@@ -39,7 +39,7 @@ This method presents several benefits:
 - Drastically reduces the time spent to install the recorder compared to other tools.
 - Can be uninstalled without breaking the project.
 
-Hooks are automatically injected in the assemblies listed in the [settings](#settings) when recompiled. If automatic injection wasn't triggered, injection can be forced with `PLUME > Force Recompile With Hooks`.
+Hooks are automatically injected at compile time in the assemblies listed in the [settings](#settings). If automatic injection wasn't triggered, injection can be forced with `PLUME > Force Recompile With Hooks`.
 
 ## Settings
 
