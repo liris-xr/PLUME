@@ -1,0 +1,18 @@
+.inline {
+    display: inline-block;
+}
+
+.center-h-v {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}

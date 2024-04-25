@@ -19,6 +19,9 @@ plugins:
   - search
   - awesome-pages
 
+extra_css:
+  - styles/style.css
+
 hooks:
   - generate_protos_docs.py
 
