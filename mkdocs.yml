@@ -12,6 +12,7 @@ theme:
     accent: 'light blue'
   features:
     - navigation.indexes
+    - navigation.footer
     - content.code.copy
     - content.code.annotate
 
@@ -35,5 +36,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - admonition
   - attr_list
