@@ -2,6 +2,9 @@
 
 The `AudioRecorderModule` can be used to record the audio stream sent to the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) component. When enabled, a separate `.wav` file containing the audio samples will be created alongside the record file.
 
+!!! warning
+    The audio recorder module is disabled by default in the settings. If you want to record audio, make sure to enable it before running your experiment.
+
 ## Spatialized audio
 
 The audio recorder module takes into account the audio setup of the project. As a consequence, the produced WAV file will have the same number of channels as the number of channels specified in the [audio speaker mode setting](https://docs.unity3d.com/ScriptReference/AudioSpeakerMode.html) (mono, stereo, quad, surroung, etc).
