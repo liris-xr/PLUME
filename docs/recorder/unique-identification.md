@@ -1,10 +1,10 @@
 # Unique identification
 
-To link back data to the game object/component it belongs to, it is necessary to have some kind of unique identification system. Moreover, identifying objects across multiple executions is also challenging but crucial for multi-record analysis (eg. aggregated heatmaps, trajectories, etc).
+To link back recorded data to the game object/component it belongs to, it is necessary to have some kind of unique identification system. Moreover, identifying objects across multiple executions is challenging but crucial for multi-record analysis (eg. aggregated heatmaps, trajectories, etc).
 
-The Unity engine uses a GUID system to uniquely identify objects across executions. However, this implementation is not available at runtime. As a consequence, we implemented our own GUID system to uniquely identify objects across executions, without the need for any custom component attached to the objects.
+The Unity engine uses a GUID (Globally Unique IDentifier) system to identify objects across executions. However, this implementation is not available at runtime. As a consequence, we implemented our own GUID system to uniquely identify objects across executions, without the need for any custom component attached to the objects.
 
-This plugin, named Unity-Runtime-GUID, is embedded in the recorder, and is [available on GitHub](https://github.com/cjaverliat/Unity-Runtime-GUID) as well.
+This plugin, named Unity-Runtime-GUID, is embedded in the recorder, its source code is [available on GitHub](https://github.com/cjaverliat/Unity-Runtime-GUID).
 
 ## GUID registries
 
@@ -29,7 +29,7 @@ The `SceneGuidRegistry` contains the correspondences between each scene object a
 ### Assets GUID registry
 
 The assets GUID registry is unique and is located in `Assets/Resources`. It contains the correspondences between each assets used in the scenes specified in the build settings or, if none, the currently opened scene. The `AssetsGuidRegistry` is automatically created on build or when entering play mode in the editor.
-Entries of the assets GUID registry contains an additional property call `Asset Bundle Path`. This is used by the [PLUME Viewer](../viewer/index.md) to find the asset inside the [asset bundle](asset-bundle.md).
+Entries of the assets GUID registry contains an additional property called `Asset Bundle Path`. This is used by the [PLUME Viewer](../viewer/index.md) to find the asset inside the [asset bundle](asset-bundle.md).
 
 <figure>
 <div>
