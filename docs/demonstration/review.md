@@ -1,5 +1,5 @@
 # Review your Easter egg hunting skills
-You can replay your performance using PLUME-Viewer. If you don't have any record file, you can create one by following the [previous tutorial](setup.md) or downloading [sample files](https://github.com/liris-xr/PLUME-Demo/tree/master/EasterEggHunt/Samples).
+You can replay your performance using PLUME-Viewer. If you don't have any record file, you can create one by following the [previous tutorial](record.md) or downloading [sample files](https://github.com/liris-xr/PLUME-Demo/tree/master/EasterEggHunt/Samples).
 
 ## Build *Easter Egg Hunt* asset bundle
 To replay your recordings, you need an [Asset Bundle](../recorder/asset-bundle.md), which countains the project assets in a single file.
@@ -38,7 +38,7 @@ When launching PLUME-Viewer, you are prompted to open your `.plm` file and then 
 !!! tip
     By default, the viewer will look for the asset bundle next to the record file. By placing the `plume_bundle.zip` in the same folder as the `.plm` files, the viewer will not ask for it when opening a record.
 
-On openning, replay will start automatically. You can navigate your record like you would a video by using the media bar. See [PLUME-Viewer documentation](../viewer.md) for more details on functionalities.
+On openning, replay will start automatically. You can navigate your record like you would a video by using the media bar. See [PLUME-Viewer documentation](../viewer/index.md) for more details on functionalities.
 
 <p align="center">
     <img src="../images/media_bar.png" alt="github latest release" width="800"/>
