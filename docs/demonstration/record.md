@@ -33,7 +33,7 @@ PLUME-Recorder is pre-installed in the project. You can update the package using
 
 === "Lab Streaming Layer"
 
-    Lab Streaming Layer streams can be picked up for recording.
+    Lab Streaming Layer streams picks up every available stream for recording.
 
 ### Settings Panel
 If you want to configure PLUME-Recorder, the settings panel is located inside the `Project Settings` window which is accessible directly from `PLUME > Settings`.
