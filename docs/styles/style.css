@@ -16,6 +16,18 @@
     align-items: center;
 }
 
+.flex-v {
+    flex-direction: column;
+}
+
+.flex-h {
+    flex-direction: row;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
 .gap-5 {
     gap: 5px;
 }
