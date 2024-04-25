@@ -19,6 +19,8 @@ Due to the nature of the transform, any change in position, rotation and scale i
 
 ## Settings
 
+Settings for the `TransformRecorderModule` can be found under `Edit > Project Settings > PLUME Recorder > Frame Recorder > Transform`.
+
 | Setting | Type | Description |
 |---|---|---|
 | Position Threshold | float | Threshold over which movements will be effectively recorded. The value is expressed in local space. |
