@@ -2,6 +2,13 @@
     display: inline-block;
 }
 
+.center, .center-h {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .center-h-v {
     display: flex;
     text-align: center;
