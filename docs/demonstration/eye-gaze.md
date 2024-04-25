@@ -32,4 +32,4 @@ Generated heatmaps can be hidden from view (using eye icon) or deleted (using tr
 ## Export generated eye-gaze heatmap for ex-situ analysis
 Generated heatmaps can be exported (using download icon). Every object included in the heatmap will be exported as a point cloud. The point cloud integrates a scalar values corresponding to the time spent gazing at the object. You can use [Cloud Compare](https://www.danielgm.net/cc/) to view exported heatmaps.
 
-TODO: add a screeshot of CloudCompare.
+TODO: add a screenshot of CloudCompare.
