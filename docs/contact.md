@@ -10,10 +10,12 @@
 
 💬 Discord: <https://discord.gg/c3evqEWMge>
 
+💬 GitHub issues: <https://github.com/liris-xr/PLUME/issues>
+
 🌐 Website: <https://xr.liris.cnrs.fr/>
 
 !!! info
-    Please favor direct contact via the discord server in order to share the exchange with the rest of the community.
+    Please favor contact via the discord server or via GitHub issues in order to share the exchange with the rest of the community.
 
 
 Charles JAVERLIAT - <charles.javerliat@gmail.com> | [LinkedIn](https://www.linkedin.com/in/charles-javerliat-20234716a/)
