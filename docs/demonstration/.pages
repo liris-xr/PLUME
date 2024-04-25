@@ -2,7 +2,10 @@ title: Walkthrough
 
 nav:
     - index.md
-    - setup.md
-    - in-situ-analysis.md
-    - ex-situ-analysis.md
+    - record.md
+    - review.md
+    - movements.md
+    - interaction.md
+    - eye-gaze.md
+    - physiological-signals.md
     - ...
