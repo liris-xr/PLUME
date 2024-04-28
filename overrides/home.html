@@ -1,0 +1,215 @@
+{% extends "main.html" %}
+
+{% block header %}
+{{ super() }}
+<script src="home.js"></script>
+{% endblock %}
+
+{% block tabs %}
+{{ super() }}
+
+<!-- Additional styles for landing page -->
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Application header should be static for the landing page */
+.md-header--transparent {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+}
+
+.md-tabs {
+    background-color: transparent !important;
+    overflow: visible;
+}
+
+/* Hide main content for now */
+.md-banner {
+    display: none;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 76.25em) {
+    .teaser {
+        height: calc(100vh - 4.8rem);
+    }
+
+    .teaser__background {
+        margin-top: -4.8rem;
+        height: calc(100% + 4.8rem);
+    }
+}
+
+@media screen and (max-width: 76.25em) {
+    .teaser {
+        height: calc(100vh - 2.4rem);
+    }
+
+    .teaser__background {
+        margin-top: -2.4rem;
+        height: calc(100% + 2.4rem);
+    }
+}
+
+.teaser {
+    display: block;
+    position: relative;
+}
+
+.teaser__background {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.teaser__background > video {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.teaser__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 61rem;
+    position: relative;
+}
+
+.teaser__content :not(.md-button) {
+    text-shadow: 0 0 .2rem #211d2dcc;
+}
+
+.teaser__content {
+    bottom: 4rem;
+    position: absolute;
+    max-width: 26rem;
+}
+
+.teaser__text {
+    padding: 0 1rem;
+    position: relative;
+}
+
+@media screen and (min-width: 76.25em) {
+    .teaser__dummy {
+        bottom: 5em;
+        left: -9rem;
+    }
+}
+
+@media screen and (max-width: 76.25em) {
+    .teaser__dummy {
+        bottom: 10em;
+        left: 0rem;
+    }
+}
+
+.teaser__dummy {
+    position: absolute;
+    height: 20rem;
+    animation: hover 3s infinite ease-in-out;
+}
+
+.teaser__dummy > img {
+    transform: scaleX(-1);
+    height: 100%;
+    user-select: none;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.teaser__content .md-button {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.teaser__text h1 {
+    display: block !important;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.teaser__text p {
+    color: white;
+}
+
+/* Hide table of contents */
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+/* Hide navigation */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        display: none;
+    }
+}
+
+.arrow-btn {
+    width: 2rem;
+    height: 2rem;
+    color: lightgray;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+</style>
+
+<section class="teaser">
+    <div class="teaser__background">
+        <video autoplay muted loop playsinline>
+            <source src="./viewer/videos/replay.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="teaser__inner">
+        <div class="teaser__content">
+            <div class="teaser__text md-typeset">
+                <div class="teaser__dummy">
+                    <img src="./images/dummy.png" alt="dummy">
+                </div>
+                <h1>PLUME: Record, replay, analyze</h1>
+                <p>Simplify the process of recording user behavior and physiological data in your experiment and focus on what matters.</p>
+                <a href="getting-started/" class="md-button md-button--primary">Get started</a>
+                <a href="#about-plume" class="md-button md-button--secondary">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrow-btn">
+        <a href="#about-plume">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11 4h2v12l5.5-5.5 1.42 1.42L12 19.84l-7.92-7.92L5.5 10.5 11 16V4Z"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<section class="content">
+{{ super() }}
+</section>
+{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{{ super() }}{% endblock %}

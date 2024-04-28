@@ -1,3 +1,8 @@
+---
+template: home.html
+title: Home
+---
+
 <style>
   .md-typeset h1,
   .md-content__button {
@@ -5,12 +10,8 @@
   }
 </style>
 # Home
-<p align="center">
-    <img src="./images/plume_logo_light.png" alt="plume logo" width="300"/>
-    <br/>
-    <br/>
-    <img src="./images/plume_viewer_teaser.png" alt="teaser" width="800"/>
-</p>
+
+## About PLUME
 
 PLUME is an open-source software (GPLv3) toolbox that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (see [an example](./demonstration/index.md)), and their easy sharing due to our compact and interoperable data format. PLUME is composed of three main tools:
 
