@@ -10,3 +10,11 @@
 </p>
 
 <br/>
+PLUME Viewer is a Unity application that lets you interactively explore recordings made with [PLUME Recorder](../recorder/index.md). This application is independent of the Unity project used for recording, so all you need is the [asset bundle](../recorder/asset-bundle.md) and the recording file to use PLUME Viewer. A major benefit of this viewer is the contextualisation of temporal data such as event markers or physiological signals within the spatial environment. PLUME Viewer also comes with several analysis modules:
+
+- 3D Trajectory
+- Position Heatmap
+- Eye Gaze Heatmap
+- Interaction Highlight
+
+For more details on how to use those analysis modules, visit the [in-situ analysis page](./in-situ-analysis/index.md).
