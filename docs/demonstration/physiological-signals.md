@@ -122,7 +122,7 @@ Download the latest release of [SigViewer](https://github.com/cbrnr/sigviewer) a
     <img src="/demonstration/images/sigviewer.png" alt="SigViewer" width="800"/>
 </p>
 
-Recorded [markers](../recorder/recorded-data/marker.md) are automatically exported as events to be viewed directly within SigViewer.
+Recorded [markers](../recorder/recorded-data/markers.md) are automatically exported as events to be viewed directly within SigViewer.
 
 <p align="center">
     <img src="/demonstration/images/sigviewer_events.png" alt="SigViewer Events" width="600"/>

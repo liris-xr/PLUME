@@ -65,7 +65,7 @@ Click on `Generate` to create the interaction eye-gaze heatmap with selected par
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
 ## Interactions Highlights
-With the interactions module, you can highlight objects that have been interacted with. See more details on how PLUME-Recorder logs interactions in the [XRITK section](../recorder/recorded-data/inputs.md).
+With the interactions module, you can highlight objects that have been interacted with. See more details on how PLUME-Recorder logs interactions in the [XRITK section](../../recorder/recorded-data/inputs.md).
 
 * Interactor(s): GUID of one or more interactor.
 * Interactable(s) **(Optional)**: GUID of one or more interactable. If empty, every interactable in the scene will be taken into account.
