@@ -6,7 +6,7 @@ PLUME-Recorder records [Unity Input Actions](https://docs.unity3d.com/Packages/c
 For the Easter Egg Hunt project, actions are defined using the Input Action Manager component.
 
 <p align="center">
-    <img src="../images/input_action_manager.png" alt="input action manager" width="800"/>
+    <img src="/demonstration/images/input_action_manager.png" alt="input action manager" width="800"/>
 </p>
 
 When an action is triggered, it sends a message to the PLUME-Recorder, which will timestamp and log the action. See more details on how PLUME-Recorder logs input actions [here](../recorder/recorded-data/inputs.md).
@@ -24,13 +24,13 @@ Using PLUME-Viewer Interaction Heatmap module, you can highlight objects that ha
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="../images/interaction_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
+    <img src="/demonstration/images/interaction_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
 </p>
 
 Click on `Generate` to create the interaction heatmap with selected parameters. Once computed, objects that have been interacted with are highlighted in shades of red. White means no interaction, Dark Red means most number of interactions.
 
 <p align="center">
-    <img src="../images/interaction_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
+    <img src="/demonstration/images/interaction_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
 </p>
 
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).

@@ -12,13 +12,13 @@ Going back to the Unity Editor of the *Easter Egg Hunt* project, build the asset
 From PLUME Viewer GitHub access the <a href="https://github.com/liris-xr/PLUME-Viewer/releases">releases page</a>.
 
 <p align="center">
-    <img src="../images/github_releases.png" alt="github releases" width="800"/>
+    <img src="/demonstration/images/github_releases.png" alt="github releases" width="800"/>
 </p>
 
 From here go the latest release page, and download `PLUME-Viewer.zip`.
 
 <p align="center">
-    <img src="../images/latest_release.png" alt="github latest release" width="800"/>
+    <img src="/demonstration/images/latest_release.png" alt="github latest release" width="800"/>
 </p>
 
 Unzip `PLUME-Viewer.zip` where you see fit on your computer.
@@ -27,7 +27,7 @@ Unzip `PLUME-Viewer.zip` where you see fit on your computer.
 Execute `PLUME-Viewer.exe`.
 
 <p align="center">
-    <img src="../images/file_plume_executable.png" alt="github latest release" width="800"/>
+    <img src="/demonstration/images/file_plume_executable.png" alt="github latest release" width="800"/>
 </p>
 
 !!! tip
@@ -41,11 +41,11 @@ When launching PLUME-Viewer, you are prompted to open your `.plm` file and then 
 On openning, replay will start automatically. You can navigate your record like you would a video by using the media bar. See [PLUME-Viewer documentation](../viewer/index.md) for more details on functionalities.
 
 <p align="center">
-    <img src="../images/media_bar.png" alt="github latest release" width="800"/>
+    <img src="/demonstration/images/media_bar.png" alt="github latest release" width="800"/>
 </p>
 
 <video align="center" width="800" height="600" controls>
-  <source src="../video/free_view_replay.mp4" type="video/mp4">
+  <source src="/demonstration/video/free_view_replay.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 

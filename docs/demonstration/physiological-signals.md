@@ -104,7 +104,7 @@ Following metadata for the signal are also displayed:
 * Maximum value
 
 <p align="center">
-    <img src="../images/physiological_signal_viewer.png" alt="physiological signal viewer" width="800"/>
+    <img src="/demonstration/images/physiological_signal_viewer.png" alt="physiological signal viewer" width="800"/>
 </p>
 
 ## View physiological signals ex-situ using SigViewer
@@ -119,11 +119,11 @@ PLUME-Python will export the resulting xdf file next to your record file.
 Download the latest release of [SigViewer](https://github.com/cbrnr/sigviewer) and open the created .xdf file.
 
 <p align="center">
-    <img src="../images/sigviewer.png" alt="SigViewer" width="800"/>
+    <img src="/demonstration/images/sigviewer.png" alt="SigViewer" width="800"/>
 </p>
 
 Recorded [markers](../recorder/recorded-data/marker.md) are automatically exported as events to be viewed directly within SigViewer.
 
 <p align="center">
-    <img src="../images/sigviewer_events.png" alt="SigViewer Events" width="600"/>
+    <img src="/demonstration/images/sigviewer_events.png" alt="SigViewer Events" width="600"/>
 </p>

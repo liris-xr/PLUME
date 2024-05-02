@@ -41,7 +41,7 @@ If you want to configure PLUME-Recorder, the settings panel is located inside th
 To get more details on settings go to the PLUME-Recorder [global settings page](../recorder/global-settings.md).
 
 <p align="center">
-    <img src="../images/settings.png" alt="plume settings panel" width="800"/>
+    <img src="/demonstration/images/settings.png" alt="plume settings panel" width="800"/>
 </p>
 
 ## Create you first record
@@ -57,7 +57,7 @@ You have 2 minutes to find as much eggs as you can. You can teleport around the 
 If recording has successfully started, PLUME will display the information messages in the console or in [Unity log files](https://docs.unity3d.com/Manual/LogFiles.html). Recording is automatically stopped when quitting the application.
 
 <p align="center">
-    <img src="../images/recorder_started.png" alt="plume logs" width="800"/>
+    <img src="/demonstration/images/recorder_started.png" alt="plume logs" width="800"/>
 </p>
 
 Record files are saved in the <a href="https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html">application persistent data path</a>, the path is different depending on your operating system:
