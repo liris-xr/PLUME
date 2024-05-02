@@ -5,7 +5,7 @@ If you use a headset that integrates eye-tracking data (e.g., HTC Vive Pro Eye, 
 PLUME-Recorder records [Unity Input Actions](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/manual/Actions.html) which loosely correspond to input from the user. Eye-gaze data are recorded through Input Actions, if you have defined actions that use the [eye-gaze pose data bindings](https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.10/manual/features/eyegazeinteraction.html). These actions are part of the XRI Default Action Map provided by the XR Interaction Toolkit samples.
 
 <p align="center">
-    <img src="/demonstration/images/input_action_manager.png" alt="input action manager" width="800"/>
+    <img src="../images/input_action_manager.png" alt="input action manager" width="800"/>
 </p>
 
 ## Compute eye-gaze heatmap in-situ
@@ -18,13 +18,13 @@ Using PLUME-Viewer Eye-gaze Heatmap module, you can highlight objects that have 
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="/demonstration/images/eye_gaze_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
+    <img src="../images/eye_gaze_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
 </p>
 
 Click on `Generate` to create the interaction eye-gaze heatmap with selected parameters. Once computed, objects that have been gazed at directly will be highlighted. Dark blue means no gaze, Dark Red means most time spent gazing at this zone.
 
 <p align="center">
-    <img src="/demonstration/images/eye_gaze_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
+    <img src="../images/eye_gaze_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
 </p>
 
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).

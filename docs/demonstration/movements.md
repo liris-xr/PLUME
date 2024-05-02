@@ -17,5 +17,5 @@ To compute trajectories of moving objects, use the Trajectory analysis module. Y
 * Include rotations: if enabled, rotation gizmo will be displayed above the trajectory.
 
 <p align="center">
-    <img src="/demonstration/images/hmd_trajectory.png" alt="trajectory module within PLUME-Viewer" width="400"/>
+    <img src="../images/hmd_trajectory.png" alt="trajectory module within PLUME-Viewer" width="400"/>
 </p>

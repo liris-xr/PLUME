@@ -12,13 +12,13 @@ With the trajectory module, you can create 3D trajectories of moving objects in 
 * Time Range: section of the record you want the trajectory to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="/viewer/images/hmd_trajectory.png" alt="trajectory module within PLUME-Viewer" width="400"/>
+    <img src="../images/hmd_trajectory.png" alt="trajectory module within PLUME-Viewer" width="400"/>
 </p>
 
 Click on `Generate` to create the trajectory with selected parameters. The trajectory is colored using a gradient from blue (beginning) to red (end) to indicate its temporality.
 
 <p align="center">
-    <img src="/viewer/images/hmd_trajectory_result.png" alt="PLUME-Viewer trajectory heatmap result" width="800"/>
+    <img src="../images/hmd_trajectory_result.png" alt="PLUME-Viewer trajectory heatmap result" width="800"/>
 </p>
 
 Generated trajectories can be hidden from view (using eye icon) or deleted (using trash icon).
@@ -32,13 +32,13 @@ With the position module, you can create heatmaps that show where the objects ha
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="/viewer/images/position_heatmap.png" alt="PLUME-Viewer position heatmap module" width="600"/>
+    <img src="../images/position_heatmap.png" alt="PLUME-Viewer position heatmap module" width="600"/>
 </p>
 
 Click on `Generate` to create the position heatmap with selected parameters. Once computed, position that have been most visitied highlighted. Dark blue means no time spent at this position, Dark Red means most time spent at this position.
 
 <p align="center">
-    <img src="/viewer/images/position_heatmap_result.png" alt="PLUME-Viewer position heatmap result" width="800"/>
+    <img src="../images/position_heatmap_result.png" alt="PLUME-Viewer position heatmap result" width="800"/>
 </p>
 
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
@@ -53,13 +53,13 @@ With the eye-gaze module, you can create heatmaps that highlight objects that ha
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="/viewer/images/eye_gaze_heatmap.png" alt="PLUME-Viewer eye-gaze module" width="600"/>
+    <img src="../images/eye_gaze_heatmap.png" alt="PLUME-Viewer eye-gaze module" width="600"/>
 </p>
 
 Click on `Generate` to create the interaction eye-gaze heatmap with selected parameters. Once computed, objects that have been gazed at directly will be highlighted. Dark blue means no gaze, Dark Red means most time spent gazing at this zone.
 
 <p align="center">
-    <img src="/viewer/images/eye_gaze_heatmap_result.png" alt="PLUME-Viewer eye-gaze heatmap result" width="800"/>
+    <img src="../images/eye_gaze_heatmap_result.png" alt="PLUME-Viewer eye-gaze heatmap result" width="800"/>
 </p>
 
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
@@ -73,13 +73,13 @@ With the interactions module, you can highlight objects that have been interacte
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
 <p align="center">
-    <img src="/viewer/images/interaction_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
+    <img src="../images/interaction_heatmap.png" alt="PLUME-Viewer interaction module" width="600"/>
 </p>
 
 Click on `Generate` to create the interaction heatmap with selected parameters. Once computed, objects that have been interacted with are highlighted in shades of red. White means no interaction, Dark Red means most number of interactions.
 
 <p align="center">
-    <img src="/viewer/images/interaction_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
+    <img src="../images/interaction_heatmap_result.png" alt="PLUME-Viewer interaction heatmap result" width="800"/>
 </p>
 
 Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
