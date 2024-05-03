@@ -48,4 +48,5 @@ A [LineRendererUpdate](../../file-format/proto-files/unity/line_renderer.md#line
 - [LineRenderer.SetPositions(NativeArray<Vector3> positions)](https://docs.unity3d.com/ScriptReference/LineRenderer.SetPositions.html)
 - [LineRenderer.SetPositions(NativeSlice<Vector3> positions)](https://docs.unity3d.com/ScriptReference/LineRenderer.SetPositions.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/line_renderer.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/line_renderer.md) for more information on the data format.

@@ -49,4 +49,5 @@ Settings for the `TransformRecorderModule` can be found under `Edit > Project Se
 | Scale Threshold    | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
 | Scale Threshold    | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
 
-See the [associated proto files](../../file-format/proto-files/unity/transform.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/transform.md) for more information on the data format.

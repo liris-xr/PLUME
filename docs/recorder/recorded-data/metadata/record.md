@@ -11,4 +11,5 @@ Metadata about the record itself is recorded at the beginning of each recording.
 - The name of the record, as defined in the [recorder global settings](../../global-settings.md#global-settings) or in the call to `StartRecording`.
 - Extra metadata, as defined in the [recorder global settings](../../global-settings.md#global-settings) or in the call to `StartRecording`.
 
-See the [associated proto file](../../file-format/proto-files/record.md#recordmetadata) for more information on the data format.
+!!! info
+    See the [associated proto file](../../file-format/proto-files/record.md#recordmetadata) for more information on the data format.

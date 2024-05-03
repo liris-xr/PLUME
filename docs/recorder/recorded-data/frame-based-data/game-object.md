@@ -25,4 +25,5 @@ A [GameObjectUpdate](../../file-format/proto-files/unity/game-object.md#gameobje
 - [GameObject.tag](https://docs.unity3d.com/ScriptReference/GameObject-tag.html)
 - [void GameObject.SetActive(bool value)](https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/game_object.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/game_object.md) for more information on the data format.

@@ -39,6 +39,7 @@ When created, a [TerrainUpdate](../../file-format/proto-files/unity/terrain.md#t
 
 ### Hooks
 
-This recorder module doesn't hook into any methods to detect changes in the terrain component yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
+This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
 
-See the [associated proto files](../../file-format/proto-files/unity/terrain.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/terrain.md) for more information on the data format.

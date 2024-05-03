@@ -36,4 +36,5 @@ A [SkinnedMeshRendererUpdate](../../file-format/proto-files/unity/skinned_mesh_r
 - [SkinnedMeshRenderer.rootBone](https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer-rootBone.html)
 - [SkinnedMeshRenderer.SetBlendShapeWeight(int index, float value)](https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.SetBlendShapeWeight.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/skinned_mesh_renderer.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/skinned_mesh_renderer.md) for more information on the data format.

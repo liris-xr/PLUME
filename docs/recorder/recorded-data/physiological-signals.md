@@ -13,4 +13,5 @@ A [StreamOpen](../file-format/proto-files/lsl/lsl_stream.md#streamsample) sample
 
 When receiving data from a LSL stream, its timestamp is corrected to take into account any network latency and to be converted into the same time reference as the rest of the recorded data [timestamps](../timestamps.md). This is made possible thanks to the [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) (NTP) implemented by LSL to synchronize the clocks of the devices.
 
-See the [associated proto files](../file-format/proto-files/lsl/lsl_stream.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../file-format/proto-files/lsl/lsl_stream.md) for more information on the data format.

@@ -29,4 +29,5 @@ A [MeshRendererUpdate](../../file-format/proto-files/unity/mesh_renderer.md#mesh
 - [void Renderer.SetMaterials(List<Material> materials)](https://docs.unity3d.com/ScriptReference/Renderer.SetMaterials.html)
 - [void Renderer.SetSharedMaterials(List<Material> materials)](https://docs.unity3d.com/ScriptReference/Renderer.SetSharedMaterials.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/mesh_renderer.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/mesh_renderer.md) for more information on the data format.

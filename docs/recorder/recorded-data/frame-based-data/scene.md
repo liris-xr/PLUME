@@ -14,4 +14,5 @@ This recorder module hooks into the following methods to detect change of scene:
 - [SceneManager.sceneUnloaded](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager-sceneUnloaded.html)
 - [SceneManager.activeSceneChanged](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager-activeSceneChanged.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/scene.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/scene.md) for more information on the data format.

@@ -26,4 +26,5 @@ A [MeshFilterUpdate](../../file-format/proto-files/unity/mesh_filter.md#meshfilt
 
 - [MeshFilter.sharedMesh](https://docs.unity3d.com/ScriptReference/MeshFilter-sharedMesh.html)
 
-See the [associated proto files](../../file-format/proto-files/unity/mesh_filter.md) for more information on the data format.
+!!! info
+    See the [associated proto files](../../file-format/proto-files/unity/mesh_filter.md) for more information on the data format.

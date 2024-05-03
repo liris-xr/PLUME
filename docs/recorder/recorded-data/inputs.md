@@ -7,4 +7,5 @@ The inputs are recorded by the `InputSystemRecorderModule` for the actions liste
 !!! info
     For now the `InputSystemRecorderModule` is still dependant on the XRITK input action manager. This will be updated in the future to decouple the input recording from the XRITK input action manager.
 
-See the [associated proto file](../file-format/proto-files/unity/xritk/input_action.md) for more information on the data format.
+!!! info
+    See the [associated proto file](../file-format/proto-files/unity/xritk/input_action.md) for more information on the data format.
