@@ -28,12 +28,12 @@ As transforms can be updated internally by the physics engine, and as we cannot 
 
 A [TransformUpdate](../../file-format/proto-files/unity/transform.md#transformupdate) sample is emitted when a change in the hierarchy is detected. The following methods are hooked to detect those changes:
 
-- [Transform.SetParent(Transform p)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
-- [Transform.SetParent(Transform p, bool worldPositionStays)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
+- [void Transform.SetParent(Transform p)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
+- [void Transform.SetParent(Transform p, bool worldPositionStays)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
 - [Transform.parent](https://docs.unity3d.com/ScriptReference/Transform-parent.html)
-- [Transform.SetSiblingIndex(int index)](https://docs.unity3d.com/ScriptReference/Transform.SetSiblingIndex.html)
-- [Transform.SetAsFirstSibling()](https://docs.unity3d.com/ScriptReference/Transform.SetAsFirstSibling.html)
-- [Transform.SetAsLastSibling()](https://docs.unity3d.com/ScriptReference/Transform.SetAsLastSibling.html)
+- [void Transform.SetSiblingIndex(int index)](https://docs.unity3d.com/ScriptReference/Transform.SetSiblingIndex.html)
+- [void Transform.SetAsFirstSibling()](https://docs.unity3d.com/ScriptReference/Transform.SetAsFirstSibling.html)
+- [void Transform.SetAsLastSibling()](https://docs.unity3d.com/ScriptReference/Transform.SetAsLastSibling.html)
 
 ## Settings
 
