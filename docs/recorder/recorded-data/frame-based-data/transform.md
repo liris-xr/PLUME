@@ -4,11 +4,15 @@ Transforms contain the objects' position, rotation and scale.
 
 The `TransformRecorderModule` automatically picks up every transform in the scene and records:
 
-- The local position: (x, y, z) position relative to its parent.
-- The local rotation: (x, y, z, w) rotation quaternion relative to its parent.
-- The local scale: (x, y, z) scale relative to its parent.
-- The transform parent
-- The transform sibling index
+- Local position: (x, y, z) position relative to its parent.
+
+    !!! note
+        The position is expressed in local space, this means that depending on the scale of its parents in the hierarchy, the value might not be expressed in meters. If you need to work with world positions, see how to [convert local positions to world positions](#convert-local-positions-to-world-positions).
+
+- Local rotation: (x, y, z, w) rotation quaternion relative to its parent.
+- Local scale: (x, y, z) scale relative to its parent.
+- Sibling index
+- Reference to the transform's parent
 
 For efficient recording, new samples are emitted only when the difference in position, rotation or scale is significative enough to be considered as a change. Those threshold are defined in the [settings](#settings).
 
