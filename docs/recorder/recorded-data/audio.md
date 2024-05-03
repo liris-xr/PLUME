@@ -1,5 +1,7 @@
 # Audio
 
+Audio is an essential part of many experiments, whether it is to test the effect of specific audio stimuli, spatialized audio or special effects.
+
 The audio stream from the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) is automatically recorded when the `AudioRecorderModule` is enabled in the settings. The audio is recorded as a `.wav` file alongside the record file.
 
 !!! warning

@@ -1,8 +1,10 @@
 # Inputs
 
-The `InputSystemRecorderModule` record inputs from the actions assets listed in the [XRITK input action manager](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.0/manual/input-action-manager.html). For a classic XRITK installation, this includes all the controllers inputs such as triggers, buttons, and so on.
+Inputs are the actions performed by the user in the application. This can be a button press, a trigger pull, a joystick movement, and so on.
 
-The proto specification documentation for the input samples can be found [here](../file-format/proto-files/unity/xritk/input_action.md). 
+The inputs are recorded by the `InputSystemRecorderModule` for the actions listed in the [XRITK input action manager](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.0/manual/input-action-manager.html).
 
 !!! info
-    The `InputSystemRecorderModule` is still in development and will be improved in the future, starting by decoupling the recorder from the XRITK input action manager.
+    For now the `InputSystemRecorderModule` is still dependant on the XRITK input action manager. This will be updated in the future to decouple the input recording from the XRITK input action manager.
+
+See the [associated proto file](../file-format/proto-files/unity/xritk/input_action.md) for more information on the data format.
