@@ -1,6 +1,8 @@
 # Transform
 
-Transforms are the objects' position, rotation and scale. The `TransformRecorderModule` picks up every transform in the scene and record:
+Transforms contain the objects' position, rotation and scale.
+
+The `TransformRecorderModule` automatically picks up every transform in the scene and record:
 
 - The local position: (x, y, z) position relative to its parent.
 - The local rotation: (x, y, z, w) rotation quaternion relative to its parent.
@@ -21,8 +23,8 @@ Due to the nature of the transform, any change in position, rotation and scale i
 
 Settings for the `TransformRecorderModule` can be found under `Edit > Project Settings > PLUME Recorder > Frame Recorder > Transform`.
 
-| Setting | Type | Description |
-|---|---|---|
-| Position Threshold | float | Threshold over which movements will be effectively recorded. The value is expressed in local space. |
-| Scale Threshold | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
-| Scale Threshold | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
+| Setting            | Type  | Description                                                                                                   |
+| ------------------ | ----- | ------------------------------------------------------------------------------------------------------------- |
+| Position Threshold | float | Threshold over which movements will be effectively recorded. The value is expressed in local space.           |
+| Scale Threshold    | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
+| Scale Threshold    | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
