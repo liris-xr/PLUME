@@ -68,4 +68,4 @@ Record files are saved in the <a href="https://docs.unity3d.com/ScriptReference/
 
 ## Issues with this step of the walkthrough ?
 
-If you encounter any errors or issues, please <a href="https://github.com/liris-xr/PLUME-Recorder/issues">create an issue</a> or [contact us](../contact.md).
+If you encounter any errors or issues, please <a href="https://github.com/liris-xr/PLUME-Recorder/issues">create an issue</a> or [contact us](../about.md#contact).
