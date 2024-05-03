@@ -1,6 +1,6 @@
 # Audio
 
-The `AudioRecorderModule` can be used to record the audio stream sent to the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) component. When enabled, a separate `.wav` file containing the audio samples will be created alongside the record file.
+The audio stream from the [AudioListener](https://docs.unity3d.com/Manual/class-AudioListener.html) is automatically recorded when the `AudioRecorderModule` is enabled in the settings. The audio is recorded as a `.wav` file alongside the record file.
 
 !!! warning
     The audio recorder module is disabled by default in the settings. If you want to record audio, make sure to enable it before running your experiment.
@@ -16,7 +16,7 @@ The audio system of Unity runs on a separated thread. As a result, the audio Dig
 
 ## Settings
 
-| Setting | Type | Description |
-|---|---|---|
-| Enable | bool | Enable or disable the module. Disabled by default to prevent creating heavy WAV file when not required. |
-| Log Silence Insertion | bool | When enabled, insertion of silence inside the `.wav` file will be logged in the Unity console. |
+| Setting               | Type | Description                                                                                             |
+| --------------------- | ---- | ------------------------------------------------------------------------------------------------------- |
+| Enable                | bool | Enable or disable the module. Disabled by default to prevent creating heavy WAV file when not required. |
+| Log Silence Insertion | bool | When enabled, insertion of silence inside the `.wav` file will be logged in the Unity console.          |
