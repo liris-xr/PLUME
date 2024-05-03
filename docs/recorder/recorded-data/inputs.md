@@ -11,4 +11,4 @@ For now the `InputSystemRecorderModule` is still dependant on the XRITK input ac
 
 
 !!! info
-    See the [associated proto file](../file-format/proto-files/unity/xritk/input_action.md) for more information on the data format.
+    See the [associated proto file](../advanced/format-specifications/unity/xritk/input_action.md) for more information on the data format.

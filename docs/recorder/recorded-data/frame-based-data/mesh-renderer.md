@@ -9,15 +9,15 @@ The `MeshRendererRecorderModule` automatically picks up every mesh renderer in t
 
 ## Creation and destruction
 
-The creation and destruction of a mesh renderer component are recorded as a [MeshRendererCreate](../../file-format/proto-files/unity/mesh_renderer.md#meshrenderercreate) and [MeshRendererDestroy](../../file-format/proto-files/unity/mesh_renderer.md#meshrendererdestroy) sample respectively.
+The creation and destruction of a mesh renderer component are recorded as a [MeshRendererCreate](../../advanced/format-specifications/unity/mesh_renderer.md#meshrenderercreate) and [MeshRendererDestroy](../../advanced/format-specifications/unity/mesh_renderer.md#meshrendererdestroy) sample respectively.
 
-When created, a [MeshRendererUpdate](../../file-format/proto-files/unity/mesh_renderer.md#meshrendererupdate) and [RendererUpdate](../../file-format/proto-files/unity/renderer.md#rendererupdate) samples are emitted with the initial values of the mesh renderer component.
+When created, a [MeshRendererUpdate](../../advanced/format-specifications/unity/mesh_renderer.md#meshrendererupdate) and [RendererUpdate](../../advanced/format-specifications/unity/renderer.md#rendererupdate) samples are emitted with the initial values of the mesh renderer component.
 
 ## Update
 
 ### Hooks
 
-A [MeshRendererUpdate](../../file-format/proto-files/unity/mesh_renderer.md#meshrendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
+A [MeshRendererUpdate](../../advanced/format-specifications/unity/mesh_renderer.md#meshrendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
 
 - [Renderer.enabled](https://docs.unity3d.com/ScriptReference/Renderer-enabled.html)
 - [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html)
@@ -30,4 +30,4 @@ A [MeshRendererUpdate](../../file-format/proto-files/unity/mesh_renderer.md#mesh
 - [void Renderer.SetSharedMaterials(List<Material> materials)](https://docs.unity3d.com/ScriptReference/Renderer.SetSharedMaterials.html)
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/mesh_renderer.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/mesh_renderer.md) for more information on the data format.

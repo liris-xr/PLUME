@@ -37,9 +37,9 @@ The `LightRecorderModule` automatically picks up every light in the scene and re
 
 ## Creation and destruction
 
-The creation and destruction of a light are recorded as a [LightCreate](../../file-format/proto-files/unity/light.md#lightcreate) and [LightDestroy](../../file-format/proto-files/unity/light.md#lightdestroy) sample respectively.
+The creation and destruction of a light are recorded as a [LightCreate](../../advanced/format-specifications/unity/light.md#lightcreate) and [LightDestroy](../../advanced/format-specifications/unity/light.md#lightdestroy) sample respectively.
 
-When created, a [LightUpdate](../../file-format/proto-files/unity/light.md#lightupdate) sample is emitted with the initial properties of the light.
+When created, a [LightUpdate](../../advanced/format-specifications/unity/light.md#lightupdate) sample is emitted with the initial properties of the light.
 
 ## Update
 
@@ -48,4 +48,4 @@ When created, a [LightUpdate](../../file-format/proto-files/unity/light.md#light
 This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/light.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/light.md) for more information on the data format.

@@ -15,7 +15,6 @@ theme:
     accent: 'light blue'
   features:
     - content.action.edit
-    - navigation.indexes
     - navigation.footer
     - navigation.tabs
     - content.code.copy

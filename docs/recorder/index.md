@@ -1,3 +1,6 @@
+---
+title: Recorder
+---
 <style>
   .md-typeset h1,
   .md-content__button {

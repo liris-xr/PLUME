@@ -20,8 +20,8 @@ The `SceneGuidRegistry` contains the correspondences between each scene object a
 
 <figure>
 <div class="center-h-v gap-10">
-<img src="../images/scene_guid_registry_in_hierarchy.png" alt="scene guid registry in hierarchy" />
-<img src="../images/scene_guid_registry.png" alt="scene guid registry" style="height:300px" />
+<img src="../../images/scene_guid_registry_in_hierarchy.png" alt="scene guid registry in hierarchy" />
+<img src="../../images/scene_guid_registry.png" alt="scene guid registry" style="height:300px" />
 </div>
 <figcaption>Exemple of a scene GUID registry in the editor hierarchy (left) and the component UI (right).</figcaption>
 </figure>
@@ -29,11 +29,11 @@ The `SceneGuidRegistry` contains the correspondences between each scene object a
 ### Assets GUID registry
 
 The assets GUID registry is unique and is located in `Assets/Resources`. It contains the correspondences between each assets used in the scenes specified in the build settings or, if none, the currently opened scene. The `AssetsGuidRegistry` is automatically created on build or when entering play mode in the editor.
-Entries of the assets GUID registry contains an additional property called `Asset Bundle Path`. This is used by the [PLUME Viewer](../viewer/index.md) to find the asset inside the [asset bundle](asset-bundle.md).
+Entries of the assets GUID registry contains an additional property called `Asset Bundle Path`. This is used by the [PLUME Viewer](../../viewer/index.md) to find the asset inside the [asset bundle](asset-bundle.md).
 
 <figure>
 <div>
-<img src="../images/assets_guid_registry.png" alt="scene guid registry" style="height:300px" />
+<img src="../../images/assets_guid_registry.png" alt="scene guid registry" style="height:300px" />
 </div>
 <figcaption>Exemple of an assets GUID registry component UI.</figcaption>
 </figure>

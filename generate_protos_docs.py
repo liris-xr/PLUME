@@ -11,7 +11,7 @@ last_proto_template_mtime = None
 def generate_protos_docs(force_rebuild=False):
     global last_proto_template_mtime
 
-    file_format_dir = "./docs/recorder/file-format/"
+    file_format_dir = "./docs/recorder/advanced/"
 
     protos_docs_template = os.path.join(file_format_dir, "proto_docs.tmpl")
     template_mtime = os.path.getmtime(protos_docs_template)
@@ -21,7 +21,7 @@ def generate_protos_docs(force_rebuild=False):
         last_proto_template_mtime = template_mtime
 
     protos_dir = "./external/PLUME-Protos/"
-    protos_docs_dir = os.path.join(file_format_dir, "proto-files/")
+    protos_docs_dir = os.path.join(file_format_dir, "format-specifications/")
 
     if which("protoc") is None:
         print("protoc not found. Ensure that you installed and added it to your PATH.")

@@ -1,12 +1,7 @@
 nav:
     - index.md
-    - getting-started.md
-    - demonstration
     - recorder
     - viewer
     - python
     - contributing.md
-    - license.md
-    - citation.md
-    - contact.md
-    - ...
+    - about.md

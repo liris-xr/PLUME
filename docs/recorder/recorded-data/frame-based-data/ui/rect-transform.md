@@ -4,15 +4,15 @@ The `RectTransformRecorderModule` automatically picks up every [RectTransform](h
 
 ## Creation and destruction
 
-The creation and destruction of a ContentSizeFitter component are recorded as a [ContentSizeFitterCreate](../../../file-format/proto-files/unity/ui/content_size_fitter.md#contentsizefittercreate) and [ContentSizeFitterDestroy](../../../file-format/proto-files/unity/ui/content_size_fitter.md#contentsizefitterdestroy) sample respectively.
+The creation and destruction of a ContentSizeFitter component are recorded as a [ContentSizeFitterCreate](../../../advanced/format-specifications/unity/ui/content_size_fitter.md#contentsizefittercreate) and [ContentSizeFitterDestroy](../../../advanced/format-specifications/unity/ui/content_size_fitter.md#contentsizefitterdestroy) sample respectively.
 
-When created, a [ContentSizeFitterUpdate](../../../file-format/proto-files/unity/ui/content_size_fitter.md#contentsizefitterupdate) sample is emitted with the initial properties of the content size fitter component.
+When created, a [ContentSizeFitterUpdate](../../../advanced/format-specifications/unity/ui/content_size_fitter.md#contentsizefitterupdate) sample is emitted with the initial properties of the content size fitter component.
 
 ## Update
 
 ### Hooks
 
-This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
+This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../../file-format/proto-files/unity/ui/rect_transform.md) for more information on the data format.
+    See the [associated proto files](../../../advanced/format-specifications/unity/ui/rect_transform.md) for more information on the data format.

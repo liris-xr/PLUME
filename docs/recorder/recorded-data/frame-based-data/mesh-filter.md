@@ -8,15 +8,15 @@ The `MeshFilterRecorderModule` automatically picks up every mesh filter in the s
 
 ## Creation and destruction
 
-The creation and destruction of a mesh filter component are recorded as a [MeshFilterCreate](../../file-format/proto-files/unity/mesh_filter.md#meshfiltercreate) and [MeshFilterDestroy](../../file-format/proto-files/unity/mesh_filter.md#meshfilterdestroy) sample respectively.
+The creation and destruction of a mesh filter component are recorded as a [MeshFilterCreate](../../advanced/format-specifications/unity/mesh_filter.md#meshfiltercreate) and [MeshFilterDestroy](../../advanced/format-specifications/unity/mesh_filter.md#meshfilterdestroy) sample respectively.
 
-When created, a [MeshFilterUpdate](../../file-format/proto-files/unity/mesh_filter.md#meshfilterupdate) sample is emitted with the initial values of the mesh filter component.
+When created, a [MeshFilterUpdate](../../advanced/format-specifications/unity/mesh_filter.md#meshfilterupdate) sample is emitted with the initial values of the mesh filter component.
 
 ## Update
 
 ### Hooks
 
-A [MeshFilterUpdate](../../file-format/proto-files/unity/mesh_filter.md#meshfilterupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
+A [MeshFilterUpdate](../../advanced/format-specifications/unity/mesh_filter.md#meshfilterupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
 
 - [MeshFilter.mesh (setter)](https://docs.unity3d.com/ScriptReference/MeshFilter-mesh.html)
 - [MeshFilter.mesh (getter)](https://docs.unity3d.com/ScriptReference/MeshFilter-mesh.html)
@@ -27,4 +27,4 @@ A [MeshFilterUpdate](../../file-format/proto-files/unity/mesh_filter.md#meshfilt
 - [MeshFilter.sharedMesh](https://docs.unity3d.com/ScriptReference/MeshFilter-sharedMesh.html)
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/mesh_filter.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/mesh_filter.md) for more information on the data format.

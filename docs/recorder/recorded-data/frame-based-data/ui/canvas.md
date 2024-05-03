@@ -4,15 +4,15 @@ The `CanvasRecorderModule` automatically picks up every [Canvas](https://docs.un
 
 ## Creation and destruction
 
-The creation and destruction of a Canvas component are recorded as a [CanvasCreate](../../../file-format/proto-files/unity/ui/canvas.md#canvascreate) and [CanvasDestroy](../../../file-format/proto-files/unity/ui/canvas.md#canvasdestroy) sample respectively.
+The creation and destruction of a Canvas component are recorded as a [CanvasCreate](../../../advanced/format-specifications/unity/ui/canvas.md#canvascreate) and [CanvasDestroy](../../../advanced/format-specifications/unity/ui/canvas.md#canvasdestroy) sample respectively.
 
-When created, a [CanvasUpdate](../../../file-format/proto-files/unity/ui/canvas.md#canvasupdate) sample is emitted with the initial properties of the Canvas component.
+When created, a [CanvasUpdate](../../../advanced/format-specifications/unity/ui/canvas.md#canvasupdate) sample is emitted with the initial properties of the Canvas component.
 
 ## Update
 
 ### Hooks
 
-This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
+This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../../file-format/proto-files/unity/ui/canvas.md) for more information on the data format.
+    See the [associated proto files](../../../advanced/format-specifications/unity/ui/canvas.md) for more information on the data format.

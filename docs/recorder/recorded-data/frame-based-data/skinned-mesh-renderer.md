@@ -13,15 +13,15 @@ The `SkinnedMeshRendererRecorderModule` automatically picks up every skinned mes
 
 ## Creation and destruction
 
-The creation and destruction of a skinned mesh renderer component are recorded as a [SkinnedMeshRendererCreate](../../file-format/proto-files/unity/skinned_mesh_renderer.md#skinnedmeshrenderercreate) and [SkinnedMeshRendererDestroy](../../file-format/proto-files/unity/skinned_mesh_renderer.md#skinnedmeshrendererdestroy) sample respectively.
+The creation and destruction of a skinned mesh renderer component are recorded as a [SkinnedMeshRendererCreate](../../advanced/format-specifications/unity/skinned_mesh_renderer.md#skinnedmeshrenderercreate) and [SkinnedMeshRendererDestroy](../../advanced/format-specifications/unity/skinned_mesh_renderer.md#skinnedmeshrendererdestroy) sample respectively.
 
-When created, a [SkinnedMeshRendererUpdate](../../file-format/proto-files/unity/skinned_mesh_renderer.md#skinnedmeshrendererupdate) and [RendererUpdate](../../file-format/proto-files/unity/renderer.md#rendererupdate) samples are emitted with the initial values of the skinned mesh renderer component.
+When created, a [SkinnedMeshRendererUpdate](../../advanced/format-specifications/unity/skinned_mesh_renderer.md#skinnedmeshrendererupdate) and [RendererUpdate](../../advanced/format-specifications/unity/renderer.md#rendererupdate) samples are emitted with the initial values of the skinned mesh renderer component.
 
 ## Update
 
 ### Hooks
 
-A [SkinnedMeshRendererUpdate](../../file-format/proto-files/unity/skinned_mesh_renderer.md#skinnedmeshrendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
+A [SkinnedMeshRendererUpdate](../../advanced/format-specifications/unity/skinned_mesh_renderer.md#skinnedmeshrendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
 
 - [Renderer.enabled](https://docs.unity3d.com/ScriptReference/Renderer-enabled.html)
 - [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html)
@@ -37,4 +37,4 @@ A [SkinnedMeshRendererUpdate](../../file-format/proto-files/unity/skinned_mesh_r
 - [SkinnedMeshRenderer.SetBlendShapeWeight(int index, float value)](https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.SetBlendShapeWeight.html)
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/skinned_mesh_renderer.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/skinned_mesh_renderer.md) for more information on the data format.

@@ -10,7 +10,7 @@ The Graphic component is an abstract type that is derived by UI elements such as
 
 ### Hooks
 
-This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
+This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../../file-format/proto-files/unity/ui/graphic.md) for more information on the data format.
+    See the [associated proto files](../../../advanced/format-specifications/unity/ui/graphic.md) for more information on the data format.

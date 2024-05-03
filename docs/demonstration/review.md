@@ -2,7 +2,7 @@
 You can replay your performance using PLUME-Viewer. If you don't have any record file, you can create one by following the [previous tutorial](record.md) or downloading [sample files](https://github.com/liris-xr/PLUME-Demo/tree/master/EasterEggHunt/Samples).
 
 ## Build *Easter Egg Hunt* asset bundle
-To replay your recordings, you need an [Asset Bundle](../recorder/asset-bundle.md), which countains the project assets in a single file.
+To replay your recordings, you need an [Asset Bundle](../recorder/advanced/asset-bundle.md), which countains the project assets in a single file.
 Going back to the Unity Editor of the *Easter Egg Hunt* project, build the asset bundle by going to `PLUME > Build Asset Bundle`. An archive named `plume_bundle.zip` will be generated under `Assets/AssetBundles/`.
 
 !!! info

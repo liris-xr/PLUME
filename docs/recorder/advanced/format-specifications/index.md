@@ -1,4 +1,7 @@
-# File format
+---
+title: Format specifications
+---
+# Format specifications
 
 ## Overview
 
@@ -15,7 +18,7 @@ The file contains a sequence of serialized [packed samples](#sample-packing), pr
 
 ## Packed samples
 
-Recorded data is specified in `.proto` files. This file format has the advantage of being easily convertible to data structures in several languages (C#, Python, C/C++, etc). In practice, this means that the specification of the recorded data is decoupled from the recorder itself, and also allows for reading the resulting `.plm` files from any language of your liking. This is what we use for [PLUME Python](../../python/index.md).
+Recorded data is specified in `.proto` files. This file format has the advantage of being easily convertible to data structures in several languages (C#, Python, C/C++, etc). In practice, this means that the specification of the recorded data is decoupled from the recorder itself, and also allows for reading the resulting `.plm` files from any language of your liking. This is what we use for [PLUME Python](../../../python/index.md).
 
 ??? example "Example of a proto file"
     A proto file is defined by a list of properties with a type, a name, and an id. For more information on the `.proto` file format, see the [documentation](https://protobuf.dev/programming-guides/proto3/).

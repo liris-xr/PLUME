@@ -31,9 +31,9 @@ The `TerrainRecorderModule` automatically picks up every terrain in the scene an
 
 ## Creation and destruction
 
-The creation and destruction of a terrain component are recorded as a [TerrainCreate](../../file-format/proto-files/unity/terrain.md#terraincreate) and [TerrainDestroy](../../file-format/proto-files/unity/terrain.md#terraindestroy) sample respectively.
+The creation and destruction of a terrain component are recorded as a [TerrainCreate](../../advanced/format-specifications/unity/terrain.md#terraincreate) and [TerrainDestroy](../../advanced/format-specifications/unity/terrain.md#terraindestroy) sample respectively.
 
-When created, a [TerrainUpdate](../../file-format/proto-files/unity/terrain.md#terrainupdate) sample is emitted with the initial values of the terrain component.
+When created, a [TerrainUpdate](../../advanced/format-specifications/unity/terrain.md#terrainupdate) sample is emitted with the initial values of the terrain component.
 
 ## Update
 
@@ -42,4 +42,4 @@ When created, a [TerrainUpdate](../../file-format/proto-files/unity/terrain.md#t
 This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/terrain.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/terrain.md) for more information on the data format.

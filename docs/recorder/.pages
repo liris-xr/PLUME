@@ -1,7 +1,6 @@
-title: PLUME Recorder
-
 nav:
-    - index.md
-    - installation.md
+    - Index: index.md
+    - getting-started.md
     - global-settings.md
     - ...
+    - advanced

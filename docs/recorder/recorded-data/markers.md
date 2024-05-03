@@ -9,4 +9,4 @@ PlumeRecorder.RecordMarker("MyMarkerLabel");
 The marker will be automatically timestamped with the current time in the recording.
 
 !!! info
-    See the [associated proto file](../file-format/proto-files/common/marker.md) for more information on the data format.
+    See the [associated proto file](../advanced/format-specifications/common/marker.md) for more information on the data format.

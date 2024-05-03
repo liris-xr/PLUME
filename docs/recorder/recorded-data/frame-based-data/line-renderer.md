@@ -18,15 +18,15 @@ The `LineRendererRecorderModule` automatically picks up every line renderer in t
 
 ## Creation and destruction
 
-The creation and destruction of a line renderer component are recorded as a [LineRendererCreate](../../file-format/proto-files/unity/line_renderer.md#linerenderercreate) and [LineRendererDestroy](../../file-format/proto-files/unity/line_renderer.md#linerendererdestroy) sample respectively.
+The creation and destruction of a line renderer component are recorded as a [LineRendererCreate](../../advanced/format-specifications/unity/line_renderer.md#linerenderercreate) and [LineRendererDestroy](../../advanced/format-specifications/unity/line_renderer.md#linerendererdestroy) sample respectively.
 
-When created, a [LineRendererUpdate](../../file-format/proto-files/unity/line_renderer.md#linerendererupdate) sample is emitted with the initial values of the line renderer component.
+When created, a [LineRendererUpdate](../../advanced/format-specifications/unity/line_renderer.md#linerendererupdate) sample is emitted with the initial values of the line renderer component.
 
 ## Update
 
 ### Hooks
 
-A [LineRendererUpdate](../../file-format/proto-files/unity/line_renderer.md#linerendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
+A [LineRendererUpdate](../../advanced/format-specifications/unity/line_renderer.md#linerendererupdate) sample is emitted when a change in the component properties is detected. The following methods are hooked to detect those changes:
 
 - [Renderer.enabled](https://docs.unity3d.com/ScriptReference/Renderer-enabled.html)
 - [Renderer.material](https://docs.unity3d.com/ScriptReference/Renderer-material.html)
@@ -49,4 +49,4 @@ A [LineRendererUpdate](../../file-format/proto-files/unity/line_renderer.md#line
 - [LineRenderer.SetPositions(NativeSlice<Vector3> positions)](https://docs.unity3d.com/ScriptReference/LineRenderer.SetPositions.html)
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/line_renderer.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/line_renderer.md) for more information on the data format.

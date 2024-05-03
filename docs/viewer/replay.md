@@ -1,8 +1,8 @@
 # Replay
 
-## Introduction
+## Opening a Record
 
-To replay a record file produced by the [PLUME Recorder](../recorder/index.md), you will need your record `.plm` file along with the [asset bundle](../recorder/asset-bundle.md) associated to the project.
+To replay a record file produced by the [PLUME Recorder](../recorder/index.md), you will need your record `.plm` file along with the [asset bundle](../recorder/advanced/asset-bundle.md) associated to the project.
 
 1. Launch PLUME Viewer.
 2. Select the `.plm` file you want to replay.
@@ -26,3 +26,5 @@ Your browser does not support the video tag.
 
 ## Controls
 
+!!! warning
+    This section is WIP.

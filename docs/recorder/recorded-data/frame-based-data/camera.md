@@ -49,9 +49,9 @@ The `CameraRecorderModule` automatically picks up every camera in the scene and 
 
 ## Creation and destruction
 
-The creation and destruction of a camera are recorded as a [CameraCreate](../../file-format/proto-files/unity/camera.md#cameracreate) and [CameraDestroy](../../file-format/proto-files/unity/camera.md#cameradestroy) sample respectively.
+The creation and destruction of a camera are recorded as a [CameraCreate](../../advanced/format-specifications/unity/camera.md#cameracreate) and [CameraDestroy](../../advanced/format-specifications/unity/camera.md#cameradestroy) sample respectively.
 
-When created, a [CameraUpdate](../../file-format/proto-files/unity/camera.md#cameraupdate) sample is emitted with the initial properties of the camera.
+When created, a [CameraUpdate](../../advanced/format-specifications/unity/camera.md#cameraupdate) sample is emitted with the initial properties of the camera.
 
 ## Update
 
@@ -60,4 +60,4 @@ When created, a [CameraUpdate](../../file-format/proto-files/unity/camera.md#cam
 This recorder module doesn't hook into any methods to detect changes in the component properties yet. If you need to record dynamic changes, feel free to [contribute](../../../contributing.md).
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/camera.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/camera.md) for more information on the data format.

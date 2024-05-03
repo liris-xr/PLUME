@@ -18,19 +18,19 @@ For efficient recording, new samples are emitted only when the difference in pos
 
 ## Creation and destruction
 
-The creation and destruction of a transform are recorded as a [TransformCreate](../../file-format/proto-files/unity/transform.md#transformcreate) and [TransformDestroy](../../file-format/proto-files/unity/transform.md#transformdestroy) sample respectively.
+The creation and destruction of a transform are recorded as a [TransformCreate](../../advanced/format-specifications/unity/transform.md#transformcreate) and [TransformDestroy](../../advanced/format-specifications/unity/transform.md#transformdestroy) sample respectively.
 
-When created, a [TransformUpdate](../../file-format/proto-files/unity/transform.md#transformupdate) sample is emitted with the initial position, rotation, scale, parent and sibling index.
+When created, a [TransformUpdate](../../advanced/format-specifications/unity/transform.md#transformupdate) sample is emitted with the initial position, rotation, scale, parent and sibling index.
 
 ## Update
 
 ### Polling
 
-As transforms can be updated internally by the physics engine, and as we cannot inject hooks in the Unity Engine (mainly for legal reasons), we are constrained to poll changes in the transform's position, rotation and scale at the end of the frame. In order to keep high performance, we use the Burst compiler to detect the changes in parallel with optimized code. Every time a change is detected and is above the defined threshold in the [settings](#settings), a [TransformUpdate](../../file-format/proto-files/unity/transform.md#transformupdate) sample is emitted with the updated position, rotation and scale.
+As transforms can be updated internally by the physics engine, and as we cannot inject hooks in the Unity Engine (mainly for legal reasons), we are constrained to poll changes in the transform's position, rotation and scale at the end of the frame. In order to keep high performance, we use the Burst compiler to detect the changes in parallel with optimized code. Every time a change is detected and is above the defined threshold in the [settings](#settings), a [TransformUpdate](../../advanced/format-specifications/unity/transform.md#transformupdate) sample is emitted with the updated position, rotation and scale.
 
 ### Hooks
 
-A [TransformUpdate](../../file-format/proto-files/unity/transform.md#transformupdate) sample is emitted when a change in the hierarchy is detected. The following methods are hooked to detect those changes:
+A [TransformUpdate](../../advanced/format-specifications/unity/transform.md#transformupdate) sample is emitted when a change in the hierarchy is detected. The following methods are hooked to detect those changes:
 
 - [void Transform.SetParent(Transform p)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
 - [void Transform.SetParent(Transform p, bool worldPositionStays)](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html)
@@ -50,4 +50,4 @@ Settings for the `TransformRecorderModule` can be found under `Edit > Project Se
 | Scale Threshold    | float | Threshold over which the change in scale will be effectively recorded. The value is expressed in local space. |
 
 !!! info
-    See the [associated proto files](../../file-format/proto-files/unity/transform.md) for more information on the data format.
+    See the [associated proto files](../../advanced/format-specifications/unity/transform.md) for more information on the data format.
