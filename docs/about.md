@@ -1,8 +1,8 @@
 # About
 
-PLUME is an open-source software (GPLv3) toolbox that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (see an example), and their easy sharing due to our compact and interoperable data format. It was first presented at IEEE VR 2024 both as a demo and a conference paper and is was published at the same time in the [IEEE Transactions on Visualization and Computer Graphics journal](https://www.computer.org/csdl/journal/tg/2024/05/10458415/1V2s4TP60so).
+PLUME is an open-source software (GPLv3) toolbox that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (see an example), and their easy sharing due to our compact and interoperable data format. It was presented at the IEEE VR 2024 conference both as a demo and a scientific paper (accepted in the journal track) and was published in the [IEEE Transactions on Visualization and Computer Graphics journal](https://www.computer.org/csdl/journal/tg/2024/05/10458415/1V2s4TP60so).
 
-This project was developed in the LIRIS laboratory. It was supported by the Région Auvergne-Rhône-Alpes through the PROMESS project and the French National Research Agency (ANR) through the [RENFORCE project](https://projet.liris.cnrs.fr/renforce/).
+This project was developed in the LIRIS laboratory. It was supported by the Région Auvergne-Rhône-Alpes (PROMESS project), the French National Research Agency ([RENFORCE project](https://projet.liris.cnrs.fr/renforce/)) and the École Centrale de Lyon/ENISE.
 
 <div class="md-container center-h gap-30 flex-row">
 	<div class="column">
@@ -13,6 +13,9 @@ This project was developed in the LIRIS laboratory. It was supported by the Rég
 	</div>
 	<div class="column">
 		<a href="https://liris.cnrs.fr/renforce/"><img src="../images/logo_liris.png" alt="LIRIS" style="height: 30px"></a>
+	</div>
+	<div class="column">
+		<a href="https://www.enise.fr/"><img src="../images/logo_enise.jpg" alt="ENISE" style="height: 30px"></a>
 	</div>
 </div>
 
