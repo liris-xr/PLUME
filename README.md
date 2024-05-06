@@ -3,7 +3,7 @@
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="docs/images/plume_logo_dark.png">
             <source media="(prefers-color-scheme: light)" srcset="docs/images/plume_logo_light.png">
-            <img alt="PLUME banner." src="docs/images/plume_logo_light.png" style="max-height: 150px">
+            <img alt="PLUME banner." src="docs/images/plume_logo_light.png" width="350">
         </picture>
     </a>
     <p>
