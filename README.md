@@ -7,13 +7,13 @@
         </picture>
     </a>
     <p>
-        <a href="https://opensource.org/license/gpl-3-0">
+        <a style="text-decoration:none;" href="https://opensource.org/license/gpl-3-0">
             <img alt="License badge" src="https://img.shields.io/badge/license-GPLv3-blue.svg"/>
         </a>
-        <a href="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml">
+        <a style="text-decoration:none;" href="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml">
             <img alt="Documentation badge" src="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml/badge.svg"/>
         </a>
-        <a href="https://discord.gg/c3evqEWMge">
+        <a style="text-decoration:none;" href="https://discord.gg/c3evqEWMge">
             <img alt="Discord badge" src="https://img.shields.io/discord/1151165491767935107?logo=discord&logoColor=white&label=discord"/>
         </a>
     </p>
