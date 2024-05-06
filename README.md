@@ -7,25 +7,18 @@
         </picture>
     </a>
     <p>
-        <a style="text-decoration:none !important;" href="https://opensource.org/license/gpl-3-0">
-            <img alt="License badge" src="https://img.shields.io/badge/license-GPLv3-blue.svg"/>
-        </a>
-        <a style="text-decoration:none !important;" href="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml">
-            <img alt="Documentation badge" src="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml/badge.svg"/>
-        </a>
-        <a style="text-decoration:none !important;" href="https://discord.gg/c3evqEWMge">
-            <img alt="Discord badge" src="https://img.shields.io/discord/1151165491767935107?logo=discord&logoColor=white&label=discord"/>
-        </a>
+        <a href="https://opensource.org/license/gpl-3-0"><img alt="License badge" src="https://img.shields.io/badge/license-GPLv3-blue.svg"/></a>
+        <a href="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml"><img alt="Documentation badge" src="https://github.com/liris-xr/PLUME/actions/workflows/docs.yml/badge.svg"/></a>
+        <a href="https://discord.gg/c3evqEWMge"><img alt="Discord badge" src="https://img.shields.io/discord/1151165491767935107?logo=discord&logoColor=white&label=discord"/></a>
     </p>
 </div>
 <p align="center">
-    <br />
     Charles Javerliat, Sophie Villenave, Pierre Raimbaud, Guillaume Lavoué
     <br />
-    <em>(Journal Track) IEEE Conference on Virtual Reality and 3D User Interfaces</em>
+    <em>IEEE Conference on Virtual Reality and 3D User Interfaces (Journal Track)</em>
     <br />
-    <a href="https://www.youtube.com/watch?v=_6krSw7fNqg"><strong>Video »</strong><a>
-    <a href="https://hal.science/hal-04488824"><strong>Paper »</strong></a>
+    <a href="https://www.youtube.com/watch?v=_6krSw7fNqg"><strong>Video »</strong></a>&emsp;
+    <a href="https://hal.science/hal-04488824"><strong>Paper »</strong></a>&emsp;
     <a href="https://liris-xr.github.io/PLUME/"><strong>Explore the docs »</strong></a>
     <br />
 </p>
@@ -38,7 +31,7 @@ PLUME is a software toolbox that allows for the exhaustive record of XR behavior
 
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available to as many people as possible, contributing to the reproducibility and replicability of user studies using virtual environments (XR, game design, etc), enabling the creation of large datasets, and contributing to a deeper understanding of user experience.
 
-https://github.com/liris-xr/PLUME/assets/20073809/dd7e07f9-04b6-468a-9410-17097f812ce9
+https://github.com/liris-xr/PLUME/assets/20073809/33369f47-a308-4bfa-8b99-edaf5a9633d0
 
 ## Getting Started
 
