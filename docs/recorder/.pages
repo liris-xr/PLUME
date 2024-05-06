@@ -1,6 +1,6 @@
 nav:
     - Index: index.md
-    - getting-started.md
+    - installation.md
     - global-settings.md
     - ...
     - advanced

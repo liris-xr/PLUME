@@ -32,7 +32,22 @@ html {
 }
 
 .content {
-    min-height: 100vh;
+    display: none;
+}
+
+.md-footer {
+    display: none;
+}
+
+.md-main__inner {
+    height: 0;
+    margin: 0;
+}
+
+.md-content__inner, .md-content__inner:before {
+    padding: 0;
+    margin: 0;
+    height: 0;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -186,34 +201,16 @@ html {
     </div>
     <div class="teaser__inner">
         <div class="teaser__content">
+            <div class="teaser__dummy">
+                <img src="./images/dummy.png" alt="dummy">
+            </div>
             <div class="teaser__text md-typeset">
-                <div class="teaser__dummy">
-                    <img src="./images/dummy.png" alt="dummy">
-                </div>
                 <h1>PLUME: Record, replay, analyze</h1>
                 <p>Simplify the process of recording and analyzing user behavior and physiological data in your experiment and focus on what matters.</p>
-                <a href="recorder/getting-started/" class="md-button md-button--primary">Get started</a>
-                <a href="#about-plume" class="md-button md-button--secondary">Learn more</a>
+                <a href="get-started/" class="md-button md-button--primary">Get started</a>
+                <a href="about" class="md-button md-button--secondary">Learn more</a>
             </div>
         </div>
     </div>
-
-    <div class="arrow-btn">
-        <a href="#about-plume">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M11 4h2v12l5.5-5.5 1.42 1.42L12 19.84l-7.92-7.92L5.5 10.5 11 16V4Z"></path>
-            </svg>
-        </a>
-    </div>
 </section>
 {% endblock %}
-
-<!-- Content -->
-{% block content %}
-<section class="content">
-{{ super() }}
-</section>
-{% endblock %}
-
-<!-- Application footer -->
-{% block footer %}{{ super() }}{% endblock %}

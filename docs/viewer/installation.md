@@ -1,18 +1,15 @@
-# Getting started
+# Installation
 
 !!! info
     If you want to try PLUME on a sample project, you can use the [Easter Egg Hunt demo](https://www.github.com/liris-xr/PLUME-Demo).
 
 The viewer is a standalone application, decoupled from any project files, that can be installed on any Windows 10 or later machine.
 
-## 1. Installation 🛠️
-
-
-### Prerequisites
+## Prerequisites
 
 * Windows 10 or later
 
-### From the GitHub releases (Recommended) 📦
+## From the GitHub releases 📦 **(Recommended)**
 
 Download the latest release from the [releases page](https://github.com/liris-xr/PLUME-Viewer/releases).
 
@@ -30,7 +27,7 @@ Unzip the `PLUME-Viewer.zip` file and locate the `PLUME-Viewer.exe` executable. 
 !!! success
     You are now ready to use the viewer.
 
-### From Git 🐙
+## From Git 🐙
 
 The viewer can also be installed as a Unity project for development purposes. To do so, clone the repository using the following command:
 
@@ -43,11 +40,3 @@ The viewer can also be installed as a Unity project for development purposes. To
     ```bash
     git clone --recurse-submodules git@github.com:liris-xr/PLUME-Viewer.git
     ```
-
-## 2. Replay an experiment 🔍
-
-See the dedicated page on [how to replay a record](./replay.md).
-
-## 3. In-situ analysis 🔬
-
-After quickly inspecting your record through the player, you can analyze the data in-situ with the dedicated analysis modules. See dedicated page for getting started with [in-situ](../viewer/in-situ-analysis/index.md) analysis.
