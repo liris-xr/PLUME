@@ -26,8 +26,8 @@
 PLUME is a software toolbox that allows for the exhaustive record of XR behavioral data (including synchronous physiological signals), their offline interactive replay and analysis. PLUME is composed of three main tools:
 
 - [PLUME Recorder](https://www.github.com/liris-xr/PLUME-Recorder) for recording data from any Unity applications.
-- [PLUME Viewer](https://www.github.com/liris-xr/PLUME-Recorder) for replaying records and in-situ analysis.
-- [PLUME Python](https://www.github.com/liris-xr/PLUME-Recorder) for ex-situ analysis.
+- [PLUME Viewer](https://www.github.com/liris-xr/PLUME-Viewer) for replaying records and in-situ analysis.
+- [PLUME Python](https://www.github.com/liris-xr/PLUME-Python) for ex-situ analysis.
 
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available to as many people as possible, contributing to the reproducibility and replicability of user studies using virtual environments (XR, game design, etc), enabling the creation of large datasets, and contributing to a deeper understanding of user experience.
 
