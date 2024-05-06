@@ -38,7 +38,7 @@ PLUME is a software toolbox that allows for the exhaustive record of XR behavior
 
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available to as many people as possible, contributing to the reproducibility and replicability of user studies using virtual environments (XR, game design, etc), enabling the creation of large datasets, and contributing to a deeper understanding of user experience.
 
-https://github.com/liris-xr/PLUME/raw/master/docs/viewer/videos/replay.mp4
+https://github.com/liris-xr/PLUME/assets/20073809/dd7e07f9-04b6-468a-9410-17097f812ce9
 
 ## Getting Started
 
