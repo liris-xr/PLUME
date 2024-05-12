@@ -18,7 +18,7 @@ message Person {
 }
 ```
 
-## 2. Compiling the `.proto` file to C#
+## 2. Compiling the `.proto` file to C\#
 
 To be able to send the custom data with the recorder, you will need to compile the `.proto` file to C# code. You can do this using the `protoc` compiler.
 
