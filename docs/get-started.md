@@ -35,7 +35,7 @@ To record data from your own physiological hardware, start by checking the [list
 
 Please refer to the [recording custom data guide](./recorder/advanced/recording-custom-data.md).
 
-## 3. Quick inspection of the records 🔍
+## 2. Quick inspection of the records 🔍
 
 To ensure that nothing went wrong during the recording process, you can quickly inspect `.plm` files by replaying them in the [PLUME Viewer](./viewer/index.md).
 
@@ -48,11 +48,11 @@ To ensure that nothing went wrong during the recording process, you can quickly 
 2. In your Unity project, export the asset bundle (only required once) by following the [export guide](./recorder/advanced/asset-bundle.md#exporting-an-asset-bundle). This asset bundle contains the assets required to visualize the record.
 3. Open the PLUME Viewer and load the record file (`.plm` file) and asset bundle by following the [replay guide](./viewer/replay.md). 
 
-## 4. In-situ analysis (using the viewer) 🔬
+## 3. In-situ analysis (using the viewer) 🔬
 
 After quickly inspecting your record, you can now perform [in-situ analysis](./viewer/in-situ-analysis/index.md) using the viewer. The viewer provides a set of modules to visualize and analyze the data within the 3D context such as [3D trajectories](./viewer/in-situ-analysis/trajectories.md), [position heatmap](./viewer/in-situ-analysis/position-heatmap.md), [eye-gaze heatmap](./viewer/in-situ-analysis/eye-gaze-heatmap.md) and [interactions highlights](./viewer/in-situ-analysis/interactions-highlights.md).
 
-## 5. Ex-situ analysis (using Python) 🔬
+## 4. Ex-situ analysis (using Python) 🔬
 
 PLUME record files are fully decoupled from any application. As a result, they can be parsed from any applications using the Protobuf library. To further simplify the process, we provide a Python API to easily parse and extract data from the record files. This allows you to perform [ex-situ analysis](./python/ex-situ-analysis/index.md) using Python for more traditional analysis workflow (statistical analysis, machine learning, etc.).
 
