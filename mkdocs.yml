@@ -27,6 +27,8 @@ theme:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      execute: true
   - awesome-pages
   - glightbox
   - macros
