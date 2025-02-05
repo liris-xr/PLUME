@@ -1,6 +1,6 @@
 # Replay a record
 
-PLUME records can be opened in the PLUME Viewer. This standalone application lets you interactively replay and inspect records, it is independent and completely decoupled from the initial Unity project used during recording, meaning that you can share records with others without having to send the entire project.
+Replaying and inspecting records can be done with the PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording. In practice, this means that anyone can replay a record of your experiment without having to send them your full Unity project.
 
 <figure>
     <video width="700" controls autoplay loop>
