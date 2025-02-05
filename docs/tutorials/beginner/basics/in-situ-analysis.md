@@ -4,16 +4,13 @@ In-situ analysis is the process of analyzing the data within the 3D context. Thi
 
 The PLUME Viewer provides a set of module to perform in-situ analysis, we describe here the main ones.
 
+---
+
 ## 3D Trajectories
 
-With the trajectory module, one can create 3D trajectories of any objects in the scene.
+With the trajectory module, one can create 3D trajectories of any objects in the scene. The trajectory analysis module contains the following parameters:
 
-![Trajectory module](assets/trajectory_module.png){ width="300" }
-/// caption
-Trajectory module.
-///
-
-The trajectory analysis module contains the following parameters:
+![Trajectory module](assets/trajectory_module.png){ width="300", align="left" }
 
 * Object ID: GUID of the object you want to compute the trajectory for.
 * Markers **(Optional)**: name of recorded markers, they are displayed above the trajectory.
@@ -23,6 +20,7 @@ The trajectory analysis module contains the following parameters:
 * Include rotations: if enabled, rotation gizmo will be displayed above the trajectory.
 * Time Range: section of the record you want the trajectory to be computed on. Leave as is to take the entire record into account.
 
+<br>
 Click on `Generate` to create the trajectory with selected parameters. Generated trajectories can be hidden from view (using the eye icon) or deleted (using trash icon).
 
 ![Trajectory result](assets/trajectory_result.png){ width="600" }
@@ -30,20 +28,20 @@ Click on `Generate` to create the trajectory with selected parameters. Generated
 Result of the trajectory visualization. The trajectory is represented by a line, with markers displayed above it. It is colored using a gradient from blue (beginning) to red (end) to indicate its temporality.
 ///
 
+---
+
 ## Position Heatmap
 
 With the position heatmap module, you can create heatmaps that show where objects have stayed the most. In practice, the position of the object is projected orthogonally towards the ground (-Y axis). The position heatmaps analysis module contains the following parameters:
+
+![Position heatmap module](assets/position_heatmap_module.png){ width="400", align="left" }
 
 * Projection Caster: GUID of the object you want to compute the heatmap for.
 * Projection Receiver: GUID of one or more object for the heatmap to be projected on.
 * Include children: if enabled, the projection will include the GUID inserted in 'Projection Receiver' and their children in the hierarchy.
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
-![Position heatmap module](assets/position_heatmap_module.png){ width="600" }
-/// caption
-Position heatmap module.
-///
-
+<br>
 Click on `Generate` to create the position heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
 <figure>
@@ -58,6 +56,8 @@ Click on `Generate` to create the position heatmap with selected parameters. Gen
 /// caption
 Result of the position heatmap visualization. The duration of the stay is represented by the color intensity from blue (no time spent) to red (most time spent).
 ///
+
+---
 
 ## Eye-gaze heatmap (Experimental 🧪)
 
@@ -77,17 +77,15 @@ With the eye-gaze module, you can create heatmaps that show where the user looke
 
 The eye-gaze heatmap analysis module contains the following parameters:
 
+![Eye-gaze heatmap module](assets/eye_gaze_heatmap_module.png){ width="400", align="left" }
+
 * XR Camera: GUID of the Main Camera object.
 * Projection Receiver: GUID of one or more object for the heatmap to be projected on.
 * Include children: if enabled, the projection will include the GUID inserted in 'Projection Receiver' and their children in the hierarchy.
 * Coordinate System: Tracking Space or Head Space. OpenXR doesn't push a standard for the coordinate system used by HMDs eye-tracker. Depending on your headset, recorded eye-gaze will have a different coordinate system (eg. Meta Quest Pro uses `Tracking Space`; HTC Vive Pro Eye uses `Head Space`).
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
-![Eye-gaze heatmap module](assets/eye_gaze_heatmap_module.png){ width="600" }
-/// caption
-Eye-gaze heatmap module.
-///
-
+<br>
 Click on `Generate` to create the interaction eye-gaze heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
 ![Eye-gaze heatmap result](assets/eye_gaze_heatmap_result.png){ width="600" }
@@ -95,19 +93,20 @@ Click on `Generate` to create the interaction eye-gaze heatmap with selected par
 Result of the eye-gaze heatmap visualization. The duration of the gaze is represented by the color intensity from blue (no time spent) to red (most time spent).
 ///
 
+---
+
 ## Interaction highlight
 
 With the interactions module, you can highlight objects that have been interacted with based on the recorded XRITK interactions. The interactions highlights analysis module contains the following parameters:
+
+![Interaction highlight module](assets/interaction_highlight_module.png){ width="400", align="left" }
 
 * Interactor(s): GUID of one or more interactor.
 * Interactable(s) **(Optional)**: GUID of one or more interactable. If empty, every interactable in the scene will be taken into account.
 * Interaction type: Interactions as defined by the [XR Interaction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.0/manual/interactable-events.html).  Taking the example of a Direct (or near) Interactor, `Hover` corresponds to touching an interactable, `Select` corresponds to grabbing an interactable, `Activate` is a contextual interaction executed with a selected interactable.
 * Time Range: section of the record you want the heatmap to be computed on. Leave as is to take the entire record into account.
 
-![Interaction highlight module](assets/interaction_highlight_module.png){ width="600" }
-/// caption
-Interaction highlight module.
-///
+<br>
 
 Click on `Generate` to create the interaction heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
