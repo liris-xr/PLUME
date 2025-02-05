@@ -1,10 +1,10 @@
 # About
 
-PLUME is an open-source software (GPLv3) toolbox that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (see [an example](./demonstration/index.md)), and their easy sharing due to our compact and interoperable data format. PLUME is composed of three main tools:
+PLUME is an open-source software (GPLv3) toolbox that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis, and their easy sharing due to our compact and interoperable data format. PLUME is composed of three main tools:
 
-- [PLUME Recorder](./recorder/index.md) for recording data from any Unity applications.
-- [PLUME Viewer](./viewer/index.md) for replaying records and in-situ analysis.
-- [PLUME Python](./python/index.md) for ex-situ analysis.
+- [PLUME Recorder](https://github.com/liris-xr/PLUME-Recorder) for recording data from any Unity applications.
+- [PLUME Viewer](https://github.com/liris-xr/PLUME-Viewer) for replaying records and in-situ analysis.
+- [PLUME Python](https://github.com/liris-xr/PLUME-Python) for ex-situ analysis.
 
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available to as many people as possible, contributing to the reproducibility and replicability of user studies using virtual environments (XR, game design, etc), enabling the creation of large datasets, and contributing to a deeper understanding of user experience. It was presented at the IEEE VR 2024 conference both as a demo and a scientific paper (accepted in the journal track) and was published in the [IEEE Transactions on Visualization and Computer Graphics journal](https://www.computer.org/csdl/journal/tg/2024/05/10458415/1V2s4TP60so).
 
@@ -12,6 +12,7 @@ We believe that PLUME can greatly benefit the scientific community by making the
 
 If you appreciate our work and use it in your own experiment, please cite our paper:
 
+{% raw %}
 ```
 @article{javerliat_plume_2024,
 	title = {{PLUME}: {Record}, {Replay}, {Analyze} and {Share} {User} {Behavior} in {6DoF} {XR} {Experiences}},
@@ -24,6 +25,7 @@ If you appreciate our work and use it in your own experiment, please cite our pa
 	pages = {1--11}
 }
 ```
+{% endraw %}
 
 ## License
 

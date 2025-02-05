@@ -11,24 +11,28 @@ theme:
   custom_dir: overrides
   logo: images/logo.png
   palette:
-    primary: 'black'
-    accent: 'light blue'
+    primary: "black"
+    accent: "light blue"
   features:
-    - content.action.edit
+    # - navigation.indexes
+    - navigation.expand
+    - navigation.sections
     - navigation.footer
     - navigation.tabs
+    - content.action.edit
     - content.code.copy
     - content.code.annotate
+    - toc.follow
+    - toc.integrate
 
 plugins:
   - search
   - awesome-pages
+  - glightbox
+  - macros
 
 extra_css:
   - styles/style.css
-
-hooks:
-  - generate_protos_docs.py
 
 watch:
   - overrides
@@ -43,6 +47,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.blocks.caption
   - pymdownx.tabbed:
       alternate_style: true
   - admonition

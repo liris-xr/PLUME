@@ -1,8 +1,8 @@
 nav:
-    - index.md
-    - get-started.md
-    - recorder
-    - viewer
-    - python
-    - contributing.md
-    - about.md
+  - Home: index.md
+  - Learn:
+      - get-started.md
+      - Learn the basics: tutorials/beginner/basics/introduction
+      - tutorials
+  - contributing.md
+  - about.md
