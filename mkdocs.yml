@@ -19,6 +19,7 @@ theme:
     - navigation.sections
     - navigation.footer
     - navigation.tabs
+    - navigation.top
     - content.action.edit
     - content.code.copy
     - content.code.annotate
@@ -29,6 +30,7 @@ plugins:
   - search
   - mkdocs-jupyter:
       execute: true
+      include_source: True
   - awesome-pages
   - glightbox
   - macros

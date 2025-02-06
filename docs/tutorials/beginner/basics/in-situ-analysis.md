@@ -10,7 +10,7 @@ The PLUME Viewer provides a set of module to perform in-situ analysis, we descri
 
 With the trajectory module, one can create 3D trajectories of any objects in the scene. The trajectory analysis module contains the following parameters:
 
-![Trajectory module](assets/trajectory_module.png){ width="300", align="left" }
+![Trajectory module](../../../assets/in-situ-analysis/trajectory_module.png){ width="300", align="left" }
 
 * Object ID: GUID of the object you want to compute the trajectory for.
 * Markers **(Optional)**: name of recorded markers, they are displayed above the trajectory.
@@ -23,7 +23,7 @@ With the trajectory module, one can create 3D trajectories of any objects in the
 <br>
 Click on `Generate` to create the trajectory with selected parameters. Generated trajectories can be hidden from view (using the eye icon) or deleted (using trash icon).
 
-![Trajectory result](assets/trajectory_result.png){ width="600" }
+![Trajectory result](../../../assets/in-situ-analysis/trajectory_result.png){ width="600" }
 /// caption
 Result of the trajectory visualization. The trajectory is represented by a line, with markers displayed above it. It is colored using a gradient from blue (beginning) to red (end) to indicate its temporality.
 ///
@@ -34,7 +34,7 @@ Result of the trajectory visualization. The trajectory is represented by a line,
 
 With the position heatmap module, you can create heatmaps that show where objects have stayed the most. In practice, the position of the object is projected orthogonally towards the ground (-Y axis). The position heatmaps analysis module contains the following parameters:
 
-![Position heatmap module](assets/position_heatmap_module.png){ width="400", align="left" }
+![Position heatmap module](../../../assets/in-situ-analysis/position_heatmap_module.png){ width="400", align="left" }
 
 * Projection Caster: GUID of the object you want to compute the heatmap for.
 * Projection Receiver: GUID of one or more object for the heatmap to be projected on.
@@ -46,13 +46,13 @@ Click on `Generate` to create the position heatmap with selected parameters. Gen
 
 <figure>
     <video width="600" controls autoplay loop>
-        <source src="../assets/position_heatmap_generation.mp4" type="video/mp4">
+        <source src="../../../../assets/in-situ-analysis/position_heatmap_generation.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <figcaption>Realtime generation of the position heatmap in PLUME viewer of the user head mounted display projected on the floor of the scene.</figcaption>
 </figure>
 
-![Position heatmap result](assets/position_heatmap_result.png){ width="600" }
+![Position heatmap result](../../../assets/in-situ-analysis/position_heatmap_result.png){ width="600" }
 /// caption
 Result of the position heatmap visualization. The duration of the stay is represented by the color intensity from blue (no time spent) to red (most time spent).
 ///
@@ -69,7 +69,7 @@ With the eye-gaze module, you can create heatmaps that show where the user looke
 
 <figure>
     <video width="600" controls autoplay loop>
-        <source src="../assets/eye_gaze_heatmap_generation.mp4" type="video/mp4">
+        <source src="../../../../assets/in-situ-analysis/eye_gaze_heatmap_generation.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <figcaption>Presentation of the eye-gaze algorithm integrated in the viewer.</figcaption>
@@ -77,7 +77,7 @@ With the eye-gaze module, you can create heatmaps that show where the user looke
 
 The eye-gaze heatmap analysis module contains the following parameters:
 
-![Eye-gaze heatmap module](assets/eye_gaze_heatmap_module.png){ width="400", align="left" }
+![Eye-gaze heatmap module](../../../assets/in-situ-analysis/eye_gaze_heatmap_module.png){ width="400", align="left" }
 
 * XR Camera: GUID of the Main Camera object.
 * Projection Receiver: GUID of one or more object for the heatmap to be projected on.
@@ -88,7 +88,7 @@ The eye-gaze heatmap analysis module contains the following parameters:
 <br>
 Click on `Generate` to create the interaction eye-gaze heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
-![Eye-gaze heatmap result](assets/eye_gaze_heatmap_result.png){ width="600" }
+![Eye-gaze heatmap result](../../../assets/in-situ-analysis/eye_gaze_heatmap_result.png){ width="600" }
 /// caption
 Result of the eye-gaze heatmap visualization. The duration of the gaze is represented by the color intensity from blue (no time spent) to red (most time spent).
 ///
@@ -99,7 +99,7 @@ Result of the eye-gaze heatmap visualization. The duration of the gaze is repres
 
 With the interactions module, you can highlight objects that have been interacted with based on the recorded XRITK interactions. The interactions highlights analysis module contains the following parameters:
 
-![Interaction highlight module](assets/interaction_highlight_module.png){ width="400", align="left" }
+![Interaction highlight module](../../../assets/in-situ-analysis/interaction_highlight_module.png){ width="400", align="left" }
 
 * Interactor(s): GUID of one or more interactor.
 * Interactable(s) **(Optional)**: GUID of one or more interactable. If empty, every interactable in the scene will be taken into account.
@@ -110,7 +110,7 @@ With the interactions module, you can highlight objects that have been interacte
 
 Click on `Generate` to create the interaction heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
-![Interaction highlight result](assets/interaction_highlight_result.png){ width="600" }
+![Interaction highlight result](../../../assets/in-situ-analysis/interaction_highlight_result.png){ width="600" }
 /// caption
 Example of interaction highlight visualization.
 ///
