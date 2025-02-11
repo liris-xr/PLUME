@@ -1,13 +1,13 @@
 # Replay a record
 
-Replaying and inspecting records can be done with the PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording. In practice, this means that anyone can replay a record of your experiment without having to send them your full Unity project.
+After recording an experiment, you can replay it to inspect the data, analyze the user behavior, or even for post-experiment debriefing. Replaying and inspecting records is done with the PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording. In practice, this means that anyone can replay a record of your experiment without having to send them your full Unity project.
 
 <figure>
     <video width="700" controls autoplay loop>
         <source src="../assets/replay_lq.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <figcaption>Example video of a record replay in PLUME Viewer from the <a href="https://github.com/liris-xr/PLUME-Demo">Easter Egg Hunt demo</a>.</figcaption>
+    <figcaption>Example video of a replay in PLUME Viewer from the Easter Egg Hunt.</figcaption>
 </figure>
 
 ## Installing the PLUME Viewer
