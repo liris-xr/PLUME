@@ -1,10 +1,10 @@
 # Recording your first experiment
 
+The first brick of the PLUME toolbox is the PLUME Recorder. The PLUME Recorder is a Unity plugin that records the virtual environment, user behavior, and synchronized physiological signals into a single `.plm` file, without the need for extensive configuration and without having to modify the application's code. The plugin can be used on various type of projects (2D, 3D, XR), including multi-user experiences, and various platforms (Windows, Android, iOS), including standalone headsets.
+
 ![PLUME Recorder](assets/recorder_teaser.png){ width="700" }
 /// caption
 ///
-
-The first brick of the PLUME toolbox is the PLUME Recorder. The PLUME Recorder is a Unity plugin that records the virtual environment, user behavior, and synchronized physiological signals into a single `.plm` file, without the need for extensive configuration and without having to modify the application's code. The plugin can be used on various type of projects (2D, 3D, XR), including multi-user experiences, and various platforms (Windows, Android, iOS), including standalone headsets.
 
 ## Installing the PLUME Recorder
 
