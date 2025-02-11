@@ -4,5 +4,5 @@ nav:
   - introduction.md
   - record.md
   - replay.md
-  - ex-situ-analysis.ipynb
+  - ex-situ-analysis.md
   - in-situ-analysis.md

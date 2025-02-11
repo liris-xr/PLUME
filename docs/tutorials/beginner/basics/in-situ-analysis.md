@@ -1,4 +1,4 @@
-# In-situ analysis
+# Analyzing data in-situ
 
 In-situ analysis is the process of analyzing the data within the 3D context. This is particularly useful to contextualize data such as physiological signals or gaze data with the actions performed by the user in the virtual environment, or to visualize the data in the 3D space (3D heatmaps, trajectories, etc.).
 
