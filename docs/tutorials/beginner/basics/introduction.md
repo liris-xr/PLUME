@@ -1,6 +1,6 @@
 # Introduction
 
-While virtual reality research often relies on self-reported data through questionnaires and interviews, the growing need for objective measurements has made behavioral and physiological data collection essential. However, collecting this data in XR environments remains technically challenging. PLUME is a toolbox that aims to address this challenge by providing a set of tool to easily <strong>record the virtual environment, user behavior, and synchronized physiological signals</strong> as exhaustively as possible, and perform <strong>in-situ</strong> and <strong>ex-situ</strong> analysis of the data. PLUME is composed of three main tools:
+While virtual reality research often relies on self-reported data through questionnaires and interviews, the growing need for objective measurements has made behavioral and physiological data collection essential. However, collecting this data in XR environments remains technically challenging. PLUME is a toolbox that aims to address this challenge by providing a set of tool to easily <strong>record the virtual environment, user behavior, and synchronized physiological signals</strong> as exhaustively as possible, and perform <strong>in-situ</strong> and <strong>ex-situ analysis</strong> of the data. PLUME is composed of three main tools:
 
 * [PLUME Recorder](https://github.com/liris-xr/PLUME-Recorder) for recording data from any Unity applications.
 * [PLUME Viewer](https://github.com/liris-xr/PLUME-Viewer) for replaying records and in-situ analysis.
