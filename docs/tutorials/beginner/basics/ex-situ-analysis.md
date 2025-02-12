@@ -46,18 +46,22 @@ my_record_file.plm
 ├── markers: All the marker events in the record.
 |   ├── label: The label of the marker.
 |   ├── time_s: The time at which the marker was recorded in seconds, relative to the start of the recording.
-|   ├── time_ns: The time at which the marker was recorded in nanoseconds, relative to the start of the recording.
-|   
-└── samples: All the samples in the record.
+|   └── time_ns: The time at which the marker was recorded in nanoseconds, relative to the start of the recording.
+├── signals: List of timeseries data samples, such as LabStreamingLayer physiological signals.
+|   ├── stream_info: Information about the stream.
+|   |   ├── name: The name of the stream.
+|   |   ├── type: The type of the stream (e.g. EEG, ECG, etc.)
+|   |   ├── channel_count: The number of channels in the stream.
+|   |   ├── ...
+|   ├── values: The values contained in the sample.
+|   ├── time_s: The time at which the sample was recorded in seconds, relative to the start of the recording.
+|   └── time_ns: The time at which the sample was recorded in nanoseconds, relative to the start of the recording.
+└── input_actions: List of input actions, such as keyboard or mouse events.
+    ├── binding_paths: The binding paths of the input action.
+    ├── type: The type of the input action (e.g. value, button, pass-through, etc.)
+    ├── time_s: The time at which the input action was recorded in seconds, relative to the start of the recording.
+    └── time_ns: The time at which the input action was recorded in nanoseconds, relative to the start of the recording.
 ```
-
-* **Frames**: Contains all the data that is frame-based (i.e. data that is updated in the Unity update loop). For example, the position of the objects, their properties, etc.
-    * **Frame number**: The number of the frame, as given by Unity.
-    * **Time**: The time at which the frame was recorded. Can be fetched as seconds or nano-seconds, relative to the start of the recording or in absolute UNIX time.
-    * **Scenes**: All the scenes in the current frame.
-        * **Scene name**: The name of the scene.
-        * **Game Objects**: Game Objects in the scene.
-            * **Components**: Components of the Game Object.
 
 ```python linenums="1"
 from plume import RecordReader
