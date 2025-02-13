@@ -48,7 +48,7 @@ The PLUME toolbox is distributed under the GPLv3 License.
 
 🧑 Charles JAVERLIAT - <charles.javerliat@gmail.com> | [LinkedIn](https://www.linkedin.com/in/charles-javerliat-20234716a/)
 
-🧑 Sophie VILLENAVE - <sophie.villenave@ec-lyon.fr>
+🧑 Sophie VILLENAVE - <sophie.villenave@liris.cnrs.fr> | [LinkedIn](https://www.linkedin.com/in/sophie-villenave/)
 
 !!! info
     Please favor contact via the discord server or via GitHub issues in order to share the exchange with the rest of the community.

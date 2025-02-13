@@ -32,7 +32,8 @@ plugins:
       execute: true
       include_source: True
   - awesome-pages
-  - glightbox
+  - glightbox:
+      auto_caption: true
   - macros
 
 extra_css:

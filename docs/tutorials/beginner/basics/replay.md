@@ -1,6 +1,6 @@
-# Replay a record
+# Replay your Easter Egg Hunt
 
-After recording an experiment, you can replay it to inspect the data, analyze the user behavior, or even for post-experiment debriefing. Replaying and inspecting records is done with the PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording. In practice, this means that anyone can replay a record of your experiment without having to send them your full Unity project.
+After recording your experience, you can replay it with PLUME Viewer to ensure everything went as expected, analyze user behavior, or even for post-experiment debriefing. This standalone application is independent and completely decoupled from the initial Unity project used during recording. In practice, this means that anyone can replay a record of your experiment without having to send them your full Unity project.
 
 <figure>
     <video width="700" controls autoplay loop>
@@ -10,30 +10,73 @@ After recording an experiment, you can replay it to inspect the data, analyze th
     <figcaption>Example video of a replay in PLUME Viewer from the Easter Egg Hunt.</figcaption>
 </figure>
 
-## Installing the PLUME Viewer
+## Download PLUME-Viewer
+* Go to the PLUME-Viewer [releases page](https://github.com/liris-xr/PLUME-Viewer/releases).
 
-1. Go to the GitHub release page [here](https://github.com/liris-xr/PLUME-Viewer/releases/latest) to download the latest version of the viewer.
-2. Extract the archive in the folder of your choice.
-3. Run `PLUME-Viewer.exe`
+![PLUME Viewer Release](assets/replay/images/image-1.png)
+/// caption
+///
+
+* Download the latest available release and unpack the downloaded `.zip` file.
+
+
+## Open your .plm file with PLUME-Viewer
+!!! tip 
+    If you were unable to create a .plm, we provide [a sample file](record.md/#download-the-tutorial-files) to follow along this section of the tutorial.
+
+* Retrieve the [built Asset Bundle](record.md#build-easter-egg-hunt-asset-bundle) which is located in your project's folder, under `Assets \ AssetBundles \ plume_bundle.zip`
+* Copy the Asset Bundle next to your records for PLUME Viewer to automatically load it.
+* _Reminder:_ Your records are located in ``C:\Users\your_username\AppData\LocalLow\LIRIS\EasterEggHunt`` on Windows and ``\Shared Internal Storage\Android\data\fr.liris.EasterEggHunt\files`` on Android.
 
 !!! note
-    PLUME Viewer is available for Windows only.
+    If you did not copy the Asset Bundle next to your records, PLUME-Viewer will prompt a window asking for the location of the Asset Bundle.
 
-## Building the asset bundle of your application
+![PLUME Bundle next to PLUME Records](assets/replay/images/image.png)
+/// caption
+///
 
-To replay a recording, you need to build an asset bundle of your application. The asset bundle include prefabs, textures, materials, meshes, etc. that are used in the application. This operation is required only once as assets are common to all application runs and prevents embeddings the assets in every record file.
+* Option 1 : Launch PLUME-Viewer by clicking on the executable. You will be prompted with a window asking for your record file.
+* Option 2 : Set PLUME-Viewer as the default application to open `.plm` files. To do so, `right-click on a .plm file -> Open With... -> Select PLUME-Viewer executable`. You can now directly double-click on a `.plm` file to open it with PLUME-Viewer.
 
-To export the asset bundle, open your Unity project and generate it by clicking `PLUME > Build Asset Bundle`. The generated asset bundle is saved as `Assets/AssetBundles/plume_bundle.zip` in your project folder.
+## Replay your Easter Egg Hunt
+* Once your record is loaded, replay starts automatically.
 
-!!! info
-    The asset bundle only includes the assets from the scenes specified in the build settings. If no scene is selected, the currently opened scene will be used.
+![PLUME Viewer Media Bar](assets/replay/images/image-11.png)
+/// caption
+PLUME Viewer Media Bar.
+///
 
+* Media Bar Options
+    - Play
+    - Stop
+    - Replay Speed (from x0.25 to x5)
+    - Camera
+    - Full Screen
 
-## Opening a record
+![Camera Button](assets/replay/images/image-15.png){align="right"}
 
-To open a record for replay, launch the viewer and select the record file to inspect. Then, you will be asked to select the asset bundle `plume_bundle.zip` generated in the previous step. The viewer will load the record and the associated assets.
+* Camera Options
+    - Main: Camera view as recorded.
+    - Top View: Orthogonal Camera. `Scroll` to change cut plan. `Left-click` to navigate.
+    - Free: 3D Camera. `Right Click` + use `W,A,S,D` (forward/left/back/right) and `Q,E` (up/down) to navigate.
 
-When the record is loaded, you can start/pause the recording, navigate through the timeline, and inspect the data. A major benefit of this viewer is the contextualisation of temporal data such as event markers or physiological signals within the spatial environment and the associated analysis modules that will be covered in the [in-situ analysis](analysis/in-situ/index.md) section.
+<br>
 
-!!! tip
-    You can associate `.plm` files with the viewer by right-clicking on a `.plm` file, selecting `Open with`, and choosing the viewer executable. This will allow you to open `.plm` files by double-clicking on them. If your asset bundle is located next to the record file, the viewer will automatically detect it and load it. This, in combination with the file association, allows you to open a record quickly by simply double-clicking on it.
+* While in Free Camera, click ![Auto Adjust View Button](assets/replay/images/image-16.png){width=100} to place the Free Camera at the position of the Main Camera position.
+
+* Use the Timeline to navigate through your record.
+
+![Timeline](assets/replay/images/image-2.png)
+/// caption
+PLUME Viewer Timeline
+///
+
+## Markers
+![Markers Panel](image.png){width=300, align="right"}
+
+* During the [first part of this tutorial](record.md/#markers), we edited a script to record an Event Marker every time the user picks up an Egg.
+* Event Markers are listed on the panel on the right.
+* Event Markers also appear as bars on the Timeline. The color code helps identify the bars.
+* To change their display status on the Timeline, enable or disable them in the Markers panel.
+* Click Show All or Hide All to enable or disable every marker.
+* Markers can also be placed within 3D trajectories to emphasize their space-time relation with the session. We will see how to add visual markers to trajectories in the next section.
