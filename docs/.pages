@@ -4,5 +4,7 @@ nav:
       - get-started.md
       - Learn the basics: tutorials/beginner/basics/introduction
       - tutorials
+  - FAQ:
+      - troubleshoot.md
   - contributing.md
   - about.md
