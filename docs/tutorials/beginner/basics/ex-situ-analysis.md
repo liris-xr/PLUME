@@ -18,50 +18,23 @@ pip install plume-python
 !!! note
     A sample record file is available in the [tutorial repository](https://www.github.com/liris-xr/PLUME-Tutorial-Basics).
 
-Reading a record file is done using the `RecordReader` class. The reader provides methods to access the data in the record file easily. A record file can contain multiple streams of data:
+Reading a record file is done using the `RecordReader` class. The reader provides methods to access the data in the record file easily. Each record file contains four main data streams:
 
-```
-my_record_file.plm
-├── frames
-│   ├── frame_number: Number of the frame, as given by Unity Time.frameCount
-│   ├── time_s: Time at which the frame was recorded in seconds, relative to the start of the recording.
-│   ├── time_ns: Time at which the frame was recorded in nanoseconds, relative to the start of the recording.
-|   ├── time_unix_s: Time at which the frame was recorded in seconds, relative to the UNIX epoch.
-|   ├── ...
-|   ├── scenes: All the scenes in the current frame.
-|   |   ├── name: The name of the scene.
-|   |   ├── guid: The globally unique identifier of the scene.
-|   |   ├── ...
-|   |   ├── game_objects: Game Objects in the scene, at this frame.
-|   |   |   ├── name: The name of the Game Object.
-|   |   |   ├── guid: The globally unique identifier of the Game Object.
-|   |   |   ├── active: Whether the Game Object is active.
-|   |   |   ├── tag: The tag of the Game Object.
-|   |   |   ├── layer: The layer of the Game Object.
-|   |   |   ├── ...
-|   |   |   ├── components: Components attached the Game Object.
-|   |   |   |   ├── guid: The globally unique identifier of the Component.
-|   |   |   |   ├── ... (Component-specific data)
-|   └── xritk_interactions: XR Interaction Toolkit interactions. This is frame-based because it relates interactions between XRInteractor and XRInteractable components in the scene.
-├── markers: All the marker events in the record.
-|   ├── label: The label of the marker.
-|   ├── time_s: The time at which the marker was recorded in seconds, relative to the start of the recording.
-|   └── time_ns: The time at which the marker was recorded in nanoseconds, relative to the start of the recording.
-├── signals: List of timeseries data samples, such as LabStreamingLayer physiological signals.
-|   ├── stream_info: Information about the stream.
-|   |   ├── name: The name of the stream.
-|   |   ├── type: The type of the stream (e.g. EEG, ECG, etc.)
-|   |   ├── channel_count: The number of channels in the stream.
-|   |   ├── ...
-|   ├── values: The values contained in the sample.
-|   ├── time_s: The time at which the sample was recorded in seconds, relative to the start of the recording.
-|   └── time_ns: The time at which the sample was recorded in nanoseconds, relative to the start of the recording.
-└── input_actions: List of input actions, such as keyboard or mouse events.
-    ├── binding_paths: The binding paths of the input action.
-    ├── type: The type of the input action (e.g. value, button, pass-through, etc.)
-    ├── time_s: The time at which the input action was recorded in seconds, relative to the start of the recording.
-    └── time_ns: The time at which the input action was recorded in nanoseconds, relative to the start of the recording.
-```
+1. **Frames**: Contains frame-by-frame data including:
+   - Basic timing information (frame number, timestamps)
+   - Scene hierarchy with GameObjects and their Components
+   - XR Interaction Toolkit interactions
+
+2. **Markers**: Event markers with labels and timestamps, used for annotating specific moments in your recording
+
+3. **Signals**: Time-series data (like LSL physiological signals) with:
+   - Stream information (name, type, channel count)
+   - Sample values with precise timestamps
+
+4. **Input Actions**: Records of user inputs (keyboard, mouse, etc.) with:
+   - Binding paths
+   - Action types
+   - Precise timestamps
 
 ```python linenums="1"
 from plume import RecordReader
