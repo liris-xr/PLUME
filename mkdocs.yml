@@ -28,6 +28,7 @@ theme:
 
 plugins:
   - search
+  - markdown-exec
   - mkdocs-jupyter:
       execute: true
       include_source: True
