@@ -53,25 +53,57 @@ reader.close()
 
 ### Example: Extracting the position of a GameObject
 
+```python exec="on" source="above" linenums="1"
+from plume import RecordReader
+import numpy as np
+import plotly.graph_objects as go
+
+reader = RecordReader("docs/tutorials/beginner/basics/assets/record_1.plm")
+
+time_s = np.empty(0)
+world_positions: np.ndarray = np.empty((0, 3))
+
+for frame in reader.frames:
+   scene = frame.scenes.first_with_name("Simple")
+   player = scene.game_objects.first_with_name("Cube")
+   world_pos = player.transform.world_position.numpy()
+   world_positions = np.append(world_positions, world_pos.reshape(1, 3), axis=0)
+   time_s = np.append(time_s, frame.time_s)
+
+# Plot y in function of time
+fig = go.Figure(
+    data=go.Scatter(
+        x=time_s,
+        y=world_positions[:, 1],
+        mode="lines",
+    )
+)
+
+print(fig.to_html(full_html=False, include_plotlyjs="cdn"))
+fig.show()
+reader.close()
+```
+
 ```python exec="on" source="above" linenums="1" session="record-parsing"
 from plume import RecordReader
 import numpy as np
 import plotly.graph_objects as go
 import matplotlib
-from tqdm import tqdm
 
 reader = RecordReader("docs/tutorials/beginner/basics/assets/record.plm")
 
 time_s = np.empty(0)
 world_positions: np.ndarray = np.empty((0, 3))
 
-for frame in tqdm(reader.frames):
-    scene = frame.scenes.first_with_name("HouseObjectivesSteamAudio")
-    player = scene.game_objects.first_with_name("Torso")
-    world_pos = player.transform.world_position.numpy()
-    world_positions = np.append(world_positions, world_pos.reshape(1, 3), axis=0)
-    time_s = np.append(time_s, frame.time_s)
+for frame in reader.frames:
+   scene = frame.scenes.first_with_name("HouseObjectivesSteamAudio")
+   player = scene.game_objects.first_with_name("Torso")
+   world_pos = player.transform.world_position.numpy()
+   world_positions = np.append(world_positions, world_pos.reshape(1, 3), axis=0)
+   time_s = np.append(time_s, frame.time_s)
 
+print(np.diff(time_s).mean())
+    
 markers = [marker for marker in reader.markers]
 marker_time_s = np.array([marker.time_s for marker in markers])
 marker_labels = [marker.label for marker in markers]
@@ -141,6 +173,6 @@ reader.close()
 ```
 
 ```python exec="true" html="true" session="record-parsing"
-import plotly.express as px
+fig.update_layout(width=800, height=800)
 print(fig.to_html(full_html=False, include_plotlyjs="cdn"))
 ```
