@@ -104,12 +104,12 @@ Now that PLUME Recorder is installed within your project, you're all set to crea
     ``C:\Users\your_username\AppData\LocalLow\LIRIS\EasterEggHunt``
 
 ## Build Easter Egg Hunt Asset Bundle
-PLUME records are compact files that encompasses behavioural data and the application state. To keep it light-weight, assets used to develop the application (e.g., meshes, materials, lightmaps, etc.) are not saved within the PLUME record files. As these assets are necessary to replay the experiment in context of the virtual environment, PLUME is delivered with an Asset Bundle build script, that will collect dependancies from the built scenes and compress them. The built Asset Bundle will be used to [replay the records](replay.md) and perform [in-situ analysis](in-situ-analysis.md).
+PLUME records are compact files that encompasses behavioural data and the application state. To keep it light-weight, assets used to develop the application (e.g., meshes, materials, lightmaps, etc.) are not saved within the PLUME record files. As these assets are necessary to replay the experiment in context of the virtual environment, PLUME is delivered with an Asset Bundle build script, that will collect dependencies from the built scenes and compress them. The built Asset Bundle will be used to [replay the records](replay.md) and perform [in-situ analysis](in-situ-analysis.md).
 
 ![PLUME Menu Build Asset Bundle](assets/record/images/image-12.png){width=250, align="right"}
 
 * Click on `PLUME -> Build Asset Bundle` to build the Asset Bundle.
-* The asset bundle only includes assets dependancies from the scenes specified in the build settings. If no scene is selected, the currently opened scene will be used.
+* The asset bundle only includes assets dependencies from the scenes specified in the build settings. If no scene is selected, the currently opened scene will be used.
 
 </br></br>
 
