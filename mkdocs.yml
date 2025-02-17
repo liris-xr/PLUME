@@ -29,9 +29,6 @@ theme:
 plugins:
   - search
   - markdown-exec
-  - mkdocs-jupyter:
-      execute: true
-      include_source: True
   - awesome-pages
   - glightbox:
       auto_caption: true
