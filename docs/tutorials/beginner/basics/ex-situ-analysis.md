@@ -58,6 +58,9 @@ record1 = RecordReader("path/to/record1.plm")
 
 The record file contains a collection of frames, each representing the state of the game at a specific time. Each frame is organized hierarchically, with scenes containing game objects, which in turn contain components with their properties. The `RecordReader` class provides methods to access these elements. In practice, this allows us to extract the values of a specific property of a game object or component over time (i.e. transform position/rotation/scale, mesh and material properties, light color, etc.)
 
+!!! warning
+    All the component decoder classes are not yet implemented in PLUME Python, even though the data is present in the record file.
+
 To start with a basic example, let's extract the position of a game object over time, and plot its 3D trajectory. For this, we need to collect the transform's world position of the object in each frame and store it in a list along with the time information.
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis" title="Function to extract the position of an object over time"
