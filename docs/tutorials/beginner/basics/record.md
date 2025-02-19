@@ -14,6 +14,8 @@ In the first part of this tutorial, you will get hands-on experience with PLUME 
 * Build the application to enable deployment for data collection.
 * Retrieve records, i.e., access recorded data for further analysis.
 
+---
+
 ## Download the Tutorial Files
 * Option 1: Go on the [Tutorial GitHub](https://github.com/liris-xr/PLUME-Tutorial-Basics) page and download the repository as ZIP. Unpack the downloaded .zip file.
 * Option 2: Clone the repository using the command line. If Git is not installed on your computer, you can [download it](https://git-scm.com/downloads).

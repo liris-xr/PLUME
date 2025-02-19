@@ -7,6 +7,8 @@ set of utilities to simplify the conversion of the data to different formats use
 dataframe, CSV and XDF for physiological signals to be analyzed in external software such as SigViewer, EEGLAB or
 MoBILAB.
 
+---
+
 ## Installing PLUME Python
 
 !!! note
@@ -325,7 +327,7 @@ input_time_s, input_values = extract_input_actions(record1, "<Gamepad>/leftStick
     Composite bindings are not supported yet.
 
 !!! note
-    If want to extract higher-level XRITK interactions (hover, activate, select), note that those are included in frames and accessible via `frame.xritk_interactions`. This is because XRITK interactions involves components present in a scene (XRInteractor and XRInteractable), and thus are frame-dependent in contrast to input actions that are not tied to specific frames.
+    If you want to extract higher-level XRITK interactions (hover, activate, select), note that those are included in frames and accessible via `frame.xritk_interactions`. This is because XRITK interactions involves components present in a scene (XRInteractor and XRInteractable), and thus are frame-dependent in contrast to input actions that are not tied to specific frames.
 
 <!-- Now a section about analyzing multiple records at the same time (e.g. comparing different conditions, subjects, etc.) -->
 ### Analyzing multiple records (inter-subject or intra-subject comparison)
