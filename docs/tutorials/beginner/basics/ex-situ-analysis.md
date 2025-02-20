@@ -106,10 +106,10 @@ from plume.proxy.unity.component.mesh_filter import MeshFilter
 mesh_filter = game_object.components.first_with_type(MeshFilter)
 ```
 
-Applying this to our example project, we can extract the position of the player's head over time. In the project, the main scene is called `HouseObjectivesSteamAudio` and the head object is called `Head`.
+Applying this to our example project, we can extract the position of the player's head over time. In the project, the main scene is called `EasterEggHunt` and the head object is called `Head`.
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis" title="Extracting the player's head position over time" result="output"
-head_time_s, head_world_positions = extract_object_positions_timeseries(record1, "HouseObjectivesSteamAudio", "Head")
+head_time_s, head_world_positions = extract_object_positions_timeseries(record1, "EasterEggHunt", "Head")
 
 print(f"head_time_s shape: {head_time_s.shape}")
 print(f"head_world_positions shape: {head_world_positions.shape}")
@@ -164,11 +164,16 @@ fig = go.Figure()
 fig.add_trace(head_trajectory)
 fig.update_layout(
     title="Head trajectory in world space (m) over time (s)",
-    # We swap the y and z axis to match the Unity coordinate system
     scene=dict(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
+        xaxis=dict(range=[-9, 3]),
+        yaxis=dict(range=[-10, 1]),
+        zaxis=dict(range=[0, 2.5]),
+        aspectmode='manual',
+        aspectratio=dict(x=12, y=11, z=2.5),
+        camera_eye=dict(x=12, y=2, z=12)
     ),
     width=800,
     height=800
@@ -232,6 +237,12 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
+        xaxis=dict(range=[-9, 3]),
+        yaxis=dict(range=[-10, 1]),
+        zaxis=dict(range=[0, 2.5]),
+        aspectmode='manual',
+        aspectratio=dict(x=12, y=11, z=2.5),
+        camera_eye=dict(x=12, y=2, z=12)
     ),
     width=800,
     height=800
@@ -258,12 +269,9 @@ def extract_signals(record: RecordReader, signal_name: str) -> tuple[np.ndarray,
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
 eda_time_s, eda_values = extract_signals(record1, "EDA")
-
-# TODO: replace by true EDA
-eda_time_s = np.linspace(head_time_s.min(), head_time_s.max(), len(head_time_s))
-eda_values = np.sin(eda_time_s * 10)
-
+#TODO: check if they are correct eda values from record
 resampled_eda_values = eda_values[np.clip(np.searchsorted(eda_time_s, head_time_s), 0, len(eda_values) - 1)]
+resampled_eda_values = eda_values
 ```
 
 Now let's plot the trajectory with the EDA signal color-coded on the trajectory.
@@ -274,6 +282,7 @@ head_trajectory_with_eda = set_trajectory_custom_data(head_trajectory_with_eda, 
 
 fig = go.Figure()
 fig.add_trace(head_trajectory_with_eda)
+
 fig.update_layout(
     title="Head trajectory in world space (m) with EDA signal (µS)",
     # We swap the y and z axis to match the Unity coordinate system
@@ -281,10 +290,19 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
+        xaxis=dict(range=[-9, 3]),
+        yaxis=dict(range=[-10, 1]),
+        zaxis=dict(range=[0, 2.5]),
+        aspectmode='manual',
+        aspectratio=dict(x=12, y=11, z=2.5),
+        camera_eye=dict(x=12, y=2, z=12)
     ),
     width=800,
     height=800
 )
+
+
+
 fig.show()
 ```
 
@@ -310,7 +328,7 @@ Example of an XDF file including EEG signals imported in EEGLAB. Source: [EEGLAB
 def extract_input_actions(record: RecordReader, binding_path: str) -> tuple[np.ndarray, np.ndarray]:
     time_s = []
     values = []
-
+    #TODO Investigate Error in input_action_decoder.py line 44, attribute name must be string, not 'NoneType
     for input_action in record.input_actions:
         if binding_path in input_action.binding_paths:
             time_s.append(input_action.time_s)
@@ -320,7 +338,7 @@ def extract_input_actions(record: RecordReader, binding_path: str) -> tuple[np.n
 ```
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-input_time_s, input_values = extract_input_actions(record1, "<Gamepad>/leftStick")
+input_time_s, input_values = extract_input_actions(record1, "XRI Right Hand Interaction/Select")
 ```
 
 !!! warning
@@ -342,13 +360,8 @@ record2 = RecordReader("path/to/record2.plm")
 We can extract the data from both records as we did before:
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-r1_head_time_s, r1_head_world_positions = extract_object_positions_timeseries(record1, "HouseObjectivesSteamAudio", "Head")
-r2_head_time_s, r2_head_world_positions = extract_object_positions_timeseries(record2, "HouseObjectivesSteamAudio", "Head")
-
-# TODO: remove when we have true data
-r2_head_world_positions[:, 0] += np.sin(r2_head_time_s * 5) * 0.1
-r2_head_world_positions[:, 1] += np.sin(r2_head_time_s * 10) * 0.1
-r2_head_world_positions[:, 2] += np.sin(r2_head_time_s * 2) * 0.1
+r1_head_time_s, r1_head_world_positions = extract_object_positions_timeseries(record1, "EasterEggHunt", "Main Camera")
+r2_head_time_s, r2_head_world_positions = extract_object_positions_timeseries(record2, "EasterEggHunt", "Main Camera")
 
 r1_head_trajectory = create_trajectory_3d(r1_head_world_positions, "Head trajectory (Record 1)")
 r1_head_trajectory = set_trajectory_custom_data(r1_head_trajectory, r1_head_time_s, "Time", "s")
@@ -366,9 +379,12 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
-        zaxis_range=[0, 2],
-        xaxis_range=[-6, 6],
-        yaxis_range=[-6, 0],
+        xaxis=dict(range=[-9, 3]),
+        yaxis=dict(range=[-10, 1]),
+        zaxis=dict(range=[0, 2.5]),
+        aspectmode='manual',
+        aspectratio=dict(x=12, y=11, z=2.5),
+        camera_eye=dict(x=12, y=2, z=12)
     ),
     width=800,
     height=800

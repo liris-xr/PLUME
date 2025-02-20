@@ -33,6 +33,7 @@ plugins:
   - glightbox:
       auto_caption: true
   - macros
+  - print-site #always define as last plugin
 
 extra_css:
   - styles/style.css

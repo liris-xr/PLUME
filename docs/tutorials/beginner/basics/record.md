@@ -208,7 +208,7 @@ conda create --name my_env python==3.12
 ```
 conda activate my_env
 ```
-* In Anaconda Prompt, navigate to the tutorial files, enter the `Python\PhysiologicalSignals` folder.
+* In Anaconda Prompt, navigate to the tutorial files, enter the `UnityProject/EasterEggHunt/Assets/PythonScripts~` folder.
 * Install the required packages using pip and the following command:
 ```
 pip install -r requirements.txt
