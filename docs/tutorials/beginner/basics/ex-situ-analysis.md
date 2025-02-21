@@ -136,7 +136,7 @@ def create_trajectory_3d(positions: np.ndarray, name: str, line_width: int = 5, 
         )
     )
 
-def set_trajectory_custom_data(trajectory: go.Scatter3d, data: np.ndarray, data_name: str, data_units: str, cmap: str = "viridis") -> go.Scatter3d:
+def set_trajectory_custom_data(trajectory: go.Scatter3d, data: np.ndarray, data_name: str, data_units: str, cmap: str = "viridis", color_bar_x=-0.15) -> go.Scatter3d:
     trajectory.customdata = data
     trajectory.hovertemplate = (
         "<b>X:</b> %{x:.2f}<br>" +
@@ -147,7 +147,7 @@ def set_trajectory_custom_data(trajectory: go.Scatter3d, data: np.ndarray, data_
     )
 
     trajectory.line.color = data
-    trajectory.line.colorbar = dict(title=f"{data_name} ({data_units})", x=-0.15)
+    trajectory.line.colorbar = dict(title=f"{data_name} ({data_units})", x=color_bar_x)
     trajectory.line.colorscale = cmap
     return trajectory
 ```
@@ -306,20 +306,73 @@ Example of an XDF file including EEG signals imported in EEGLAB. Source: [EEGLAB
 ### Extracting input actions
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
+from scipy.interpolate import interp1d
+
 def extract_input_actions(record: RecordReader, binding_path: str) -> tuple[np.ndarray, np.ndarray]:
     time_s = []
     values = []
-    #TODO Investigate Error in input_action_decoder.py line 44, attribute name must be string, not 'NoneType
     for input_action in record.input_actions:
         if binding_path in input_action.binding_paths:
             time_s.append(input_action.time_s)
             values.append(input_action.value)
 
     return np.array(time_s), np.array(values)
+
+def interpolate_actions(time_s: np.ndarray, values: np.ndarray, time_s_reference) -> tuple[np.ndarray, np.ndarray]:
+    values_interpolated = interp1d(time_s, values, kind='previous', fill_value=0, bounds_error=False)
+
+    for t in time_s_reference:
+        if t not in time_s:
+            time_s = np.append(time_s, t)
+            values = np.append(values, values_interpolated(t))
+
+    time_s, values = zip(*sorted(zip(time_s, values)))
+
+    return np.array(time_s), np.array(values)
 ```
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-input_time_s, input_values = extract_input_actions(record1, "XRI Right Hand Interaction/Select")
+right_hand_binding_path = "<XRController>{RightHand}/pointerPosition"
+right_grip_binding_path = "<XRController>{RightHand}/{Grip}"
+
+left_hand_binding_path = "<XRController>{LeftHand}/pointerPosition"
+left_grip_binding_path = "<XRController>{LeftHand}/{Grip}"
+
+right_hand_time_s, right_hand_values = extract_input_actions(record1, right_hand_binding_path)
+right_grip_time_s, right_grip_values = extract_input_actions(record1, right_grip_binding_path)
+
+left_hand_time_s, left_hand_values = extract_input_actions(record1, left_hand_binding_path)
+left_grip_time_s, left_grip_values = extract_input_actions(record1, left_grip_binding_path)
+
+right_grip_time_s, right_grip_values = interpolate_actions(right_grip_time_s, right_grip_values, right_hand_time_s)
+left_grip_time_s, left_grip_values = interpolate_actions(left_grip_time_s, left_grip_values, left_hand_time_s)
+
+fig = go.Figure()
+right_hand_trajectory = create_trajectory_3d(right_hand_values, "Right Hand Position")
+right_hand_trajectory = set_trajectory_custom_data(right_hand_trajectory, np.array(right_grip_values), "Right Grip Value", "unit", "darkmint", color_bar_x=-0.25)
+
+fig.add_trace(right_hand_trajectory)
+
+left_hand_trajectory = create_trajectory_3d(left_hand_values, "Left Hand Position", color="blue")
+left_hand_trajectory = set_trajectory_custom_data(left_hand_trajectory, np.array(left_grip_values), "Left Grip Value", "unit", "peach", color_bar_x=-0.5)
+
+fig.add_trace(left_hand_trajectory)
+
+
+fig.update_layout(
+    title="Right Hand Position + Grip Value",
+    # We swap the y and z axis to match the Unity coordinate system
+    scene=dict(
+        xaxis_title="X",
+        yaxis_title="Z",
+        zaxis_title="Y",
+        zaxis=dict(range=[0,2])
+    ),
+    width=800,
+    height=800
+)
+
+fig.show()
 ```
 
 !!! warning
