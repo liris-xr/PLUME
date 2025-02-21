@@ -1,6 +1,6 @@
 # Replay your experiment
 
-After recording your experience, you can replay it with PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording: a record can be replayed without having to send them your full Unity project. The PLUME Viewer recreates the scene as it was during the recording in 3D, providing richer context than a simple video recording for [in-situ analysis](in-situ-analysis.md). The PLUME Viewer can be used to ensure everything went as expected during the experiment, analyze user behavior, or even for post-experiment debriefing.
+After recording your experience, you can replay it with PLUME Viewer. This standalone application is independent and completely decoupled from the initial Unity project used during recording: a record can be replayed without having to send them your full Unity project. The PLUME Viewer recreates the scene as it was during the recording in 3D, providing richer context than a simple video recording for [in-situ analysis](in-situ_analysis.md). The PLUME Viewer can be used to ensure everything went as expected during the experiment, analyze user behavior, or even for post-experiment debriefing.
 
 !!! example "Sample files"
     If you were unable to create a record or build the asset bundle, we provide sample files in the [tutorial releases pages](https://github.com/liris-xr/PLUME-Tutorial-Basics/releases/) to follow along the next sections of the tutorial.
