@@ -1,6 +1,7 @@
 .vs/
 .idea/
 .vscode/
+mkdocs.local.yml
 
 *.g.md
 
