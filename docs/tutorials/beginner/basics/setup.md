@@ -48,12 +48,16 @@ To follow along with the Easter Egg Hunt project, you will need to set up your U
 !!! warning
     In this window, you can manage both Desktop and Android projects. Make sure to configure for the platform you want to build for.
 
-![Project XR Settings](assets/record/images/image-6.png)
+![Project XR Settings](assets/record/images/image-6.png){width="600"}
+/// caption
+///
 
 * Select the relevant Interaction Profile. E.g., `Oculus Touch Controller Profile` for Meta Quest.
 * Select the relevant OpenXR Feature Groups to enable. E.g., `Meta Quest Support` when building for Meta Quest.
 
-![Project OpenXR Settings](assets/record/images/image-7.png)
+![Project OpenXR Settings](assets/record/images/image-7.png){width="600"}
+/// caption
+///
 
 * Close the Project Settings Window.
 
