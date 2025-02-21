@@ -2,8 +2,6 @@
 
 PLUME record files are fully decoupled from the Unity engine. As a result, they can be parsed from any external applications. To further simplify the process, we provide a Python API to parse and extract data from the record files. This allows you to perform ex-situ analysis (i.e. analyzing the data outside its 3D context) using Python for more traditional analysis workflow (statistical analysis, machine learning, etc.). The package also comes with a set of utilities to simplify the conversion of the data to different formats used in data analysis like pandas dataframe, CSV and XDF for physiological signals to be analyzed in external software such as SigViewer, EEGLAB or MoBILAB.
 
----
-
 ## Installing PLUME Python
 
 !!! note

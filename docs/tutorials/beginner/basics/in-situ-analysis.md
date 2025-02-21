@@ -1,8 +1,6 @@
 # Analyzing data in-situ
 In-situ analysis is the process of analyzing data within its original 3D context. This is particularly valuable for understanding physiological signals, gaze data, and user interactions in relation to the user actions within the virtual environment. By visualizing data directly in 3D—such as heatmaps, trajectories, or event markers—researchers can better interpret user behavior and experiment dynamics. For this task, we provide PLUME Viewer, a tool that allows users to replay and analyze recorded sessions in the fully reconstructed 3D scene. In this part of the tutorial, we will introduce its core features and demonstrate how it can be used to better understand the behaviour of the egg hunter.
 
----
-
 ## User Trajectory
 After recording a user exploring the virtual environment in search of Easter eggs, we can analyze their movements to better understand navigation patterns and spatial behavior. One key aspect of this analysis is tracking the user’s trajectory within the 3D space. Let's compute the trajectory of the user’s head to visualize their movement path, identify frequently visited areas, and assess how they navigated the environment during the search.
 
