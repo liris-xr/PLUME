@@ -1,4 +1,4 @@
-# Recording event markers
+# Recording custom data
 
 When recording an experiment, you might want to add information to your records to fulfill your specific research needs. In this section, we will show you how to add simple event markers to your records.
 

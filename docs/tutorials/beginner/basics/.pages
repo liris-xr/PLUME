@@ -4,8 +4,8 @@ nav:
   - Introduction: introduction.md
   - setup.md
   - record.md
-  - customize_record.md
+  - record_custom_data.md
   - build_asset_bundle.md
   - replay.md
-  - ex-situ-analysis.md
-  - in-situ-analysis.md
+  - ex-situ_analysis.md
+  - in-situ_analysis.md
