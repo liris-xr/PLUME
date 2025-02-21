@@ -1,6 +1,6 @@
 # What is PLUME?
 
-PLUME is an open-source software toolbox (GPLv3) that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis (see [an example](./demonstration/index.md)), and their easy sharing due to our compact and interoperable data format.
+PLUME is an open-source software toolbox (GPLv3) that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis, and their easy sharing due to our compact and interoperable data format.
 
 <div style="float: right; width: 100px; margin: 0px 20px">
     <img src="/assets/dummy_cropped.png" alt="PLUME Dummy">

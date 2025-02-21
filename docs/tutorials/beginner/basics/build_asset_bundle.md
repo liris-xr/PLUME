@@ -1,6 +1,6 @@
 # Build the asset bundle
 
-PLUME records are compact files that contains behavioural data, application state, physiological signals, markers, etc. To keep it light-weight, assets used in application (e.g., meshes, materials, lightmaps, etc.) are not saved within the PLUME record files, as they would be redundant across recordings, and are not essential for [ex-situ analysis](ex-situ-analysis.md). However, as these assets are necessary to [replay the experiment](replay.md) and for [in-situ analysis](in-situ-analysis.md), PLUME is delivered with an asset bundle build script. This script will collect assets dependencies from the built scenes and compress them.
+PLUME records are compact files that contains behavioural data, application state, physiological signals, markers, etc. To keep it light-weight, assets used in application (e.g., meshes, materials, lightmaps, etc.) are not saved within the PLUME record files, as they would be redundant across recordings, and are not essential for [ex-situ analysis](ex-situ_analysis.md). However, as these assets are necessary to [replay the experiment](replay.md) and for [in-situ analysis](in-situ_analysis.md), PLUME is delivered with an asset bundle build script. This script will collect assets dependencies from the built scenes and compress them.
 
 !!! info
     The asset bundle is required to replay the experiment in PLUME-Viewer, but not for external analysis with PLUME-Python.
