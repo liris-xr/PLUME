@@ -1,6 +1,9 @@
 # Get started
 
-PLUME can be installed and used on various Unity projects (2D, 3D, XR) and platforms (Windows, Android, iOS). Once installed, we recommend you to check the [Beginner Tutorial](tutorials/beginner/basics/index.md) to get started with the toolbox.
+PLUME can be installed and used on various Unity projects (2D, 3D, XR) and platforms (Windows, Android, iOS). The installation process is different depending on the module you want to use, the instructions are detailed below.
+
+!!! tip
+    Once installed, we recommend you to check the [Beginner Tutorial](tutorials/beginner/basics/introduction.md) to get started with the toolbox.
 
 ## Installing PLUME Recorder
 
