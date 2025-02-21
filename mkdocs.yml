@@ -1,7 +1,6 @@
 docs_dir: docs
 site_name: PLUME
 site_author: Charles JAVERLIAT
-copyright: GNU General Public License v3.0
 repo_url: https://github.com/liris-xr/PLUME/
 repo_name: liris-xr/PLUME
 edit_uri: edit/master/docs/
@@ -53,6 +52,17 @@ extra:
           note: >- 
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to collect your feedback on the tutorial pages, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+copyright: >
+  GNU General Public License v3.0<br>
+  <a href="#__consent">Change cookie settings</a>
 
 extra_css:
   - styles/style.css
