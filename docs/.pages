@@ -5,7 +5,6 @@ nav:
         - What is PLUME?: what_is_plume.md
         - Learn the basics: tutorials/beginner/basics/introduction
         - tutorials
-  - FAQ:
-      - troubleshoot.md
+  - FAQ: faq.md
   - contributing.md
   - about.md
