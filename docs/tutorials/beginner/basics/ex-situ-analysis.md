@@ -166,12 +166,7 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
-        xaxis=dict(range=[-9, 3]),
-        yaxis=dict(range=[-10, 1]),
-        zaxis=dict(range=[0, 2.5]),
-        aspectmode='manual',
-        aspectratio=dict(x=12, y=11, z=2.5),
-        camera_eye=dict(x=12, y=2, z=12)
+        zaxis=dict(range=[0,2])
     ),
     width=800,
     height=800
@@ -235,12 +230,7 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
-        xaxis=dict(range=[-9, 3]),
-        yaxis=dict(range=[-10, 1]),
-        zaxis=dict(range=[0, 2.5]),
-        aspectmode='manual',
-        aspectratio=dict(x=12, y=11, z=2.5),
-        camera_eye=dict(x=12, y=2, z=12)
+        zaxis=dict(range=[0,2])
     ),
     width=800,
     height=800
@@ -256,9 +246,9 @@ TODO
 def extract_signals(record: RecordReader, signal_name: str) -> tuple[np.ndarray, np.ndarray]:
     time_s = []
     values = []
-
+    print(record.signals)
     for signal in record.signals:
-        if signal.stream_info.name == signal_name:
+        if signal.stream_info.name in signal_name:
             time_s.append(signal.time_s)
             values.append(signal.values)
 
@@ -266,10 +256,8 @@ def extract_signals(record: RecordReader, signal_name: str) -> tuple[np.ndarray,
 ```
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-eda_time_s, eda_values = extract_signals(record1, "EDA")
-#TODO: check if they are correct eda values from record
+eda_time_s, eda_values = extract_signals(record1, "EDA1")
 resampled_eda_values = eda_values[np.clip(np.searchsorted(eda_time_s, head_time_s), 0, len(eda_values) - 1)]
-resampled_eda_values = eda_values
 ```
 
 Now let's plot the trajectory with the EDA signal color-coded on the trajectory.
@@ -288,12 +276,7 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
-        xaxis=dict(range=[-9, 3]),
-        yaxis=dict(range=[-10, 1]),
-        zaxis=dict(range=[0, 2.5]),
-        aspectmode='manual',
-        aspectratio=dict(x=12, y=11, z=2.5),
-        camera_eye=dict(x=12, y=2, z=12)
+        zaxis=dict(range=[0,2])
     ),
     width=800,
     height=800
@@ -377,12 +360,7 @@ fig.update_layout(
         xaxis_title="X",
         yaxis_title="Z",
         zaxis_title="Y",
-        xaxis=dict(range=[-9, 3]),
-        yaxis=dict(range=[-10, 1]),
-        zaxis=dict(range=[0, 2.5]),
-        aspectmode='manual',
-        aspectratio=dict(x=12, y=11, z=2.5),
-        camera_eye=dict(x=12, y=2, z=12)
+        zaxis=dict(range=[0,2])
     ),
     width=800,
     height=800
