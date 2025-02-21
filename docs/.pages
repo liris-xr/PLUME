@@ -1,9 +1,10 @@
 nav:
   - Home: index.md
+  - Get Started: get-started.md
   - Learn:
-      - get-started.md
-      - Learn the basics: tutorials/beginner/basics/introduction
-      - tutorials
+        - What is PLUME?: what_is_plume.md
+        - Learn the basics: tutorials/beginner/basics/introduction
+        - tutorials
   - FAQ:
       - troubleshoot.md
   - contributing.md
