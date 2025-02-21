@@ -24,9 +24,12 @@ pip install plume-python
 
 <!-- Data preparation for generating the results -->
 ```python exec="on" session="basics-ex-situ-analysis" html="True"
+from warnings import filterwarnings
 from plume import RecordReader
 import numpy as np
 import plotly.graph_objects as go
+
+filterwarnings("ignore")
 
 # Replace fig.show() by hmtl output to display the plot in the page
 
