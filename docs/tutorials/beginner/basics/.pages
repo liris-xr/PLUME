@@ -2,7 +2,10 @@ title: Learn the basics
 
 nav:
   - introduction.md
+  - setup.md
   - record.md
+  - customize_record.md
+  - build_asset_bundle.md
   - replay.md
   - ex-situ-analysis.md
   - in-situ-analysis.md

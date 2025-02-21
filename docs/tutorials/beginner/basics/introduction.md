@@ -1,6 +1,6 @@
 # Learn the basics
 
-Welcome to the PLUME tutorial for beginners! This guide will help you get started with PLUME by recording your first experiment, reviewing it in the viewer and analyzing the data. To follow along with this tutorial, we've created a sample Unity project: a simple VR game where players hunt for Easter eggs against the clock. The project can be downloaded from the [PLUME-Tutorial-Basics repository](https://github.com/liris-xr/PLUME-Tutorial-Basics).
+Welcome to the PLUME tutorial for beginners! This guide will help you get started with PLUME by recording your first experiment, reviewing it in the viewer and analyzing the data. To follow along with this tutorial, we've created a sample Unity project: a simple VR game where players hunt for Easter eggs against the clock.
 
 ![PLUME Tutorial Basics](assets/tutorial_basics_teaser.png){ width="700" }
 /// caption
