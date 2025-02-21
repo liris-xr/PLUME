@@ -1,6 +1,7 @@
 ---
 hide:
   - footer
+  - feedback
 ---
 
 # What is PLUME?

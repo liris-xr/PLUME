@@ -18,7 +18,7 @@ By the end of this tutorial, you will have learned how to:
 - [Introduction](introduction.md)
 - [Setup](setup.md)
 - [Record your experiment](record.md)
-- [Recording custom data](customize_record.md)
+- [Recording custom data](record_custom_data.md)
 - [Build the asset bundle](build_asset_bundle.md)
 - [Replay your experiment](replay.md)
 - [Analyzing data ex-situ](ex-situ_analysis.md)

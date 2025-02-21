@@ -1,6 +1,9 @@
 ---
 template: home.html
 title: Home
+
+hide:
+  - feedback
 ---
 
 <style>
