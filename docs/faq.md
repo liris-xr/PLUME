@@ -1,4 +1,4 @@
-# Troubleshoot
+# Frequently Asked Questions
 
 ## Unity throws an error when installing PLUME Recorder
 * Please check the version of your Unity Editor, and make sure it is newer than 2022.3
