@@ -10,16 +10,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Install Protoc
-        uses: arduino/setup-protoc@v3
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - name: Install Mkdocs requirements
-        run: pip install -r docs/requirements.txt
-      # - name: Generate protos documentation
-      #   run: python generate_protos_docs.py
+        run: pip install -r requirements.txt
       - name: Build documentation
         run: mkdocs build --strict
       - name: Upload pages artifact

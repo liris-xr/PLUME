@@ -53,5 +53,5 @@ The timeline allows you to navigate through the record and visualize the physiol
 PLUME-Viewer timeline with two physiological signals (ECG and EDA) and event markers.
 ///
 
-![Markers Panel](image.png){width=300, align="right"}
+![Markers Panel](assets/replay/images/image.png){width=300, align="right"}
 Earlier on, we modified a script to create event markers whenever a user picks up an egg. Those events are displayed both as a list in the right panel and as color-coded bars on the timeline. You can control their visibility on the timeline by toggling individual markers in the markers panel or by using the `Show All` and `Hide All` options to manage all markers at once. Event markers aren't limited to timeline visualization—they can also be integrated into 3D trajectories to highlight spatial-temporal relationships within the session, a feature we'll explore in the upcoming section on adding visual markers to trajectories.

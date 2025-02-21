@@ -1,9 +1,3 @@
----
-hide:
-  - footer
-  - feedback
----
-
 # What is PLUME?
 
 PLUME is an open-source software toolbox (GPLv3) that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis, and their easy sharing due to our compact and interoperable data format.
@@ -24,4 +18,21 @@ We believe that PLUME can greatly benefit the scientific community by making the
     <img src="/assets/plume_recorder_light.png">
     <img src="/assets/plume_viewer_light.png">
     <img src="/assets/plume_python_light.png">
+</div>
+
+This project was developed in the LIRIS laboratory. It was supported by the Région Auvergne-Rhône-Alpes (PROMESS project), the French National Research Agency ([RENFORCE project](https://projet.liris.cnrs.fr/renforce/)) and the École Centrale de Lyon/ENISE.
+
+<div class="md-container center-h gap-30 flex-row">
+  <div class="column">
+    <a href="https://www.auvergnerhonealpes.fr/"><img src="/assets/logo_aura.png" alt="Région Auvergne-Rhône-Alpes" style="height: 30px"></a>
+  </div>
+  <div class="column">
+    <a href="https://anr.fr/"><img src="/assets/logo_anr.png" alt="Agence Nationale de la Recherche" style="height: 30px"></a>
+  </div>
+  <div class="column">
+    <a href="https://liris.cnrs.fr/renforce/"><img src="/assets/logo_liris.png" alt="LIRIS" style="height: 30px"></a>
+  </div>
+  <div class="column">
+    <a href="https://www.enise.fr/"><img src="/assets/logo_enise.jpg" alt="ENISE" style="height: 30px"></a>
+  </div>
 </div>

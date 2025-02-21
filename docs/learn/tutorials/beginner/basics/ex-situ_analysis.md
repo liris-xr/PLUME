@@ -34,8 +34,8 @@ def print_fig_html(fig):
 
 go.Figure.show = lambda fig: print_fig_html(fig)
 
-record1 = RecordReader("docs/tutorials/beginner/basics/assets/record1.plm")
-record2 = RecordReader("docs/tutorials/beginner/basics/assets/record2.plm")
+record1 = RecordReader("docs/learn/tutorials/beginner/basics/assets/record1.plm")
+record2 = RecordReader("docs/learn/tutorials/beginner/basics/assets/record2.plm")
 ```
 
 !!! note
