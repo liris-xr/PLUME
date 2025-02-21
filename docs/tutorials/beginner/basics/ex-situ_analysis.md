@@ -130,23 +130,61 @@ def create_trajectory_3d(positions: np.ndarray, name: str, line_width: int = 5, 
         hovertemplate=(
             "<b>X:</b> %{x:.2f}<br>" +
             "<b>Y:</b> %{y:.2f}<br>" +
-            "<b>Z:</b> %{z:.2f}<br>"
+            "<b>Z:</b> %{z:.2f}"
         )
     )
 
-def set_trajectory_custom_data(trajectory: go.Scatter3d, data: np.ndarray, data_name: str, data_units: str, cmap: str = "viridis", color_bar_x=-0.15) -> go.Scatter3d:
-    trajectory.customdata = data
-    trajectory.hovertemplate = (
-        "<b>X:</b> %{x:.2f}<br>" +
-        "<b>Y:</b> %{y:.2f}<br>" +
-        "<b>Z:</b> %{z:.2f}<br>" +
-        "<b>" + data_name + ":</b> " +
-        "%{customdata:.2f}" + data_units
+def add_trajectory_custom_data(
+    trajectory: go.Scatter3d,
+    data: np.ndarray,
+    data_name: str,
+    data_units: str,
+    as_line_color: bool = False,
+    cmap: str = "viridis",
+    color_bar_x=-0.15,
+) -> go.Scatter3d:
+    """
+    Add custom data to a 3D trajectory plot that will be displayed in hover tooltips.
+    Optionally use the data to color the trajectory line.
+
+    Args:
+        trajectory (go.Scatter3d): The plotly 3D scatter trajectory to add data to
+        data (np.ndarray): 1D array of data values to add, must match length of trajectory
+        data_name (str): Name of the data to display in hover tooltip
+        data_units (str): Units of the data to display in hover tooltip
+        as_line_color (bool, optional): If True, use data values to color trajectory line. Defaults to False.
+        cmap (str, optional): Colormap to use if coloring line. Defaults to "viridis".
+        color_bar_x (float, optional): X position of colorbar if showing. Defaults to -0.15.
+
+    Returns:
+        go.Scatter3d: The trajectory object with custom data added
+    """
+
+    custom_data_index = 0
+
+    if trajectory.customdata is None:
+        trajectory.customdata = data.reshape(-1, 1)
+    else:
+        custom_data_index = trajectory.customdata.shape[-1]
+        trajectory.customdata = np.concatenate(
+            (trajectory.customdata, data.reshape(-1, 1)), axis=-1
+        )
+
+    trajectory.hovertemplate += (
+        "<br>" + data_name
+        + ":</b> "
+        + "%{customdata["
+        + str(custom_data_index)
+        + "]:.2f}"
+        + data_units
     )
 
-    trajectory.line.color = data
-    trajectory.line.colorbar = dict(title=f"{data_name} ({data_units})", x=color_bar_x)
-    trajectory.line.colorscale = cmap
+    if as_line_color:
+        trajectory.line.color = data
+        trajectory.line.colorbar = dict(
+            title=f"{data_name} ({data_units})", x=color_bar_x
+        )
+        trajectory.line.colorscale = cmap
     return trajectory
 ```
 
@@ -154,7 +192,7 @@ Applying the function to the head, we get the following result:
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis" title="Creating the head trajectory"
 head_trajectory = create_trajectory_3d(head_world_positions, "Head trajectory")
-head_trajectory = set_trajectory_custom_data(head_trajectory, head_time_s, "Time", "s")
+head_trajectory = add_trajectory_custom_data(head_trajectory, head_time_s, "Time", "s", as_line_color=True)
 
 fig = go.Figure()
 fig.add_trace(head_trajectory)
@@ -238,37 +276,51 @@ fig.show()
 
 ### Extracting physiological signals
 
-TODO
+PLUME records can also contain physiological signals streamed from devices via Lab Streaming Layer (LSL). These signals can be extracted and analyzed using PLUME Python. In this example, we will extract the Electrodermal Activity (EDA) signal. We'll calculate the rate of change in the EDA signal by finding its derivative, which might helps identify moments of most significant physiological response. These key moments can then be visualized alongside the movement trajectory. Let's start by defining a function to extract the physiological signals timeseries and a function to resample the timeseries to a target time series.
 
-```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
+```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis" title="Function to extract physiological signals from the record"
 def extract_signals(record: RecordReader, signal_name: str) -> tuple[np.ndarray, np.ndarray]:
     time_s = []
     values = []
-    print(record.signals)
     for signal in record.signals:
-        if signal.stream_info.name in signal_name:
+        if signal.stream_info.name == signal_name:
             time_s.append(signal.time_s)
             values.append(signal.values)
 
     return np.array(time_s), np.array(values)
 ```
 
-```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-eda_time_s, eda_values = extract_signals(record1, "EDA1")
-resampled_eda_values = eda_values[np.clip(np.searchsorted(eda_time_s, head_time_s), 0, len(eda_values) - 1)]
+```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis" title="Function to resample a timeseries to a target timeseries"
+def resample(values: np.ndarray, values_time_s: np.ndarray, target_time_s: np.ndarray) -> np.ndarray:
+    # Here we snap to the closest value in the time series, you could also interpolate the values
+    resampled_values = values[np.clip(np.searchsorted(values_time_s, target_time_s), 0, len(values) - 1)]
+    return resampled_values
 ```
 
-Now let's plot the trajectory with the EDA signal color-coded on the trajectory.
+Now we can extract the EDA signal and compute its derivative to find the time where the signal changes the most.
 
 ```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-head_trajectory_with_eda = create_trajectory_3d(head_world_positions, "Head trajectory with EDA")
-head_trajectory_with_eda = set_trajectory_custom_data(head_trajectory_with_eda, resampled_eda_values, "EDA", "µS")
+eda_time_s, eda_values = extract_signals(record1, "EDA1")
+# Reshape the values to remove the extra dimension (N, 1) -> (N,)
+eda_values = eda_values.squeeze()
+
+# Let's compute the derivative of the EDA signal to find the time where the signal changes the most
+eda_values_diff = np.gradient(eda_values, eda_time_s, edge_order=2)
+eda_values_diff = resample(eda_values_diff, eda_time_s, head_time_s)
+```
+
+Now let's plot the trajectory with the EDA derivative color-coded on the trajectory.
+
+```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
+head_trajectory_with_eda = create_trajectory_3d(head_world_positions, "Head trajectory")
+head_trajectory_with_eda = add_trajectory_custom_data(head_trajectory_with_eda, eda_values_diff, "EDA derivative", "µS/s", as_line_color=True)
+head_trajectory_with_eda = add_trajectory_custom_data(head_trajectory_with_eda, head_time_s, "Time", "s")
 
 fig = go.Figure()
 fig.add_trace(head_trajectory_with_eda)
 
 fig.update_layout(
-    title="Head trajectory in world space (m) with EDA signal (µS)",
+    title="Head trajectory in world space (m) with EDA signal derivative (µS/s)",
     # We swap the y and z axis to match the Unity coordinate system
     scene=dict(
         xaxis_title="X",
@@ -279,8 +331,6 @@ fig.update_layout(
     width=800,
     height=800
 )
-
-
 
 fig.show()
 ```
@@ -303,9 +353,9 @@ Example of an XDF file including EEG signals imported in EEGLAB. Source: [EEGLAB
 
 ### Extracting input actions
 
-```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
-from scipy.interpolate import interp1d
+Input actions are events triggered by the user, such as pressing a button, moving a controller, etc. These actions are recorded in the record file and can be extracted using PLUME Python. In this example, we will extract the position of the right and left hand controllers and the grip value over time. We will then plot the trajectory of the controllers and color-code the trajectory based on the grip value.
 
+```python exec="on" source="above" linenums="1" session="basics-ex-situ-analysis"
 def extract_input_actions(record: RecordReader, binding_path: str) -> tuple[np.ndarray, np.ndarray]:
     time_s = []
     values = []
@@ -313,18 +363,6 @@ def extract_input_actions(record: RecordReader, binding_path: str) -> tuple[np.n
         if binding_path in input_action.binding_paths:
             time_s.append(input_action.time_s)
             values.append(input_action.value)
-
-    return np.array(time_s), np.array(values)
-
-def interpolate_actions(time_s: np.ndarray, values: np.ndarray, time_s_reference) -> tuple[np.ndarray, np.ndarray]:
-    values_interpolated = interp1d(time_s, values, kind='previous', fill_value=0, bounds_error=False)
-
-    for t in time_s_reference:
-        if t not in time_s:
-            time_s = np.append(time_s, t)
-            values = np.append(values, values_interpolated(t))
-
-    time_s, values = zip(*sorted(zip(time_s, values)))
 
     return np.array(time_s), np.array(values)
 ```
@@ -337,28 +375,31 @@ left_hand_binding_path = "<XRController>{LeftHand}/pointerPosition"
 left_grip_binding_path = "<XRController>{LeftHand}/{Grip}"
 
 right_hand_time_s, right_hand_values = extract_input_actions(record1, right_hand_binding_path)
-right_grip_time_s, right_grip_values = extract_input_actions(record1, right_grip_binding_path)
+_right_grip_time_s, right_grip_values = extract_input_actions(record1, right_grip_binding_path)
+# Resample to make sure both timeseries share the same time points
+right_grip_values = resample(right_grip_values, _right_grip_time_s, right_hand_time_s)
+right_grip_values = right_grip_values.squeeze()
 
 left_hand_time_s, left_hand_values = extract_input_actions(record1, left_hand_binding_path)
-left_grip_time_s, left_grip_values = extract_input_actions(record1, left_grip_binding_path)
+_left_grip_time_s, left_grip_values = extract_input_actions(record1, left_grip_binding_path)
+# Resample to make sure both timeseries share the same time points
+left_grip_values = resample(left_grip_values, _left_grip_time_s, left_hand_time_s)
+left_grip_values = left_grip_values.squeeze()
 
-right_grip_time_s, right_grip_values = interpolate_actions(right_grip_time_s, right_grip_values, right_hand_time_s)
-left_grip_time_s, left_grip_values = interpolate_actions(left_grip_time_s, left_grip_values, left_hand_time_s)
-
-fig = go.Figure()
 right_hand_trajectory = create_trajectory_3d(right_hand_values, "Right Hand Position")
-right_hand_trajectory = set_trajectory_custom_data(right_hand_trajectory, np.array(right_grip_values), "Right Grip Value", "unit", "darkmint", color_bar_x=-0.25)
-
-fig.add_trace(right_hand_trajectory)
+right_hand_trajectory = add_trajectory_custom_data(right_hand_trajectory, right_grip_values, "Right Grip Value", "unit", cmap="darkmint", color_bar_x=-0.25, as_line_color=True)
+right_hand_trajectory = add_trajectory_custom_data(right_hand_trajectory, right_hand_time_s, "Time", "s")
 
 left_hand_trajectory = create_trajectory_3d(left_hand_values, "Left Hand Position", color="blue")
-left_hand_trajectory = set_trajectory_custom_data(left_hand_trajectory, np.array(left_grip_values), "Left Grip Value", "unit", "peach", color_bar_x=-0.5)
+left_hand_trajectory = add_trajectory_custom_data(left_hand_trajectory, left_grip_values, "Left Grip Value", "unit", cmap="peach", color_bar_x=-0.5, as_line_color=True)
+left_hand_trajectory = add_trajectory_custom_data(left_hand_trajectory, left_hand_time_s, "Time", "s")
 
+fig = go.Figure()
+fig.add_trace(right_hand_trajectory)
 fig.add_trace(left_hand_trajectory)
 
-
 fig.update_layout(
-    title="Right Hand Position + Grip Value",
+    title="Right hand position in local space (m) and grip value (unit) over time (s)",
     # We swap the y and z axis to match the Unity coordinate system
     scene=dict(
         xaxis_title="X",
@@ -379,7 +420,6 @@ fig.show()
 !!! note
     If you want to extract higher-level XRITK interactions (hover, activate, select), note that those are included in frames and accessible via `frame.xritk_interactions`. This is because XRITK interactions involves components present in a scene (XRInteractor and XRInteractable), and thus are frame-dependent in contrast to input actions that are not tied to specific frames.
 
-<!-- Now a section about analyzing multiple records at the same time (e.g. comparing different conditions, subjects, etc.) -->
 ### Analyzing multiple records (inter-subject or intra-subject comparison)
 
 In many scenarios, you may want to compare data from multiple records. For example, to compare different conditions, subjects, or sessions. To do this, you can load multiple records and extract the data as previously shown. Suppose we have two records, `record1` and `record2`:
@@ -396,10 +436,10 @@ r1_head_time_s, r1_head_world_positions = extract_object_positions_timeseries(re
 r2_head_time_s, r2_head_world_positions = extract_object_positions_timeseries(record2, "EasterEggHunt", "Main Camera")
 
 r1_head_trajectory = create_trajectory_3d(r1_head_world_positions, "Head trajectory (Record 1)")
-r1_head_trajectory = set_trajectory_custom_data(r1_head_trajectory, r1_head_time_s, "Time", "s")
+r1_head_trajectory = add_trajectory_custom_data(r1_head_trajectory, r1_head_time_s, "Time R1", "s", cmap="darkmint", color_bar_x=-0.25, as_line_color=True)
 
 r2_head_trajectory = create_trajectory_3d(r2_head_world_positions, "Head trajectory (Record 2)")
-r2_head_trajectory = set_trajectory_custom_data(r2_head_trajectory, r2_head_time_s, "Time", "s")
+r2_head_trajectory = add_trajectory_custom_data(r2_head_trajectory, r2_head_time_s, "Time R2", "s", cmap="peach", color_bar_x=-0.5, as_line_color=True)
 
 fig = go.Figure()
 fig.add_trace(r1_head_trajectory)
@@ -418,3 +458,7 @@ fig.update_layout(
 )
 fig.show()
 ```
+
+## From ex-situ to in-situ analysis
+
+While ex-situ analysis is useful for traditional data analysis workflows, you might feel limited by the lack of context provided by the 3D environment. Take the head trajectory example: a 3D plot is useful to visualize the trajectory, but it doesn't provide the same level of understanding as seeing the trajectory in the 3D environment itself to picture where the player was looking at a specific time. In-situ analysis, on the other hand, allows you to analyze the data within the 3D environment, providing a more comprehensive understanding of the data. In the next section, we will show you how to perform in-situ analysis in PLUME-Viewer.
