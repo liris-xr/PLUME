@@ -2,7 +2,7 @@
 
 With the interactions module, you can highlight objects that have been interacted with based on the recorded XRITK interactions. The interactions highlights analysis module contains the following parameters:
 
-![Interaction highlight module](../../../assets/in-situ-analysis/interaction_highlight_module.png){ width="400", align="left" }
+![Interaction highlight module](assets/interaction_highlight_module.png){ width="300", align="right" }
 
 * Interactor(s): GUID of one or more interactor.
 * Interactable(s) **(Optional)**: GUID of one or more interactable. If empty, every interactable in the scene will be taken into account.
@@ -13,7 +13,7 @@ With the interactions module, you can highlight objects that have been interacte
 
 Click on `Generate` to create the interaction heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
-![Interaction highlight result](../../../assets/in-situ-analysis/interaction_highlight_result.png){ width="600" }
+![Interaction highlight result](assets/interaction_highlight_result.png){ width="600" }
 /// caption
 Example of interaction highlight visualization.
 ///

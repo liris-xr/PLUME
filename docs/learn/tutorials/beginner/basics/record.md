@@ -43,7 +43,7 @@ Now that PLUME Recorder is installed within your project, you're all set to crea
 2. In the Easter Egg Hunt lobby, hit the `Start` button to begin the hunt when you are ready.
 3. After completing the Easter Egg Hunt, the application should close automatically.
 4. To confirm the recording went smoothly, check Unity's console logs, they should show messages indicating that the recording has successfully started and stopped. A message confirming pick up of LSL streams should also be logged.
-5. You can find the generated record file in your user folder: ``C:/Users/<username>/AppData/LocalLow//<companyname>/<packagename>``.
+5. You can find the generated record file in your user folder: ``C:/Users/<username>/AppData/LocalLow/<companyname>/<packagename>``.
 
 ![PLUME Console Logs](assets/record/images/image-10.png)
 ///caption
@@ -51,11 +51,11 @@ Now that PLUME Recorder is installed within your project, you're all set to crea
 
 PLUME is designed to record as much data as possible without requiring any additional configuration. This include the user's interactions, the environment state (game objects and components properties), event markers and custom data. In addition, PLUME integrate a compatibility layer with the Lab Streaming Layer (LSL) to record synchronized physiological signals and thus supports multi-channels and high frequencies signals (e.g. EEG, ECG, EDA, etc). **The data from those streams are recorded at their native frequency, independently from the application's refresh rate.** Any LSL stream that are open on the machine or the local network will be automatically picked up by PLUME.
 
-### Recording in a build
+## Recording in a build
 
 The PLUME Recorder is designed to work in both the Unity Editor and in built applications, including PC-VR and standalone headsets. Similar to the Editor, the recording will start automatically when the application is launched. The recording will stop when the application is closed.
 
-#### On Windows
+### On Windows
 1. Click on `File -> Build Settings`.
 2. Click on `Windows, Mac, Linux`. Click on `Switch Platform` if applicable.
 3. Click on Build and Run.
@@ -65,7 +65,7 @@ The PLUME Recorder is designed to work in both the Unity Editor and in built app
 !!! note
     If the application is not displayed within your HMD, be sure that your VR backend (e.g., Steam VR or Meta Quest Link) is selected as the default Open XR runtime.
 
-#### On Android (e.g. Meta Quest)
+### On Android (e.g. Meta Quest)
 1. Connect your Meta Quest HMD to your computer.
 2. Click on `File -> Build Settings`
 3. Click on `Android`. Click on `Switch Platform` if applicable.
@@ -76,7 +76,7 @@ The PLUME Recorder is designed to work in both the Unity Editor and in built app
 !!! note
     If your Meta Quest does not appear in the Run Device list be sure to enable [Developper Mode](https://developers.meta.com/horizon/documentation/native/android/mobile-device-setup/)
 
-#### On iOS
+### On iOS
 1. Connect your iOS device to your computer.
 2. Click on `File -> Build Settings`
 3. Click on `iOS`. Click on `Switch Platform` if applicable.

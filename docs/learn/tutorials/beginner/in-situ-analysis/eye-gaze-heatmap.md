@@ -8,7 +8,7 @@ With the eye-gaze module, you can create heatmaps that show where the user looke
 
 <figure>
     <video width="600" controls autoplay loop>
-        <source src="../../../../assets/in-situ-analysis/eye_gaze_heatmap_generation.mp4" type="video/mp4">
+        <source src="../assets/eye_gaze_heatmap_generation.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <figcaption>Presentation of the eye-gaze algorithm integrated in the viewer.</figcaption>
@@ -16,7 +16,7 @@ With the eye-gaze module, you can create heatmaps that show where the user looke
 
 The eye-gaze heatmap analysis module contains the following parameters:
 
-![Eye-gaze heatmap module](../../../assets/in-situ-analysis/eye_gaze_heatmap_module.png){ width="400", align="left" }
+![Eye-gaze heatmap module](assets/eye_gaze_heatmap_module.png){ width="300", align="right" }
 
 * XR Camera: GUID of the Main Camera object.
 * Projection Receiver: GUID of one or more object for the heatmap to be projected on.
@@ -27,7 +27,7 @@ The eye-gaze heatmap analysis module contains the following parameters:
 <br>
 Click on `Generate` to create the interaction eye-gaze heatmap with selected parameters. Generated heatmaps can be hidden from view (using eye icon) or deleted (using trash icon).
 
-![Eye-gaze heatmap result](../../../assets/in-situ-analysis/eye_gaze_heatmap_result.png){ width="600" }
+![Eye-gaze heatmap result](assets/eye_gaze_heatmap_result.png){ width="600" }
 /// caption
 Result of the eye-gaze heatmap visualization. The duration of the gaze is represented by the color intensity from blue (no time spent) to red (most time spent).
 ///

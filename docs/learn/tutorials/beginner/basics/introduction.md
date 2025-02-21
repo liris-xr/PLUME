@@ -13,7 +13,7 @@ By the end of this tutorial, you will have learned how to:
 * How to replay and perform in-situ analysis of a record file in PLUME-Viewer
 * How to perform ex-situ analysis of a record file with PLUME-Python
 
-## Table of contents
+The tutorial is divided into the following sections:
 
 - [Introduction](introduction.md)
 - [Setup](setup.md)
@@ -24,3 +24,5 @@ By the end of this tutorial, you will have learned how to:
 - [Analyzing data ex-situ](ex-situ_analysis.md)
 - [Analyzing data in-situ](in-situ_analysis.md)
 - [Conclusion](conclusion.md)
+
+Let's get started! 🚀

@@ -15,16 +15,16 @@ theme:
     accent: "light blue"
   features:
     # - navigation.indexes
-    - navigation.expand
+    # - navigation.expand
     - navigation.sections
     - navigation.footer
     - navigation.tabs
     - navigation.top
+    - navigation.tracking
     - content.action.edit
     - content.code.copy
     - content.code.annotate
-    - toc.follow
-    - toc.integrate
+    # - toc.integrate
 
 plugins:
   - search
