@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 # What is PLUME?
 
 PLUME is an open-source software toolbox (GPLv3) that allows for the exhaustive record of behavioral data (including synchronous physiological signals), their offline interactive replay and analysis, and their easy sharing due to our compact and interoperable data format.
@@ -14,7 +19,7 @@ While virtual reality research often relies on self-reported data through questi
 
 We believe that PLUME can greatly benefit the scientific community by making the use of behavioral and physiological data available to as many people as possible, contributing to the reproducibility and replicability of user studies using virtual environments (XR, game design, etc), enabling the creation of large datasets, and contributing to a deeper understanding of user experience. It was presented at the IEEE VR 2024 conference both as a demo and a scientific paper (accepted in the journal track) and was published in the [IEEE Transactions on Visualization and Computer Graphics journal](https://www.computer.org/csdl/journal/tg/2024/05/10458415/1V2s4TP60so).
 
-<div style="display: flex; justify-content: center; gap: 100px; padding: 20px 100px;">
+<div style="display: flex; justify-content: center; gap: 5%; padding: 5% 5%;">
     <img src="/assets/plume_recorder_light.png">
     <img src="/assets/plume_viewer_light.png">
     <img src="/assets/plume_python_light.png">
