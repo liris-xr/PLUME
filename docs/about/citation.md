@@ -11,8 +11,10 @@ PLUME was presented at the IEEE VR 2024 conference both as a demo and a scientif
 	journal = {IEEE Transactions on Visualization and Computer Graphics},
 	author = {Javerliat, Charles and Villenave, Sophie and Raimbaud, Pierre and Lavoué, Guillaume},
 	year = {2024},
-	note = {Conference Name: IEEE Transactions on Visualization and Computer Graphics},
-	pages = {1--11}
+	volume={30},
+	number={5},
+	pages={2087-2097},
+	note = {Conference Name: IEEE Conference on Virtual Reality and 3D User Interfaces},
 }
 ```
 {% endraw %}
