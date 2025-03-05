@@ -77,25 +77,44 @@ For this tutorial, you can use your own physiological device and create a LSL st
 
 If you don't have access to a physiological device, we provide you with a Python script (`stream_eda.py`) that simulates one by streaming pre-recorded physiological signals using [PyLSL](https://github.com/labstreaminglayer/pylsl) and [PyXDF](https://github.com/xdf-modules/pyxdf). The script is adapted from a [PyLSL example](https://github.com/labstreaminglayer/pylsl/blob/main/src/pylsl/examples/SendData.py) and sends 2 EDA signals sampled at 8Hz. To run the script, you will need a Python virtual environment with PyLSL and PyXDF installed.
 
-Here is a step-by-step guide to creating a new Python environment using Conda.
+Here is a step-by-step guide to creating a new Python environment using venv.
 
-* Download and install [Miniconda or Anaconda](https://docs.anaconda.com/getting-started/).
-* Open the `Anaconda Prompt` application.
-* Create a new Conda environment with Python 3.12.
+1. Open a command line and make sure **Python 3.12** is installed:  
+```bash
+python3 --version
 ```
-conda create --name my_env python==3.12
+If you don’t have Python 3.12, you can download and install it from [Python Downloads](https://www.python.org/downloads/).
+
+2. In the command line, navigate to the Python files within the Project folder `UnityProject/EasterEggHunt/Assets/PythonScripts~`.
+```bash
+cd `path/to/UnityProject/EasterEggHunt/Assets/PythonScripts~`
 ```
-* Once created, activate the Conda virtual environment.
+3. Create a new virtual environment inside this folder:  
+```bash
+python3 -m venv venv
 ```
-conda activate my_env
-```
-* In Anaconda Prompt, navigate to the tutorial files, enter the `UnityProject/EasterEggHunt/Assets/PythonScripts~` folder.
-* Install the required packages using pip and the following command:
-```
+This creates a folder named **`venv`** containing the isolated Python environment.  
+
+4. Activate the Virtual Environment
+</br>
+**On Windows:**  
+  ```powershell
+  venv\Scripts\activate
+  ```
+**On macOS/Linux:**  
+  ```bash
+  source venv/bin/activate
+  ```
+
+Once activated, your terminal will show `(venv)` at the beginning of the line, indicating you are now inside the virtual environment.  
+
+1. Install dependencies from `requirements.txt` using the following command:
+```powershell
 pip install -r requirements.txt
 ```
-* Launch `stream_eda.py` using the following command. Physiological streams can now be picked up by PLUME.
-```
+
+2. Launch `stream_eda.py` using the following command. Physiological streams can now be picked up by PLUME.
+```powershell
 python stream_eda.py
 ```
 
