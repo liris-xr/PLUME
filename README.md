@@ -35,7 +35,7 @@ https://github.com/liris-xr/PLUME/assets/20073809/33369f47-a308-4bfa-8b99-edaf5a
 
 ## Getting Started
 
-The installation of PLUME is straightforward and can be done in a few minutes at any development stage of your project. Please refer to the [getting started guide](https://liris-xr.github.io/PLUME/get-started/) to start using PLUME in your project.
+The installation of PLUME is straightforward and can be done in a few minutes at any development stage of your project. Please refer to the [getting started guide](https://liris-xr.github.io/PLUME/learn/get-started/) to install PLUME in your project, and the [beginner tutorial](https://liris-xr.github.io/PLUME/learn/tutorials/beginner/basics/introduction/) for a more detailed example.
 
 
 ## Documentation
